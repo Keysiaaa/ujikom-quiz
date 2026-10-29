@@ -44,19 +44,36 @@
         </div>
       </div>
 
-      <!-- Right controls (Audio, Soal Management) -->
+      <!-- Right controls (Audio, User Role: Pengunjung vs Admin) -->
       <div class="flex items-center gap-2">
         <button id="btn-sound-toggle" title="Suara Efek Aktif/Nonaktif" class="p-2 text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition text-sm flex items-center gap-1.5 border border-slate-200">
           <span id="sound-icon">🔊</span>
           <span class="text-xs font-medium hidden sm:inline" id="sound-text">Suara: Nyala</span>
         </button>
 
-        <button id="btn-open-manage" class="px-3 py-2 text-xs font-semibold text-slate-700 hover:text-blue-600 hover:bg-blue-50 border border-slate-300 rounded-lg transition flex items-center gap-1.5">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-          </svg>
-          <span class="hidden sm:inline">Kelola / Edit Soal</span>
-        </button>
+        <!-- Mode Pengunjung: Tombol Masuk Admin -->
+        <div id="role-visitor-controls" class="flex items-center">
+          <button id="btn-open-admin-login" class="px-3 py-2 text-xs font-semibold text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 border border-slate-300 rounded-lg transition flex items-center gap-1.5">
+            <span>🔒</span>
+            <span class="hidden sm:inline">Masuk</span> Admin
+          </button>
+        </div>
+
+        <!-- Mode Admin: Muncul saat Login sebagai Admin -->
+        <div id="role-admin-controls" class="hidden flex items-center gap-2">
+          <span class="px-2.5 py-1.5 bg-amber-100 text-amber-900 border border-amber-300 font-bold text-xs rounded-lg flex items-center gap-1">
+            <span>👑</span>
+            <span class="hidden md:inline">Mode Admin</span>
+          </span>
+          <button id="btn-open-manage" class="px-3 py-2 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition flex items-center gap-1.5 shadow-sm">
+            <span>✏️</span>
+            <span>Kelola Soal</span>
+          </button>
+          <button id="btn-admin-logout" title="Keluar dari Akun Admin" class="px-2.5 py-2 text-xs font-semibold text-red-600 hover:bg-red-50 border border-red-200 rounded-lg transition flex items-center gap-1">
+            <span>🚪</span>
+            <span class="hidden sm:inline">Logout</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -120,15 +137,19 @@
               <li>Pilih satu jawaban dan klik tombol <strong>"Kirim Jawaban"</strong>.</li>
               <li>Sistem akan langsung menampilkan <strong>apakah jawaban Anda Benar atau Salah</strong>.</li>
               <li>Jika salah, sistem akan langsung <strong>menunjukkan jawaban yang benar</strong> disertai pembahasan lengkap.</li>
-              <li>Anda dapat <strong>menambah, mengedit, atau menghapus soal</strong> sesuai kebutuhan ujian Anda.</li>
+              <li>Tersedia rekapitulasi nilai dan lembar evaluasi akhir setelah selesai.</li>
             </ul>
 
-            <div class="pt-2 border-t border-slate-200 flex items-center justify-between">
-              <span class="text-slate-500">Ingin memakai soal Anda sendiri?</span>
+            <!-- Kotak Khusus Admin (Hanya Muncul jika Login Admin) -->
+            <div id="welcome-admin-box" class="hidden pt-3 border-t border-slate-200 flex items-center justify-between bg-amber-50/70 p-3 rounded-xl border border-amber-200">
+              <div class="flex items-center gap-1.5 text-amber-900 font-bold">
+                <span>👑</span>
+                <span>Hak Akses Admin Aktif:</span>
+              </div>
               <button 
                 type="button" 
                 id="btn-welcome-manage-soal"
-                class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold border border-indigo-200 rounded-lg transition text-xs flex items-center gap-1.5"
+                class="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg transition text-xs flex items-center gap-1.5 shadow-sm"
               >
                 <span>✏️ Kelola & Tambah Soal</span>
               </button>
@@ -691,6 +712,52 @@
         </button>
       </div>
 
+    </div>
+  </div>
+
+  <!-- ================= MODAL LOGIN ADMIN ================= -->
+  <div id="modal-admin-login" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 animate-pop space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-base">
+            🔒
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-800 text-base leading-tight">Masuk Sebagai Admin</h3>
+            <p class="text-xs text-slate-500">Khusus pembuat & pengelola soal</p>
+          </div>
+        </div>
+        <button id="btn-close-admin-modal" class="text-slate-400 hover:text-slate-700 text-lg p-1 rounded-lg">✕</button>
+      </div>
+
+      <form id="form-admin-login" class="space-y-3.5">
+        <div>
+          <label for="admin-password-input" class="block text-xs font-bold text-slate-700 mb-1">
+            Password Admin:
+          </label>
+          <input 
+            type="password" 
+            id="admin-password-input" 
+            required 
+            placeholder="Masukkan password admin..." 
+            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white text-sm"
+            autocomplete="current-password"
+          >
+          <p id="admin-login-error" class="text-red-500 text-xs mt-1.5 hidden font-semibold">Password salah! Silakan coba lagi.</p>
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-2.5 mt-2.5 text-xs text-blue-800 space-y-1">
+            <p><strong>🔑 Info Default:</strong> Password bawaan adalah <code class="font-mono font-bold bg-white px-1.5 py-0.5 rounded border border-blue-300">admin123</code></p>
+            <p class="text-[11px] text-blue-600">Pengunjung biasa tidak memerlukan password dan bisa langsung mengerjakan soal.</p>
+          </div>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl text-xs sm:text-sm transition shadow-sm flex items-center justify-center gap-1.5"
+        >
+          <span>Masuk Sebagai Admin 👑</span>
+        </button>
+      </form>
     </div>
   </div>
 

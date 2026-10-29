@@ -1,90 +1,53 @@
-# 🎯 Website Simulasi Latihan Uji Kompetensi (CBT) dengan Bank Soal Dinamis
+# 🎯 Website Simulasi Latihan Uji Kompetensi (CBT) dengan 2 Peran Pengguna
 
-Website aplikasi latihan soal Uji Kompetensi interaktif berbasis web dengan **fitur tambah & kelola soal sendiri secara dinamis**, koreksi otomatis langsung (real-time feedback), dan pembahasan lengkap.
-
----
-
-## 🌟 Fitur Utama & Pembaruan Dinamis:
-
-### 1. ✏️ Tambah & Kelola Soal Sendiri Secara Dinamis (Tanpa Perlu Coding!)
-Anda kini dapat mengelola bank soal langsung dari antarmuka web melalui tombol **"✏️ Kelola & Tambah Soal"** di halaman awal atau pojok kanan atas:
-
-- **Formulir Tambah/Edit Soal Satuan:**
-  - Ketikkan pertanyaan soal / studi kasus.
-  - Masukkan opsi jawaban (A, B, C, D, dan E opsional).
-  - Pilih bulatan radio di samping opsi untuk menandai **kunci jawaban yang benar**.
-  - Tuliskan pembahasan/rasionalisasinya.
-  - Klik **"➕ Tambah Soal ke Bank Soal"**.
-- **⚡ Fitur Tempel (Paste) Teks Cepat dari Word / PDF:**
-  - Jika Anda sudah memiliki naskah soal di dokumen Word, WhatsApp, atau PDF, cukup *copy-paste* teksnya sekaligus!
-  - Sistem memiliki parser cerdas yang otomatis mengenali format:
-    ```text
-    1. Pertanyaan studi kasus...
-    A. Pilihan A
-    B. Pilihan B
-    C. Pilihan C
-    D. Pilihan D
-    Kunci: B
-    Pembahasan: Alasan mengapa B adalah jawaban yang tepat...
-
-    2. Pertanyaan nomor dua...
-    A. Opsi A
-    B. Opsi B
-    Kunci: A
-    Pembahasan: Penjelasan nomor dua...
-    ```
-  - Klik tombol **"⚡ Ganti Semua Soal dengan Hasil Ini"** atau **"➕ Tambahkan ke Soal yang Ada"**.
-- **📋 Manajemen & Review Daftar Soal:**
-  - Menampilkan seluruh soal aktif.
-  - Tombol **"✏️ Edit"** untuk mengubah isi soal sewaktu-waktu.
-  - Tombol **"🗑️ Hapus"** per butir soal.
-  - Tombol **"🗑️ Kosongkan Semua"** jika ingin memulai bank soal baru dari nol.
-  - Tombol **"🔄 Reset 20 Bawaan"** untuk mengembalikan 20 contoh soal default.
-  - Tombol **"💾 Download Backup (.json)"** & **"📂 Upload File (.json)"** untuk menyimpan cadangan soal Anda ke komputer.
-- **Penyimpanan Otomatis (Auto-Save):**
-  - Semua soal yang Anda tambahkan/edit otomatis tersimpan di peramban web (*localStorage*), sehingga tidak akan hilang saat halaman di-refresh.
+Website aplikasi latihan soal Uji Kompetensi interaktif berbasis web dengan **2 peran pengguna terpisah (Pengunjung & Admin)**, koreksi otomatis langsung (*real-time feedback*), pembahasan lengkap, dan bank soal dinamis.
 
 ---
 
-### 2. 👤 Alur Masuk & Input Nama Peserta
-- Saat pertama kali masuk, peserta diminta mengisikan nama lengkap.
-- Tombol **"Mulai Latihan Sekarang"** aktif setelah nama diisi.
-- Di bawah kolom nama, terdapat lencana status jumlah soal yang tersedia (misal: *20 Soal Tersedia*).
+## 👥 Dua Peran Pengguna (User Roles):
+
+### 1. 👤 Pengunjung / Peserta Ujian (Regular Visitor)
+- **Fokus Utama:** Mengerjakan simulasi latihan soal uji kompetensi.
+- **Tampilan Bersih & Aman:** Seluruh tombol dan menu *"Kelola / Edit Soal"* disembunyikan sehingga peserta tidak dapat merusak atau mengubah bank soal.
+- **Alur Pengerjaan:**
+  1. Memasukkan nama lengkap peserta.
+  2. Klik **"Mulai Latihan Sekarang"**.
+  3. Mengerjakan soal pilihan ganda dengan navigasi grid nomor soal.
+  4. Setiap submit, sistem langsung memberikan evaluasi instan (Benar/Salah).
+  5. Menampilkan jawaban yang benar dan pembahasan lengkap.
+  6. Melihat skor akhir (skala 100), statistik kelulusan, dan rekapitulasi nilai.
 
 ---
 
-### 3. 🎯 Pengerjaan Kuis CBT & Koreksi Instan (Real-Time Feedback)
-- Navigasi Grid nomor 1 s/d N yang otomatis menyesuaikan jumlah soal yang ada.
-- Saat memilih salah satu jawaban dan menekan tombol **"Kirim Jawaban"**:
-  - ✅ **Jika Benar:** Opsi terpilih berwarna hijau cerah, muncul lencana *"Luar Biasa! Jawaban Anda BENAR"*, skor bertambah, dan efek suara apresiatif.
-  - ❌ **Jika Salah:** Opsi terpilih berwarna merah, dan sistem **secara otomatis menyorot pilihan mana yang merupakan kunci jawaban yang benar** dengan batas hijau terang dan lencana khusus *"✓ Kunci Jawaban Benar"*.
-  - 💡 **Pembahasan & Rasionalisasi:** Di bawah setiap soal langsung muncul kotak penjelasan mengapa jawaban tersebut adalah pilihan yang benar.
+### 2. 👑 Admin / Instruktur (Pengunjung + Admin)
+- **Kemampuan:** Memiliki seluruh kemampuan Pengunjung (bisa ikut latihan simulasi) **PLUS** akses penuh untuk mengelola bank soal.
+- **Cara Masuk Admin:**
+  1. Klik tombol **"🔒 Masuk Admin"** di pojok kanan atas.
+  2. Masukkan password admin (Bawaan: `admin123`).
+  3. Klik **"Masuk Sebagai Admin 👑"**.
+- **Fitur Khusus Admin:**
+  - Muncul lencana **"👑 Mode Admin"** di bilah atas dan kotak kelola soal di halaman awal.
+  - **Formulir Tambah/Edit Soal:** Input pertanyaan, opsi A–E, radio penentu kunci jawaban benar, dan pembahasan.
+  - **⚡ Paste Teks Cepat dari Word/PDF:** Tempel naskah soal banyak sekaligus dengan parser otomatis.
+  - **Manajemen Daftar Soal:** Edit butir soal per nomor, hapus soal, kosongkan bank soal, atau reset ke 20 soal bawaan.
+  - **Backup & Restore:** Unduh cadangan soal dalam format `.json` atau unggah file soal baru.
+  - **Tombol Logout (🚪):** Keluar dari mode Admin untuk kembali ke tampilan Pengunjung biasa.
 
 ---
 
-### 4. 🏆 Rekapitulasi & Lembar Evaluasi Akhir
-- Skor otomatis dihitung dalam skala 100 dengan indikator kelulusan.
-- Rangkuman detail nomor 1 s/d selesai: menampilkan perbandingan jawaban peserta, kunci jawaban benar, dan pembahasan.
-- Tombol **"Cetak / Simpan Hasil (PDF)"** untuk mencetak kartu nilai.
-- Tombol **"Ulangi Latihan Soal"** dan **"Ganti Nama / Peserta Baru"**.
+## 🌐 Tautan Publik (Live Online):
+Website ini sudah dihosting secara publik dan dapat diakses dari perangkat apa saja (laptop, PC, ponsel/HP):
+👉 **[https://keysiaaa.github.io/ujikom-quiz/](https://keysiaaa.github.io/ujikom-quiz/)**
 
 ---
 
-## 📁 Struktur File:
+## 📁 Struktur File Proyek:
 
 ```
 ujikom-quiz/
-├── index.html        # Antarmuka web utama + Modal Kelola Soal Dinamis
+├── index.html        # Antarmuka web utama (Pengunjung, Admin, Kuis CBT, dan Hasil)
 ├── style.css         # Styling modern, animasi kartu, dan print style
 ├── questions.js      # Data default 20 contoh soal bawaan
-├── app.js            # Logika dinamis bank soal, kuis, parser bulk text, & audio
+├── app.js            # Logika kuis, sistem 2 peran pengguna, parser teks, & audio
 └── README.md         # Panduan penggunaan
 ```
-
----
-
-## 🚀 Cara Membuka Website:
-
-Cukup **klik dua kali (double click)** file:
-👉 [**`index.html`**](file:///C:/Users/Pongo/.gemini/antigravity/scratch/ujikom-quiz/index.html)
-di File Explorer Anda (dapat dibuka di Google Chrome, Microsoft Edge, Firefox, dll. tanpa instalasi apapun).

@@ -18,7 +18,8 @@ const AppState = {
   userAnswers: [], // Array of { selectedOption: number|null, isSubmitted: boolean, isCorrect: boolean }
   soundEnabled: true,
   audioCtx: null,
-  editingQuestionId: null // null jika sedang tambah baru, atau ID soal jika sedang edit
+  editingQuestionId: null, // null jika sedang tambah baru, atau ID soal jika sedang edit
+  isAdmin: false // Role: false = Pengunjung biasa, true = Admin (Pengunjung + Admin)
 };
 
 const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -27,6 +28,7 @@ const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 // INISIALISASI
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
+  initRoleState();
   initQuestionsData();
   bindEvents();
   checkPersistedUser();
@@ -151,8 +153,29 @@ function bindEvents() {
     document.getElementById('sound-text').textContent = AppState.soundEnabled ? 'Suara: Nyala' : 'Suara: Mati';
   });
 
-  // Buka Modal Kelola Soal dari Header & Layar Welcome
-  document.getElementById('btn-open-manage').addEventListener('click', () => openManageModal());
+  // Role: Tombol Masuk Admin & Keluar Admin
+  const btnOpenAdmin = document.getElementById('btn-open-admin-login');
+  if (btnOpenAdmin) {
+    btnOpenAdmin.addEventListener('click', openAdminLoginModal);
+  }
+  const btnCloseAdmin = document.getElementById('btn-close-admin-modal');
+  if (btnCloseAdmin) {
+    btnCloseAdmin.addEventListener('click', closeAdminLoginModal);
+  }
+  const formAdminLogin = document.getElementById('form-admin-login');
+  if (formAdminLogin) {
+    formAdminLogin.addEventListener('submit', handleAdminLogin);
+  }
+  const btnAdminLogout = document.getElementById('btn-admin-logout');
+  if (btnAdminLogout) {
+    btnAdminLogout.addEventListener('click', handleAdminLogout);
+  }
+
+  // Buka Modal Kelola Soal (Khusus Admin)
+  const btnOpenManage = document.getElementById('btn-open-manage');
+  if (btnOpenManage) {
+    btnOpenManage.addEventListener('click', () => openManageModal());
+  }
   const btnWelcomeManage = document.getElementById('btn-welcome-manage-soal');
   if (btnWelcomeManage) {
     btnWelcomeManage.addEventListener('click', () => openManageModal());
@@ -208,6 +231,101 @@ function bindEvents() {
 }
 
 // ==========================================
+// ROLE MANAGEMENT (PENGUNJUNG VS ADMIN)
+// ==========================================
+function initRoleState() {
+  AppState.isAdmin = (localStorage.getItem('ujikom_is_admin') === 'true');
+  updateRoleUI();
+}
+
+function updateRoleUI() {
+  const visitorControls = document.getElementById('role-visitor-controls');
+  const adminControls = document.getElementById('role-admin-controls');
+  const welcomeAdminBox = document.getElementById('welcome-admin-box');
+
+  if (AppState.isAdmin) {
+    if (visitorControls) visitorControls.classList.add('hidden');
+    if (adminControls) {
+      adminControls.classList.remove('hidden');
+      adminControls.classList.add('flex');
+    }
+    if (welcomeAdminBox) {
+      welcomeAdminBox.classList.remove('hidden');
+      welcomeAdminBox.classList.add('flex');
+    }
+  } else {
+    if (visitorControls) {
+      visitorControls.classList.remove('hidden');
+      visitorControls.classList.add('flex');
+    }
+    if (adminControls) {
+      adminControls.classList.add('hidden');
+      adminControls.classList.remove('flex');
+    }
+    if (welcomeAdminBox) {
+      welcomeAdminBox.classList.add('hidden');
+      welcomeAdminBox.classList.remove('flex');
+    }
+  }
+}
+
+function openAdminLoginModal() {
+  const modal = document.getElementById('modal-admin-login');
+  const passwordInput = document.getElementById('admin-password-input');
+  const errorEl = document.getElementById('admin-login-error');
+
+  if (errorEl) errorEl.classList.add('hidden');
+  if (passwordInput) {
+    passwordInput.value = '';
+    setTimeout(() => passwordInput.focus(), 100);
+  }
+  if (modal) modal.classList.remove('hidden');
+}
+
+function closeAdminLoginModal() {
+  const modal = document.getElementById('modal-admin-login');
+  if (modal) modal.classList.add('hidden');
+}
+
+function handleAdminLogin(e) {
+  if (e) e.preventDefault();
+  const passwordInput = document.getElementById('admin-password-input');
+  const errorEl = document.getElementById('admin-login-error');
+  const enteredPass = passwordInput ? passwordInput.value.trim() : '';
+
+  // Password admin default: 'admin123'
+  const currentAdminPass = localStorage.getItem('ujikom_admin_password') || 'admin123';
+
+  if (enteredPass === currentAdminPass) {
+    AppState.isAdmin = true;
+    localStorage.setItem('ujikom_is_admin', 'true');
+    updateRoleUI();
+    closeAdminLoginModal();
+    if (errorEl) errorEl.classList.add('hidden');
+    alert("🎉 Berhasil masuk sebagai Admin!\n\nMenu 'Kelola Soal' sekarang telah aktif di bilah navigasi dan halaman utama.");
+  } else {
+    if (errorEl) errorEl.classList.remove('hidden');
+    if (passwordInput) passwordInput.focus();
+  }
+}
+
+function handleAdminLogout() {
+  if (!confirm("Keluar dari Mode Admin dan kembali ke Mode Pengunjung biasa?")) return;
+
+  AppState.isAdmin = false;
+  localStorage.removeItem('ujikom_is_admin');
+  updateRoleUI();
+
+  // Jika modal kelola soal sedang terbuka, tutup
+  const modalManage = document.getElementById('modal-manage');
+  if (modalManage && !modalManage.classList.contains('hidden')) {
+    modalManage.classList.add('hidden');
+  }
+
+  alert("Anda telah keluar. Sekarang berada dalam mode Pengunjung biasa.");
+}
+
+// ==========================================
 // LOGIKA MODAL KELOLA SOAL DINAMIS & TABS
 // ==========================================
 function setupModalTabs() {
@@ -252,6 +370,11 @@ function switchManageTab(tabName) {
 }
 
 function openManageModal() {
+  // Hanya admin yang bisa membuka modal kelola soal
+  if (!AppState.isAdmin) {
+    openAdminLoginModal();
+    return;
+  }
   updateQuestionCounters();
   renderManageQuestionsList();
   document.getElementById('modal-manage').classList.remove('hidden');
