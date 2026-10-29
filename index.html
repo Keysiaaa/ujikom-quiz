@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulasi Latihan Uji Kompetensi</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-blue-200">
+
+  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <header class="bg-white/90 backdrop-blur-md border-b border-slate-200 sticky top-0 z-30 no-print">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-bold text-slate-800 text-lg leading-tight">Uji Kompetensi CBT</h1>
+          <p class="text-xs text-slate-500">Latihan Soal & Pembahasan Langsung</p>
+        </div>
+      </div>
+
+      <!-- Right controls (Audio, Soal Management) -->
+      <div class="flex items-center gap-2">
+        <button id="btn-sound-toggle" title="Suara Efek Aktif/Nonaktif" class="p-2 text-slate-600 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition text-sm flex items-center gap-1.5 border border-slate-200">
+          <span id="sound-icon">🔊</span>
+          <span class="text-xs font-medium hidden sm:inline" id="sound-text">Suara: Nyala</span>
+        </button>
+
+        <button id="btn-open-manage" class="px-3 py-2 text-xs font-semibold text-slate-700 hover:text-blue-600 hover:bg-blue-50 border border-slate-300 rounded-lg transition flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+          <span class="hidden sm:inline">Kelola / Edit Soal</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 md:py-8">
+
+    <!-- ---------------------------------------------------- -->
+    <!-- SCREEN 1: INPUT NAMA & SELAMAT DATANG                -->
+    <!-- ---------------------------------------------------- -->
+    <section id="screen-welcome" class="max-w-xl mx-auto animate-pop">
+      <div class="glass-panel rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-200">
+        
+        <div class="text-center mb-6">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl mb-3 shadow-inner">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">Selamat Datang di Latihan Ujikom</h2>
+          <p class="text-slate-600 text-sm mt-2">
+            Uji kesiapan Anda dengan 20 latihan soal berbasis Computer Based Test (CBT) dengan koreksi dan pembahasan langsung.
+          </p>
+        </div>
+
+        <!-- Form Input Nama -->
+        <form id="form-start-quiz" class="space-y-5">
+          <div>
+            <label for="input-user-name" class="block text-sm font-semibold text-slate-700 mb-1.5">
+              Nama Lengkap Peserta:
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </span>
+              <input 
+                type="text" 
+                id="input-user-name" 
+                required 
+                placeholder="Contoh: Budi Santoso, S.Kep" 
+                class="w-full pl-11 pr-4 py-3 bg-white border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800 placeholder-slate-400 transition font-medium"
+                autocomplete="name"
+              >
+            </div>
+            <p id="name-error" class="text-red-500 text-xs mt-1.5 hidden">Silakan masukkan nama Anda terlebih dahulu.</p>
+          </div>
+
+          <!-- Fitur Sistem & Status Bank Soal -->
+          <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 text-xs text-slate-600 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-slate-700 flex items-center gap-1.5 text-sm">
+                <span>📋</span> Ketentuan Simulasi:
+              </span>
+              <span id="welcome-question-count-badge" class="px-2.5 py-1 bg-blue-100 text-blue-700 font-bold rounded-lg text-xs">
+                20 Soal Tersedia
+              </span>
+            </div>
+            <ul class="list-disc list-inside space-y-1 pl-1 text-slate-600">
+              <li>Pilih satu jawaban dan klik tombol <strong>"Kirim Jawaban"</strong>.</li>
+              <li>Sistem akan langsung menampilkan <strong>apakah jawaban Anda Benar atau Salah</strong>.</li>
+              <li>Jika salah, sistem akan langsung <strong>menunjukkan jawaban yang benar</strong> disertai pembahasan lengkap.</li>
+              <li>Anda dapat <strong>menambah, mengedit, atau menghapus soal</strong> sesuai kebutuhan ujian Anda.</li>
+            </ul>
+
+            <div class="pt-2 border-t border-slate-200 flex items-center justify-between">
+              <span class="text-slate-500">Ingin memakai soal Anda sendiri?</span>
+              <button 
+                type="button" 
+                id="btn-welcome-manage-soal"
+                class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold border border-indigo-200 rounded-lg transition text-xs flex items-center gap-1.5"
+              >
+                <span>✏️ Kelola & Tambah Soal</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Tombol Mulai -->
+          <button 
+            type="submit" 
+            id="btn-start"
+            class="w-full py-3.5 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 transition duration-200 flex items-center justify-center gap-2 group text-base"
+          >
+            <span>Mulai Latihan Sekarang</span>
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- SCREEN 2: AREA KUIS & LATIHAN SOAL                   -->
+    <!-- ---------------------------------------------------- -->
+    <section id="screen-quiz" class="hidden animate-pop space-y-6">
+      
+      <!-- Bar Info Peserta & Skor Cepat -->
+      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center text-sm shadow-inner">
+            <span id="badge-initial">U</span>
+          </div>
+          <div>
+            <div class="text-xs text-slate-500">Nama Peserta</div>
+            <div class="font-bold text-slate-800 text-sm sm:text-base" id="display-user-name">Peserta</div>
+          </div>
+        </div>
+
+        <!-- Live Score Ticker -->
+        <div class="flex items-center gap-3 text-xs sm:text-sm font-semibold">
+          <div class="px-3 py-1.5 bg-green-50 text-green-700 border border-green-200 rounded-lg flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+            Benar: <span id="score-correct-live" class="font-bold">0</span>
+          </div>
+          <div class="px-3 py-1.5 bg-red-50 text-red-700 border border-red-200 rounded-lg flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-red-500"></span>
+            Salah: <span id="score-wrong-live" class="font-bold">0</span>
+          </div>
+          <div class="px-3 py-1.5 bg-slate-100 text-slate-700 border border-slate-200 rounded-lg">
+            Terjawab: <span id="score-answered-live" class="font-bold">0</span>/20
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Layout: Grid Navigator (Kiri/Atas) + Soal Card (Kanan/Bawah) -->
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+        <!-- Sidebar / Top Grid Navigator -->
+        <div class="lg:col-span-1 order-2 lg:order-1">
+          <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-slate-800 text-sm">Navigasi Soal (1 - 20)</h3>
+              <span class="text-xs text-slate-400 font-mono" id="nav-summary">0/20</span>
+            </div>
+
+            <!-- 20 Numbers Grid -->
+            <div id="grid-question-nav" class="grid grid-cols-5 gap-2">
+              <!-- Injected dynamically via JS: 1 to 20 buttons -->
+            </div>
+
+            <!-- Legend Status -->
+            <div class="pt-3 border-t border-slate-100 text-xs space-y-1.5 text-slate-600">
+              <div class="flex items-center gap-2">
+                <span class="w-3.5 h-3.5 rounded bg-slate-200 border border-slate-300 inline-block"></span>
+                <span>Belum Dijawab</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-3.5 h-3.5 rounded bg-green-500 border border-green-600 inline-block"></span>
+                <span>Jawaban Benar</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-3.5 h-3.5 rounded bg-red-500 border border-red-600 inline-block"></span>
+                <span>Jawaban Salah</span>
+              </div>
+            </div>
+
+            <!-- Finish Early Button -->
+            <button 
+              id="btn-finish-quiz-nav" 
+              class="w-full mt-2 py-2 px-3 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs font-semibold transition"
+            >
+              Selesaikan Latihan Sekarang
+            </button>
+          </div>
+        </div>
+
+        <!-- Question & Options Card -->
+        <div class="lg:col-span-3 order-1 lg:order-2 space-y-4">
+          
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 relative">
+            
+            <!-- Progress bar -->
+            <div class="w-full bg-slate-100 rounded-full h-2 mb-5 overflow-hidden">
+              <div id="quiz-progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 5%"></div>
+            </div>
+
+            <!-- Question Header -->
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800" id="badge-question-number">
+                Soal Nomor 1 dari 20
+              </span>
+              <span id="question-status-pill" class="text-xs font-semibold text-slate-400">
+                Pilih satu jawaban
+              </span>
+            </div>
+
+            <!-- Question Text -->
+            <div class="mb-6">
+              <p id="question-text" class="text-base sm:text-lg font-medium text-slate-800 leading-relaxed">
+                Memuat soal...
+              </p>
+            </div>
+
+            <!-- Options Container -->
+            <div id="options-container" class="space-y-3">
+              <!-- Injected by JS -->
+            </div>
+
+            <!-- Action: Submit Answer Button -->
+            <div class="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
+              <div class="text-xs text-slate-500" id="action-hint">
+                Pilih salah satu opsi lalu klik tombol Submit.
+              </div>
+
+              <div class="flex items-center gap-2">
+                <button 
+                  id="btn-submit-answer"
+                  disabled
+                  class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-white font-bold rounded-xl shadow-md transition flex items-center gap-2 text-sm"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Kirim Jawaban</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- ================= INSTANT FEEDBACK BOX ================= -->
+            <div id="feedback-container" class="hidden mt-6 pt-6 border-t-2 border-slate-100 animate-pop">
+              <!-- Banner Benar / Salah -->
+              <div id="feedback-alert" class="p-4 rounded-xl flex items-start gap-3.5 mb-4 border">
+                <div id="feedback-icon" class="text-2xl flex-shrink-0"></div>
+                <div class="flex-1">
+                  <h4 id="feedback-title" class="font-bold text-base leading-snug"></h4>
+                  <p id="feedback-subtitle" class="text-sm mt-0.5"></p>
+                </div>
+              </div>
+
+              <!-- Pembahasan Lengkap -->
+              <div class="bg-amber-50/70 border border-amber-200 rounded-xl p-4 text-slate-800">
+                <div class="flex items-center gap-2 font-bold text-amber-800 text-sm mb-1">
+                  <span>💡</span> Pembahasan & Rasionalisasi:
+                </div>
+                <p id="feedback-explanation" class="text-sm leading-relaxed text-slate-700">
+                  -
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Navigation Bottom Bar (Previous / Next / Finish) -->
+          <div class="flex items-center justify-between">
+            <button 
+              id="btn-prev-question" 
+              class="px-4 py-2.5 bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 rounded-xl text-sm font-semibold transition flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+              <span>Sebelumnya</span>
+            </button>
+
+            <button 
+              id="btn-next-question" 
+              class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold transition flex items-center gap-2 shadow-sm"
+            >
+              <span>Selanjutnya</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- SCREEN 3: HASIL AKHIR & PEMBAHASAN REKAP             -->
+    <!-- ---------------------------------------------------- -->
+    <section id="screen-results" class="hidden animate-pop space-y-8">
+      
+      <!-- Hero Score Card -->
+      <div class="glass-panel rounded-3xl p-6 sm:p-10 text-center shadow-lg border border-slate-200">
+        
+        <div id="result-status-badge" class="inline-block px-4 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider mb-4 bg-green-100 text-green-800">
+          Evaluasi Latihan Selesai
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mb-1">
+          Hasil Latihan: <span id="res-user-name" class="text-blue-600">Peserta</span>
+        </h2>
+        <p class="text-sm text-slate-500 mb-6">
+          Berikut rekapitulasi performa pengerjaan 20 soal uji kompetensi Anda.
+        </p>
+
+        <!-- Big Score Display -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 my-6">
+          <!-- Nilai Akhir Card -->
+          <div class="bg-gradient-to-tr from-blue-600 to-indigo-700 text-white rounded-2xl p-6 w-56 shadow-xl shadow-blue-500/20">
+            <div class="text-xs font-semibold uppercase tracking-wider text-blue-200">Nilai Akhir (Skala 100)</div>
+            <div class="text-5xl font-black mt-2" id="res-score-number">0</div>
+            <div class="text-xs text-blue-100 mt-1 font-medium" id="res-grade-text">Kelulusan: -</div>
+          </div>
+
+          <!-- Mini Breakdown -->
+          <div class="grid grid-cols-2 gap-3 w-full sm:w-auto">
+            <div class="bg-green-50 border border-green-200 rounded-xl p-4 text-center min-w-[130px]">
+              <div class="text-xs text-green-700 font-semibold">Jawaban Benar</div>
+              <div class="text-2xl font-black text-green-600 mt-1" id="res-count-correct">0</div>
+              <div class="text-[11px] text-green-600 font-medium">Soal</div>
+            </div>
+
+            <div class="bg-red-50 border border-red-200 rounded-xl p-4 text-center min-w-[130px]">
+              <div class="text-xs text-red-700 font-semibold">Jawaban Salah</div>
+              <div class="text-2xl font-black text-red-600 mt-1" id="res-count-wrong">0</div>
+              <div class="text-[11px] text-red-600 font-medium">Soal</div>
+            </div>
+
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 text-center col-span-2">
+              <div class="text-xs text-slate-500 font-semibold">Tingkat Akurasi</div>
+              <div class="text-xl font-black text-slate-800 mt-0.5" id="res-accuracy">0%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mt-8 no-print">
+          <button 
+            id="btn-restart-quiz" 
+            class="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold shadow-md transition flex items-center gap-2"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            <span>Ulangi Latihan Soal</span>
+          </button>
+
+          <button 
+            id="btn-change-user" 
+            class="px-4 py-3 bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 rounded-xl text-sm font-semibold transition"
+          >
+            Ganti Nama / Peserta Baru
+          </button>
+
+          <button 
+            id="btn-print-results" 
+            class="px-4 py-3 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-sm font-semibold transition flex items-center gap-2"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            </svg>
+            <span>Cetak / Simpan Hasil (PDF)</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Detail Rekap Soal 1 s/d 20 -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+            <span>📝</span> Rekapitulasi & Pembahasan 20 Soal
+          </h3>
+          <span class="text-xs text-slate-500">Periksa detail jawaban Anda di bawah ini</span>
+        </div>
+
+        <div id="review-list-container" class="space-y-4">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= MODAL KELOLA / TAMBAH SOAL DINAMIS ================= -->
+  <div id="modal-manage" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-2xl max-w-3xl w-full p-5 sm:p-6 shadow-2xl border border-slate-200 flex flex-col max-h-[92vh] animate-pop">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-lg">
+            ✏️
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-800 text-base sm:text-lg leading-tight">Kelola & Tambah Soal Sendiri</h3>
+            <p class="text-xs text-slate-500">Tambah satu per satu lewat formulir, atau tempel (paste) banyak soal sekaligus.</p>
+          </div>
+        </div>
+        <button id="btn-close-modal" class="text-slate-400 hover:text-slate-700 hover:bg-slate-100 p-2 rounded-xl transition text-base">✕</button>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="flex items-center gap-1.5 border-b border-slate-200 pt-3 pb-1 text-xs sm:text-sm font-semibold">
+        <button id="tab-btn-form" class="tab-btn active px-3.5 py-2 rounded-lg border-b-2 border-blue-600 text-blue-600 bg-blue-50/50 flex items-center gap-1.5">
+          <span>➕</span> Form Tambah Soal
+        </button>
+        <button id="tab-btn-paste" class="tab-btn px-3.5 py-2 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition flex items-center gap-1.5">
+          <span>⚡</span> Paste Teks Cepat
+        </button>
+        <button id="tab-btn-list" class="tab-btn px-3.5 py-2 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition flex items-center gap-1.5">
+          <span>📋</span> Daftar Soal (<span id="manage-tab-count">20</span>)
+        </button>
+        <button id="tab-btn-json" class="tab-btn px-3 py-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-50 transition hidden sm:flex items-center gap-1">
+          <span>{ }</span> JSON
+        </button>
+      </div>
+
+      <!-- Modal Body (Tab Contents) -->
+      <div class="py-4 overflow-y-auto flex-1 space-y-4">
+        
+        <!-- ---------------- TAB 1: FORM TAMBAH / EDIT SOAL ---------------- -->
+        <div id="tab-content-form" class="space-y-4">
+          <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+            <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5" id="form-mode-title">
+              <span>📝</span> Mode: Tambah Soal Baru
+            </span>
+            <button id="btn-cancel-edit-mode" class="hidden text-xs text-red-600 hover:underline font-semibold">
+              Batal Edit (Buat Soal Baru)
+            </button>
+          </div>
+
+          <!-- Teks Pertanyaan -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">
+              Pertanyaan / Kasus Soal: <span class="text-red-500">*</span>
+            </label>
+            <textarea 
+              id="form-q-text" 
+              rows="3" 
+              required
+              class="w-full p-3 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800 placeholder-slate-400"
+              placeholder="Contoh: Seorang pasien laki-laki usia 45 tahun datang ke IGD dengan keluhan sesak napas akut. Tindakan keperawatan prioritas pertama adalah..."
+            ></textarea>
+          </div>
+
+          <!-- Pilihan Ganda & Penanda Kunci -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="block text-xs font-bold text-slate-700">
+                Pilihan Jawaban (Pilih Bulatan untuk Kunci Jawaban yang Benar): <span class="text-red-500">*</span>
+              </label>
+              <span class="text-[11px] text-blue-600 font-semibold bg-blue-50 px-2 py-0.5 rounded">
+                ● = Kunci Jawaban Benar
+              </span>
+            </div>
+
+            <div class="space-y-2.5">
+              <!-- Opsi A -->
+              <div class="flex items-center gap-2">
+                <label class="flex items-center gap-1 cursor-pointer" title="Jadikan Kunci Jawaban Benar">
+                  <input type="radio" name="form-correct-key" value="0" checked class="w-4 h-4 text-green-600 focus:ring-green-500">
+                  <span class="w-7 h-7 rounded-lg bg-slate-100 border border-slate-300 font-bold text-xs flex items-center justify-center text-slate-700">A</span>
+                </label>
+                <input type="text" id="form-opt-0" required placeholder="Tuliskan pilihan jawaban A..." class="flex-1 px-3 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500">
+              </div>
+
+              <!-- Opsi B -->
+              <div class="flex items-center gap-2">
+                <label class="flex items-center gap-1 cursor-pointer" title="Jadikan Kunci Jawaban Benar">
+                  <input type="radio" name="form-correct-key" value="1" class="w-4 h-4 text-green-600 focus:ring-green-500">
+                  <span class="w-7 h-7 rounded-lg bg-slate-100 border border-slate-300 font-bold text-xs flex items-center justify-center text-slate-700">B</span>
+                </label>
+                <input type="text" id="form-opt-1" required placeholder="Tuliskan pilihan jawaban B..." class="flex-1 px-3 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500">
+              </div>
+
+              <!-- Opsi C -->
+              <div class="flex items-center gap-2">
+                <label class="flex items-center gap-1 cursor-pointer" title="Jadikan Kunci Jawaban Benar">
+                  <input type="radio" name="form-correct-key" value="2" class="w-4 h-4 text-green-600 focus:ring-green-500">
+                  <span class="w-7 h-7 rounded-lg bg-slate-100 border border-slate-300 font-bold text-xs flex items-center justify-center text-slate-700">C</span>
+                </label>
+                <input type="text" id="form-opt-2" required placeholder="Tuliskan pilihan jawaban C..." class="flex-1 px-3 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500">
+              </div>
+
+              <!-- Opsi D -->
+              <div class="flex items-center gap-2">
+                <label class="flex items-center gap-1 cursor-pointer" title="Jadikan Kunci Jawaban Benar">
+                  <input type="radio" name="form-correct-key" value="3" class="w-4 h-4 text-green-600 focus:ring-green-500">
+                  <span class="w-7 h-7 rounded-lg bg-slate-100 border border-slate-300 font-bold text-xs flex items-center justify-center text-slate-700">D</span>
+                </label>
+                <input type="text" id="form-opt-3" required placeholder="Tuliskan pilihan jawaban D..." class="flex-1 px-3 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500">
+              </div>
+
+              <!-- Opsi E (Opsional) -->
+              <div class="flex items-center gap-2">
+                <label class="flex items-center gap-1 cursor-pointer" title="Jadikan Kunci Jawaban Benar">
+                  <input type="radio" name="form-correct-key" value="4" class="w-4 h-4 text-green-600 focus:ring-green-500">
+                  <span class="w-7 h-7 rounded-lg bg-slate-100 border border-slate-300 font-bold text-xs flex items-center justify-center text-slate-700">E</span>
+                </label>
+                <input type="text" id="form-opt-4" placeholder="Tuliskan pilihan jawaban E (opsional)..." class="flex-1 px-3 py-2 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500">
+              </div>
+            </div>
+          </div>
+
+          <!-- Pembahasan -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">
+              Pembahasan / Rasionalisasi Kunci Jawaban:
+            </label>
+            <textarea 
+              id="form-q-explanation" 
+              rows="2" 
+              class="w-full p-3 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-slate-800 placeholder-slate-400"
+              placeholder="Contoh: Posisi semi-fowler membantu ekspansi paru maksimal dan memudahkan pernapasan pasien..."
+            ></textarea>
+          </div>
+
+          <!-- Tombol Aksi Simpan -->
+          <div class="pt-2 flex items-center justify-end gap-2">
+            <button 
+              type="button" 
+              id="btn-save-form-question"
+              class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition text-xs sm:text-sm flex items-center gap-1.5"
+            >
+              <span id="btn-save-form-text">➕ Tambah Soal ke Bank Soal</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ---------------- TAB 2: PASTE TEKS CEPAT DARI WORD/PDF ---------------- -->
+        <div id="tab-content-paste" class="hidden space-y-3">
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs text-amber-900 space-y-1">
+            <p class="font-bold flex items-center gap-1.5">
+              <span>💡</span> Tempel (Paste) Soal Teks Sekaligus dari Dokumen Word / PDF:
+            </p>
+            <p class="text-amber-800">
+              Sistem akan otomatis mendeteksi nomor soal, pilihan A s/d E, kunci jawaban (Kunci: A), dan pembahasan (Pembahasan: ...).
+            </p>
+            <button id="btn-insert-sample-text" type="button" class="underline font-bold text-amber-900 hover:text-black">
+              👉 Klik di sini untuk mencoba contoh teks format
+            </button>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Tempelkan Teks Soal di Bawah Ini:</label>
+            <textarea 
+              id="textarea-bulk-paste" 
+              rows="10" 
+              class="w-full p-3 text-xs font-mono border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 bg-slate-50"
+              placeholder="1. Pertanyaan soal nomor 1...&#10;A. Pilihan jawaban A&#10;B. Pilihan jawaban B&#10;C. Pilihan jawaban C&#10;D. Pilihan jawaban D&#10;Kunci: A&#10;Pembahasan: Penjelasan mengapa A benar...&#10;&#10;2. Pertanyaan soal nomor 2...&#10;A. Pilihan A&#10;B. Pilihan B&#10;Kunci: B&#10;Pembahasan: Penjelasan B..."
+            ></textarea>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-slate-200">
+            <div id="bulk-parse-status" class="text-xs font-semibold text-slate-600">
+              Siap memproses teks soal.
+            </div>
+            <div class="flex items-center gap-2">
+              <button 
+                type="button" 
+                id="btn-process-append-bulk"
+                class="px-4 py-2 bg-slate-700 hover:bg-slate-800 text-white font-bold rounded-xl text-xs transition"
+              >
+                ➕ Tambahkan ke Soal yang Ada
+              </button>
+              <button 
+                type="button" 
+                id="btn-process-replace-bulk"
+                class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs transition shadow-sm"
+              >
+                ⚡ Ganti Semua Soal dengan Hasil Ini
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------------- TAB 3: DAFTAR SOAL AKTIF ---------------- -->
+        <div id="tab-content-list" class="hidden space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs">
+            <span class="font-bold text-slate-700">
+              Total Soal Saat Ini: <span id="list-total-badge" class="text-blue-600 font-extrabold">20</span> Soal
+            </span>
+            <div class="flex items-center gap-1.5">
+              <button id="btn-list-add-new" class="px-2.5 py-1 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition">
+                ➕ Buat Soal Baru
+              </button>
+              <button id="btn-clear-all-questions" class="px-2.5 py-1 bg-red-50 text-red-700 border border-red-200 rounded-lg font-bold hover:bg-red-100 transition">
+                🗑️ Kosongkan Semua
+              </button>
+              <button id="btn-reset-default-sample" class="px-2.5 py-1 bg-slate-200 text-slate-700 rounded-lg font-bold hover:bg-slate-300 transition">
+                🔄 Reset 20 Bawaan
+              </button>
+            </div>
+          </div>
+
+          <!-- Container List Soal -->
+          <div id="manage-questions-container" class="space-y-2.5 max-h-[50vh] overflow-y-auto pr-1">
+            <!-- Injected by JS -->
+          </div>
+
+          <!-- Backup / Download JSON -->
+          <div class="pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs">
+            <span class="text-slate-500">Backup & Restore:</span>
+            <div class="flex items-center gap-2">
+              <button id="btn-download-backup" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-semibold transition">
+                💾 Download Backup (.json)
+              </button>
+              <label class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-semibold transition cursor-pointer">
+                📂 Upload File (.json)
+                <input type="file" id="file-input-backup" accept=".json" class="hidden">
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------------- TAB 4: RAW JSON (OPSIONAL) ---------------- -->
+        <div id="tab-content-json" class="hidden space-y-3">
+          <p class="text-xs text-slate-500">
+            Bagi Anda yang sudah memiliki data soal dalam bentuk JSON, Anda dapat langsung menempelkannya di sini:
+          </p>
+          <textarea 
+            id="textarea-json-soal" 
+            rows="10" 
+            class="w-full p-3 font-mono text-xs border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500 bg-slate-50"
+            placeholder="[ { id: 1, question: '...', options: ['A', 'B', 'C', 'D'], correctIndex: 0, explanation: '...' } ]"
+          ></textarea>
+          <p id="json-error" class="text-red-500 text-xs mt-1 hidden"></p>
+          <div class="flex justify-end">
+            <button id="btn-save-json-soal" class="px-4 py-2 text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl">
+              Simpan Data JSON
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="pt-3 border-t border-slate-200 flex items-center justify-between">
+        <span class="text-xs text-slate-500" id="manage-status-footer">Semua perubahan soal otomatis tersimpan di peramban Anda.</span>
+        <button id="btn-finish-manage" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs sm:text-sm font-bold transition">
+          Selesai & Tutup
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white border-t border-slate-200 py-4 no-print text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p>© 2026 Simulasi Uji Kompetensi CBT — Siap Menghadapi Ujian Profesi</p>
+      <p class="font-medium text-slate-600">Dibuat khusus untuk latihan intensif & pembahasan instan</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

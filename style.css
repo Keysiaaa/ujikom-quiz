@@ -1,0 +1,143 @@
+/* =========================================================
+   STYLE CUSTOM - SIMULASI LATIHAN UJI KOMPETENSI
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-light: #eff6ff;
+  --success: #16a34a;
+  --success-light: #f0fdf4;
+  --danger: #dc2626;
+  --danger-light: #fef2f2;
+  --warning: #d97706;
+  --neutral-dark: #0f172a;
+  --neutral-gray: #64748b;
+  --border-color: #e2e8f0;
+  --card-bg: #ffffff;
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 50%, #f1f5f9 100%);
+  min-height: 100vh;
+  color: var(--neutral-dark);
+}
+
+/* Glassmorphism card effect */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+}
+
+/* Option Cards */
+.option-btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 2px solid #e2e8f0;
+}
+
+.option-btn:hover:not(.disabled):not(.submitted) {
+  border-color: #3b82f6;
+  background-color: #f8faff;
+  transform: translateY(-1px);
+}
+
+.option-btn.selected:not(.submitted) {
+  border-color: #2563eb;
+  background-color: #eff6ff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Result states for options */
+.option-btn.is-correct {
+  border-color: #16a34a !important;
+  background-color: #f0fdf4 !important;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2) !important;
+}
+
+.option-btn.is-wrong {
+  border-color: #dc2626 !important;
+  background-color: #fef2f2 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15) !important;
+}
+
+.option-btn.is-dimmed {
+  opacity: 0.55;
+  filter: grayscale(20%);
+}
+
+/* Number Navigator Grid */
+.nav-num-btn {
+  transition: all 0.18s ease;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.nav-num-btn.active {
+  ring: 2px solid #2563eb;
+  transform: scale(1.08);
+}
+
+.nav-num-btn.status-unanswered {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.nav-num-btn.status-correct {
+  background-color: #22c55e;
+  color: #ffffff;
+  border: 1px solid #16a34a;
+}
+
+.nav-num-btn.status-wrong {
+  background-color: #ef4444;
+  color: #ffffff;
+  border: 1px solid #dc2626;
+}
+
+/* Animations */
+@keyframes popIn {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop {
+  animation: popIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(37, 99, 235, 0); }
+}
+
+.pulse-primary {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Print styles for printing result certificate/sheet */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .glass-panel {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
