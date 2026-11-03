@@ -944,6 +944,9 @@ function handleStartQuiz() {
   // Render navigasi nomor soal dinamis
   renderQuestionNavGrid();
 
+  // Update semua counter (judul navigasi, terjawab, dsb)
+  updateQuestionCounters();
+
   // Tampilkan soal pertama
   loadQuestion(0);
 }
