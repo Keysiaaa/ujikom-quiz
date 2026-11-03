@@ -139,6 +139,40 @@ function playSound(action) {
 // EVENT LISTENERS UTAMA
 // ==========================================
 function bindEvents() {
+  // Initialize real‑time cross‑tab sync via localStorage "storage" event
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'custom_ujikom_questions') {
+      try {
+        const newQuestions = JSON.parse(e.newValue);
+        AppState.questions = newQuestions;
+        // Update counters and UI in all relevant places
+        updateQuestionCounters();
+        // If admin manage modal is open, refresh list
+        const modalManage = document.getElementById('modal-manage');
+        if (modalManage && !modalManage.classList.contains('hidden')) {
+          renderManageQuestionsList();
+        }
+        // If quiz screen is active, refresh navigation and current question
+        const quizScreen = document.getElementById('screen-quiz');
+        if (quizScreen && !quizScreen.classList.contains('hidden')) {
+          renderQuestionNavGrid();
+          // Preserve current index if still valid
+          if (AppState.currentIndex >= AppState.questions.length) {
+            AppState.currentIndex = AppState.questions.length - 1;
+          }
+          loadQuestion(AppState.currentIndex);
+        }
+        // If welcome screen is visible (admin may have just added questions), just update badge
+        const welcomeScreen = document.getElementById('screen-welcome');
+        if (welcomeScreen && !welcomeScreen.classList.contains('hidden')) {
+          // badge already updated via updateQuestionCounters()
+        }
+      } catch (err) {
+        console.warn('Failed to sync questions from storage event:', err);
+      }
+    }
+  });
+
   // Form Mulai Kuis
   const formStart = document.getElementById('form-start-quiz');
   formStart.addEventListener('submit', (e) => {
