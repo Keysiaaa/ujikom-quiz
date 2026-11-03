@@ -82,6 +82,36 @@ function updateQuestionCounters() {
   if (badgeList) {
     badgeList.textContent = count;
   }
+
+  // Dynamic: Navigasi Soal title
+  const navTitle = document.getElementById('nav-title');
+  if (navTitle) {
+    navTitle.textContent = `Navigasi Soal (1 - ${count})`;
+  }
+
+  // Dynamic: Terjawab total
+  const scoreTotalLive = document.getElementById('score-total-live');
+  if (scoreTotalLive) {
+    scoreTotalLive.textContent = count;
+  }
+
+  // Dynamic: Badge "Soal Nomor X dari Y"
+  const badgeTotalQ = document.getElementById('badge-total-questions');
+  if (badgeTotalQ) {
+    badgeTotalQ.textContent = count;
+  }
+
+  // Dynamic: Rekapitulasi performa
+  const resTotalQ = document.getElementById('res-total-questions');
+  if (resTotalQ) {
+    resTotalQ.textContent = count;
+  }
+
+  // Dynamic: Rekapitulasi & Pembahasan
+  const reviewTotal = document.getElementById('review-total-count');
+  if (reviewTotal) {
+    reviewTotal.textContent = count;
+  }
 }
 
 function saveQuestionsToStorage() {
