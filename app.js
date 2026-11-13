@@ -13,13 +13,16 @@
 // ==========================================
 const AppState = {
   userName: '',
-  questions: [],
+  categories: [],           // Array of { id, name, questions[] }
+  selectedCategoryId: null,  // Category selected for quiz
+  managingCategoryId: null,  // Category being managed in admin modal
+  questions: [],             // Active questions (loaded from selected category)
   currentIndex: 0,
-  userAnswers: [], // Array of { selectedOption: number|null, isSubmitted: boolean, isCorrect: boolean }
+  userAnswers: [],
   soundEnabled: true,
   audioCtx: null,
-  editingQuestionId: null, // null jika sedang tambah baru, atau ID soal jika sedang edit
-  isAdmin: false // Role: false = Pengunjung biasa, true = Admin (Pengunjung + Admin)
+  editingQuestionId: null,
+  isAdmin: false
 };
 
 const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -29,32 +32,291 @@ const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
   initRoleState();
-  initQuestionsData();
+  initCategoriesData();
   bindEvents();
   checkPersistedUser();
+  renderCategoryCards();
   updateQuestionCounters();
 });
 
-function initQuestionsData() {
-  const savedCustom = localStorage.getItem('custom_ujikom_questions');
-  if (savedCustom) {
+// ==========================================
+// KATEGORI & DATA SOAL
+// ==========================================
+function initCategoriesData() {
+  // 1. Coba load dari localStorage 'ujikom_categories'
+  const savedCategories = localStorage.getItem('ujikom_categories');
+  if (savedCategories) {
     try {
-      const parsed = JSON.parse(savedCustom);
+      const parsed = JSON.parse(savedCategories);
       if (Array.isArray(parsed) && parsed.length > 0) {
-        AppState.questions = parsed;
+        AppState.categories = parsed;
         return;
       }
     } catch (e) {
-      console.warn("Gagal parse saved questions, gunakan default:", e);
+      console.warn("Gagal parse saved categories:", e);
     }
   }
 
-  // Gunakan data dari questions.js jika ada
-  if (typeof questionsData !== 'undefined' && Array.isArray(questionsData) && questionsData.length > 0) {
-    AppState.questions = JSON.parse(JSON.stringify(questionsData));
-  } else {
-    AppState.questions = generateFallbackQuestions();
+  // 2. Migrasi dari format lama (flat questions array)
+  const savedOld = localStorage.getItem('custom_ujikom_questions');
+  if (savedOld) {
+    try {
+      const parsed = JSON.parse(savedOld);
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        AppState.categories = [{
+          id: 1,
+          name: "Bagian 1",
+          questions: parsed
+        }];
+        saveCategoriesData();
+        localStorage.removeItem('custom_ujikom_questions');
+        return;
+      }
+    } catch (e) {
+      console.warn("Gagal migrasi data lama:", e);
+    }
   }
+
+  // 3. Gunakan data default dari questions.js
+  if (typeof questionsData !== 'undefined' && Array.isArray(questionsData) && questionsData.length > 0) {
+    AppState.categories = [{
+      id: 1,
+      name: "Bagian 1",
+      questions: JSON.parse(JSON.stringify(questionsData))
+    }];
+  } else {
+    AppState.categories = [{
+      id: 1,
+      name: "Bagian 1",
+      questions: generateFallbackQuestions()
+    }];
+  }
+}
+
+function saveCategoriesData() {
+  localStorage.setItem('ujikom_categories', JSON.stringify(AppState.categories));
+  renderCategoryCards();
+  updateQuestionCounters();
+}
+
+function saveQuestionsToCategory() {
+  const cat = getCategory(AppState.managingCategoryId);
+  if (cat) {
+    cat.questions = [...AppState.questions];
+  }
+  saveCategoriesData();
+}
+
+function getCategory(id) {
+  return AppState.categories.find(c => c.id === id);
+}
+
+function getTotalQuestionsCount() {
+  return AppState.categories.reduce((sum, cat) => sum + cat.questions.length, 0);
+}
+
+function getNextCategoryId() {
+  if (AppState.categories.length === 0) return 1;
+  return Math.max(...AppState.categories.map(c => c.id)) + 1;
+}
+
+// ==========================================
+// KATEGORI: CRUD
+// ==========================================
+function handleAddCategory() {
+  const name = prompt("Masukkan nama kategori baru:");
+  if (!name || !name.trim()) return;
+
+  const newCat = {
+    id: getNextCategoryId(),
+    name: name.trim(),
+    questions: []
+  };
+  AppState.categories.push(newCat);
+  saveCategoriesData();
+
+  // Jika modal manage terbuka, switch ke kategori baru
+  const modalManage = document.getElementById('modal-manage');
+  if (modalManage && !modalManage.classList.contains('hidden')) {
+    switchManagingCategory(newCat.id);
+    renderCategoryManagerBar();
+  }
+
+  alert(`Kategori "${newCat.name}" berhasil dibuat!`);
+}
+
+function handleRenameCategory(catId) {
+  const cat = getCategory(catId);
+  if (!cat) return;
+
+  const newName = prompt(`Ganti nama kategori "${cat.name}" menjadi:`, cat.name);
+  if (!newName || !newName.trim()) return;
+
+  cat.name = newName.trim();
+  saveCategoriesData();
+  renderCategoryManagerBar();
+  alert(`Nama kategori berhasil diubah menjadi "${cat.name}".`);
+}
+
+function handleDeleteCategory(catId) {
+  if (AppState.categories.length <= 1) {
+    alert("Tidak bisa menghapus kategori terakhir! Minimal harus ada 1 kategori.");
+    return;
+  }
+
+  const cat = getCategory(catId);
+  if (!cat) return;
+
+  if (!confirm(`Hapus kategori "${cat.name}" beserta ${cat.questions.length} soalnya? Tindakan ini tidak dapat dibatalkan.`)) {
+    return;
+  }
+
+  AppState.categories = AppState.categories.filter(c => c.id !== catId);
+  saveCategoriesData();
+
+  // Switch ke kategori pertama
+  if (AppState.managingCategoryId === catId) {
+    switchManagingCategory(AppState.categories[0].id);
+  }
+  renderCategoryManagerBar();
+  alert("Kategori berhasil dihapus.");
+}
+
+// ==========================================
+// WELCOME: KARTU KATEGORI
+// ==========================================
+function renderCategoryCards() {
+  const container = document.getElementById('category-cards-container');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  if (AppState.categories.length === 0) {
+    container.innerHTML = `
+      <div class="text-center py-4 text-slate-500 text-sm">
+        Belum ada kategori soal. Admin perlu menambahkan kategori terlebih dahulu.
+      </div>
+    `;
+    return;
+  }
+
+  const colors = [
+    { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', badge: 'bg-blue-100 text-blue-800', selectedBorder: 'border-blue-500', ring: 'ring-blue-500', icon: '📘' },
+    { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-700', badge: 'bg-emerald-100 text-emerald-800', selectedBorder: 'border-emerald-500', ring: 'ring-emerald-500', icon: '📗' },
+    { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-700', badge: 'bg-purple-100 text-purple-800', selectedBorder: 'border-purple-500', ring: 'ring-purple-500', icon: '📕' },
+    { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-700', badge: 'bg-amber-100 text-amber-800', selectedBorder: 'border-amber-500', ring: 'ring-amber-500', icon: '📙' },
+    { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-700', badge: 'bg-rose-100 text-rose-800', selectedBorder: 'border-rose-500', ring: 'ring-rose-500', icon: '📓' },
+    { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-700', badge: 'bg-cyan-100 text-cyan-800', selectedBorder: 'border-cyan-500', ring: 'ring-cyan-500', icon: '📔' },
+  ];
+
+  AppState.categories.forEach((cat, idx) => {
+    const c = colors[idx % colors.length];
+    const isSelected = AppState.selectedCategoryId === cat.id;
+
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = `category-card w-full p-4 rounded-xl border-2 transition-all duration-200 text-left flex items-center gap-3 ${
+      isSelected
+        ? `${c.bg} ${c.selectedBorder} ring-2 ${c.ring} shadow-md`
+        : `bg-white ${c.border} hover:${c.bg} hover:shadow-sm`
+    }`;
+
+    card.innerHTML = `
+      <div class="text-2xl shrink-0">${c.icon}</div>
+      <div class="flex-1 min-w-0">
+        <div class="font-bold text-sm ${c.text} truncate">${escapeHTML(cat.name)}</div>
+        <div class="text-xs text-slate-500 mt-0.5">${cat.questions.length} soal</div>
+      </div>
+      <div class="shrink-0">
+        ${isSelected
+          ? `<span class="px-2 py-1 ${c.badge} rounded-full text-[10px] font-bold">✓ Dipilih</span>`
+          : `<span class="px-2 py-1 bg-slate-100 text-slate-500 rounded-full text-[10px] font-medium">Pilih</span>`
+        }
+      </div>
+    `;
+
+    card.addEventListener('click', () => {
+      if (cat.questions.length === 0) {
+        alert(`Kategori "${cat.name}" belum memiliki soal. Silakan tambahkan soal terlebih dahulu melalui menu Kelola Soal.`);
+        return;
+      }
+      AppState.selectedCategoryId = cat.id;
+      renderCategoryCards();
+    });
+
+    container.appendChild(card);
+  });
+}
+
+// ==========================================
+// ADMIN: BAR KATEGORI DI MODAL KELOLA SOAL
+// ==========================================
+function renderCategoryManagerBar() {
+  const container = document.getElementById('category-manager-bar');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  // Dropdown pilih kategori
+  const selectRow = document.createElement('div');
+  selectRow.className = 'flex flex-wrap items-center gap-2';
+
+  const label = document.createElement('span');
+  label.className = 'text-xs font-semibold text-slate-600';
+  label.textContent = '📁 Kategori:';
+  selectRow.appendChild(label);
+
+  const select = document.createElement('select');
+  select.id = 'select-managing-category';
+  select.className = 'flex-1 min-w-[150px] px-3 py-2 text-sm border border-slate-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-medium';
+
+  AppState.categories.forEach(cat => {
+    const opt = document.createElement('option');
+    opt.value = cat.id;
+    opt.textContent = `${cat.name} (${cat.questions.length} soal)`;
+    if (cat.id === AppState.managingCategoryId) opt.selected = true;
+    select.appendChild(opt);
+  });
+
+  select.addEventListener('change', () => {
+    switchManagingCategory(parseInt(select.value, 10));
+  });
+  selectRow.appendChild(select);
+
+  // Tombol aksi kategori
+  const btnAdd = document.createElement('button');
+  btnAdd.className = 'px-2.5 py-2 bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 rounded-lg text-xs font-bold transition flex items-center gap-1';
+  btnAdd.innerHTML = '<span>➕</span><span class="hidden sm:inline">Tambah</span>';
+  btnAdd.title = 'Tambah Kategori Baru';
+  btnAdd.addEventListener('click', handleAddCategory);
+  selectRow.appendChild(btnAdd);
+
+  const btnRename = document.createElement('button');
+  btnRename.className = 'px-2.5 py-2 bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 rounded-lg text-xs font-bold transition flex items-center gap-1';
+  btnRename.innerHTML = '<span>✏️</span><span class="hidden sm:inline">Rename</span>';
+  btnRename.title = 'Ganti Nama Kategori';
+  btnRename.addEventListener('click', () => handleRenameCategory(AppState.managingCategoryId));
+  selectRow.appendChild(btnRename);
+
+  const btnDelete = document.createElement('button');
+  btnDelete.className = 'px-2.5 py-2 bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 rounded-lg text-xs font-bold transition flex items-center gap-1';
+  btnDelete.innerHTML = '<span>🗑️</span><span class="hidden sm:inline">Hapus</span>';
+  btnDelete.title = 'Hapus Kategori';
+  btnDelete.addEventListener('click', () => handleDeleteCategory(AppState.managingCategoryId));
+  selectRow.appendChild(btnDelete);
+
+  container.appendChild(selectRow);
+}
+
+function switchManagingCategory(catId) {
+  AppState.managingCategoryId = catId;
+  const cat = getCategory(catId);
+  if (cat) {
+    AppState.questions = [...cat.questions];
+  }
+  renderCategoryManagerBar();
+  renderManageQuestionsList();
+  updateQuestionCounters();
 }
 
 function checkPersistedUser() {
@@ -66,57 +328,58 @@ function checkPersistedUser() {
 }
 
 function updateQuestionCounters() {
-  const count = AppState.questions.length;
+  const totalAll = getTotalQuestionsCount();
+  const catCount = AppState.categories.length;
+  const activeCount = AppState.questions.length;
   
   const badgeWelcome = document.getElementById('welcome-question-count-badge');
   if (badgeWelcome) {
-    badgeWelcome.textContent = `${count} Soal Tersedia`;
+    badgeWelcome.textContent = `${totalAll} Soal • ${catCount} Kategori`;
   }
 
   const badgeTab = document.getElementById('manage-tab-count');
   if (badgeTab) {
-    badgeTab.textContent = count;
+    badgeTab.textContent = activeCount;
   }
 
   const badgeList = document.getElementById('list-total-badge');
   if (badgeList) {
-    badgeList.textContent = count;
+    badgeList.textContent = activeCount;
   }
 
   // Dynamic: Navigasi Soal title
   const navTitle = document.getElementById('nav-title');
   if (navTitle) {
-    navTitle.textContent = `Navigasi Soal (1 - ${count})`;
+    navTitle.textContent = `Navigasi Soal (1 - ${activeCount})`;
   }
 
   // Dynamic: Terjawab total
   const scoreTotalLive = document.getElementById('score-total-live');
   if (scoreTotalLive) {
-    scoreTotalLive.textContent = count;
+    scoreTotalLive.textContent = activeCount;
   }
 
   // Dynamic: Badge "Soal Nomor X dari Y"
   const badgeTotalQ = document.getElementById('badge-total-questions');
   if (badgeTotalQ) {
-    badgeTotalQ.textContent = count;
+    badgeTotalQ.textContent = activeCount;
   }
 
   // Dynamic: Rekapitulasi performa
   const resTotalQ = document.getElementById('res-total-questions');
   if (resTotalQ) {
-    resTotalQ.textContent = count;
+    resTotalQ.textContent = activeCount;
   }
 
   // Dynamic: Rekapitulasi & Pembahasan
   const reviewTotal = document.getElementById('review-total-count');
   if (reviewTotal) {
-    reviewTotal.textContent = count;
+    reviewTotal.textContent = activeCount;
   }
 }
 
 function saveQuestionsToStorage() {
-  localStorage.setItem('custom_ujikom_questions', JSON.stringify(AppState.questions));
-  updateQuestionCounters();
+  saveQuestionsToCategory();
 }
 
 // ==========================================
