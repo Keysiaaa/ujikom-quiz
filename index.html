@@ -10,7 +10,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
   <script>
     tailwind.config = {
       theme: {
@@ -671,6 +671,15 @@
             <!-- Injected by JS -->
           </div>
 
+          <!-- Publikasi ke semua perangkat -->
+          <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs space-y-2">
+            <p class="text-emerald-900 font-semibold">📱 Agar soal tampil di HP &amp; semua perangkat:</p>
+            <p class="text-emerald-800">Soal yang Anda edit di sini hanya tersimpan di browser ini. Unduh file publikasi, ganti <code>bank-soal.js</code> di project, lalu push ke GitHub.</p>
+            <button id="btn-download-publish" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold transition">
+              🚀 Download untuk Publikasi (bank-soal.js)
+            </button>
+          </div>
+
           <!-- Backup / Download JSON -->
           <div class="pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs">
             <span class="text-slate-500">Backup & Restore:</span>
@@ -773,7 +782,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="questions.js?v=3"></script>
-  <script src="app.js?v=3"></script>
+  <script src="questions.js?v=4"></script>
+  <script src="bank-soal.js?v=4"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>
