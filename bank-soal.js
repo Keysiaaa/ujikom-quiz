@@ -5,7 +5,7 @@
 const publishedBank = [
   {
     "id": 1,
-    "name": "Bagian 1",
+    "name": "Bagian 1: Perencanaan",
     "questions": [
       {
         "id": 1,
@@ -1311,7 +1311,7 @@ const publishedBank = [
   },
   {
     "id": 2,
-    "name": "Bagian 2",
+    "name": "Bagian 2: Ekonomi",
     "questions": [
       {
         "id": 1,
@@ -2227,7 +2227,7 @@ const publishedBank = [
   },
   {
     "id": 3,
-    "name": "Bagian 3",
+    "name": "Bagian 3: Spasial",
     "questions": [
       {
         "id": 1,
@@ -3143,7 +3143,7 @@ const publishedBank = [
   },
   {
     "id": 4,
-    "name": "Bagian 4",
+    "name": "Bagian 4: Sosial",
     "questions": [
       {
         "id": 1,
