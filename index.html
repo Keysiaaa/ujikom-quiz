@@ -10,7 +10,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Custom Style -->
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
   <script>
     tailwind.config = {
       theme: {
@@ -208,6 +208,9 @@
         </div>
       </div>
 
+      <!-- Tab Pindah Kategori (muncul bila ada lebih dari 1 kategori) -->
+      <div id="quiz-category-tabs" class="hidden"></div>
+
       <!-- Main Layout: Grid Navigator (Kiri/Atas) + Soal Card (Kanan/Bawah) -->
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
 
@@ -360,6 +363,9 @@
     <!-- ---------------------------------------------------- -->
     <section id="screen-results" class="hidden animate-pop space-y-8">
       
+      <!-- Tab Hasil per Kategori -->
+      <div id="results-category-tabs" class="hidden"></div>
+
       <!-- Hero Score Card -->
       <div class="glass-panel rounded-3xl p-6 sm:p-10 text-center shadow-lg border border-slate-200">
         
@@ -782,8 +788,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="questions.js?v=4"></script>
-  <script src="bank-soal.js?v=4"></script>
-  <script src="app.js?v=4"></script>
+  <script src="questions.js?v=5"></script>
+  <script src="bank-soal.js?v=5"></script>
+  <script src="app.js?v=5"></script>
 </body>
 </html>

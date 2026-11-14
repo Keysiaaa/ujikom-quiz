@@ -22,7 +22,8 @@ const AppState = {
   soundEnabled: true,
   audioCtx: null,
   editingQuestionId: null,
-  isAdmin: false
+  isAdmin: false,
+  progress: {}               // Progres jawaban per kategori { [catId]: { answers, currentIndex } }
 };
 
 const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -1216,6 +1217,90 @@ function handleSaveRawJSON() {
 }
 
 // ==========================================
+// PINDAH KATEGORI SAAT KUIS (PROGRES TERPISAH PER KATEGORI)
+// ==========================================
+function getPlayableCategories() {
+  return AppState.categories.filter(c => c.questions && c.questions.length > 0);
+}
+
+function saveActiveProgress() {
+  if (AppState.selectedCategoryId === null || AppState.selectedCategoryId === undefined) return;
+  AppState.progress[AppState.selectedCategoryId] = {
+    answers: AppState.userAnswers,
+    currentIndex: AppState.currentIndex
+  };
+}
+
+function activateCategory(catId) {
+  const cat = getCategory(catId);
+  if (!cat) return false;
+  let p = AppState.progress[catId];
+  if (!p || p.answers.length !== cat.questions.length) {
+    p = {
+      answers: cat.questions.map(() => ({ selectedOption: null, isSubmitted: false, isCorrect: false })),
+      currentIndex: 0
+    };
+    AppState.progress[catId] = p;
+  }
+  AppState.selectedCategoryId = catId;
+  AppState.questions = [...cat.questions];
+  AppState.userAnswers = p.answers;
+  AppState.currentIndex = p.currentIndex;
+  return true;
+}
+
+function switchQuizCategory(catId, mode) {
+  if (catId === AppState.selectedCategoryId) return;
+  saveActiveProgress();
+  if (!activateCategory(catId)) return;
+  playSound('click');
+  if (mode === 'results') {
+    showResults();
+    return;
+  }
+  renderQuestionNavGrid();
+  updateQuestionCounters();
+  loadQuestion(AppState.currentIndex);
+  renderCategoryTabs();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderCategoryTabs() {
+  const cats = getPlayableCategories();
+  ['quiz-category-tabs', 'results-category-tabs'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = '';
+    if (cats.length < 2) {
+      el.className = 'hidden';
+      return;
+    }
+    el.className = 'flex flex-wrap items-center gap-2';
+    const label = document.createElement('span');
+    label.className = 'text-xs font-bold text-slate-500 mr-1';
+    label.textContent = id === 'results-category-tabs' ? 'Lihat hasil kategori:' : 'Kategori soal:';
+    el.appendChild(label);
+
+    cats.forEach(cat => {
+      const active = cat.id === AppState.selectedCategoryId;
+      const p = AppState.progress[cat.id];
+      const answers = active ? AppState.userAnswers : (p ? p.answers : []);
+      const answered = answers.filter(a => a.isSubmitted).length;
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'px-4 py-2 rounded-lg text-sm font-bold border transition ' +
+        (active
+          ? 'bg-blue-600 text-white border-blue-600 shadow'
+          : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-50');
+      btn.innerHTML = `${escapeHTML(cat.name)} <span class="text-xs font-semibold opacity-80">(${answered}/${cat.questions.length})</span>`;
+      btn.addEventListener('click', () => switchQuizCategory(cat.id, id === 'results-category-tabs' ? 'results' : 'quiz'));
+      el.appendChild(btn);
+    });
+  });
+}
+
+// ==========================================
 // LOGIKA MEMULAI KUIS
 // ==========================================
 function handleStartQuiz() {
@@ -1248,6 +1333,7 @@ function handleStartQuiz() {
 
   AppState.userName = name;
   localStorage.setItem('ujikom_user_name', name);
+  AppState.progress = {};
 
   // Inisialisasi array jawaban dinamis sesuai jumlah soal yang ada
   AppState.userAnswers = AppState.questions.map(() => ({
@@ -1336,6 +1422,7 @@ function updateNavGridStatus() {
   document.getElementById('score-answered-live').textContent = answeredCount;
   document.getElementById('score-correct-live').textContent = correctCount;
   document.getElementById('score-wrong-live').textContent = wrongCount;
+  renderCategoryTabs();
 }
 
 // ==========================================
@@ -1562,10 +1649,15 @@ function showFeedbackUI(question, answerState) {
 // SELESAIKAN KUIS & LAYAR HASIL AKHIR
 // ==========================================
 function confirmFinishQuiz() {
-  const unAnswered = AppState.userAnswers.filter(a => !a.isSubmitted).length;
+  saveActiveProgress();
+  let unAnswered = 0;
+  getPlayableCategories().forEach(c => {
+    const p = AppState.progress[c.id];
+    unAnswered += p ? p.answers.filter(a => !a.isSubmitted).length : c.questions.length;
+  });
 
   if (unAnswered > 0) {
-    const confirmMsg = `Masih ada ${unAnswered} soal yang belum Anda jawab/submit. Apakah Anda yakin ingin menyelesaikan simulasi sekarang dan melihat hasil akhir?`;
+    const confirmMsg = `Masih ada ${unAnswered} soal (dari semua kategori) yang belum Anda jawab/submit. Apakah Anda yakin ingin menyelesaikan simulasi sekarang dan melihat hasil akhir?`;
     if (!confirm(confirmMsg)) return;
   }
 
@@ -1573,6 +1665,7 @@ function confirmFinishQuiz() {
 }
 
 function showResults() {
+  renderCategoryTabs();
   document.getElementById('screen-quiz').classList.add('hidden');
   document.getElementById('screen-results').classList.remove('hidden');
 
@@ -1682,6 +1775,7 @@ function renderReviewList() {
 }
 
 function restartQuizSameUser() {
+  AppState.progress = {};
   AppState.userAnswers = AppState.questions.map(() => ({
     selectedOption: null,
     isSubmitted: false,
