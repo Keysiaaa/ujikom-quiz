@@ -1,6 +1,6 @@
 /**
  * BANK SOAL PUBLIK - dibaca oleh semua perangkat (laptop & HP).
- * Bagian 1: 100 soal. Bagian 2: 70 soal. Bagian 3: 70 soal.
+ * Bagian 1: 100 soal. Bagian 2: 70 soal. Bagian 3: 70 soal. Bagian 4: 70 soal.
  */
 const publishedBank = [
   {
@@ -3138,6 +3138,922 @@ const publishedBank = [
         ],
         "correctIndex": 1,
         "explanation": "Bentuk memencar (dispersed city plans) memiliki beberapa pusat perkotaan dengan kelompok fungsi yang khusus dan berbeda satu sama lain."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Bagian 4",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Dalam suatu program pembangunan desa, warga dilibatkan untuk mengenali masalah, menyusun pilihan kegiatan, dan belajar mengelola programnya sendiri. Dalam paradigma perencanaan pembangunan sosial, masyarakat ditempatkan sebagai ....",
+        "options": [
+          "Subjek yang aktif belajar dan menentukan perubahan sosial",
+          "Kelompok sasaran yang hanya dinilai setelah program selesai",
+          "Penerima bantuan yang tidak terlibat dalam keputusan",
+          "Pelaksana teknis tanpa kewenangan menyampaikan kebutuhan",
+          "Objek yang menerima arahan sosial dari pemerintah"
+        ],
+        "correctIndex": 0,
+        "explanation": "Perencanaan sebagai transformasi sosial menempatkan masyarakat sebagai subjek (social learning), yaitu pihak yang aktif memahami kondisi dan terlibat dalam perubahan."
+      },
+      {
+        "id": 2,
+        "question": "Pemerintah merancang perubahan perilaku masyarakat secara sepihak dan menempatkan warga sebagai pihak yang harus mengikuti arahan program. Pendekatan ini paling dekat dengan paradigma ....",
+        "options": [
+          "Pemberdayaan partisipatif",
+          "Social engineering",
+          "Transformasi sosial",
+          "Perencanaan berbasis komunitas",
+          "Pembelajaran sosial"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dalam materi, social engineering menggambarkan perencanaan sebagai arahan sosial yang menempatkan masyarakat sebagai objek."
+      },
+      {
+        "id": 3,
+        "question": "Ketika menyusun program sosial, tim perencana memastikan bahwa kelompok rentan tetap memperoleh akses terhadap pangan, sandang, papan, pendidikan, dan kesehatan. Pertimbangan tersebut terutama mencerminkan ....",
+        "options": [
+          "Penyamaan program untuk seluruh daerah",
+          "Pengendalian penyerapan anggaran",
+          "Etika perencanaan pembangunan sosial",
+          "Perencanaan yang hanya berorientasi pada pertumbuhan ekonomi",
+          "Pengurangan peran masyarakat dalam pembangunan"
+        ],
+        "correctIndex": 2,
+        "explanation": "Etika perencanaan pembangunan sosial dalam materi berkaitan dengan pemenuhan hak-hak dasar masyarakat, seperti pangan, sandang, papan, pendidikan, dan kesehatan."
+      },
+      {
+        "id": 4,
+        "question": "Dua desa memiliki kondisi sosial, budaya, dan kelembagaan yang berbeda. Perencana ingin agar program di kedua desa berjalan efektif. Langkah yang paling sesuai dengan konsep perencanaan sosial adalah ....",
+        "options": [
+          "Menggunakan satu indikator keberhasilan untuk seluruh aspek kehidupan",
+          "Menghindari konsultasi dengan kelompok masyarakat",
+          "Menerapkan rancangan kegiatan yang sama tanpa penyesuaian",
+          "Menyesuaikan perencanaan dengan karakteristik masyarakat dan pemangku kepentingan setempat",
+          "Menentukan kegiatan hanya berdasarkan target pemerintah pusat"
+        ],
+        "correctIndex": 3,
+        "explanation": "Materi menekankan bahwa perencanaan sosial perlu disesuaikan dengan karakteristik masyarakat dan stakeholders agar pembangunan lebih optimal dan efektif."
+      },
+      {
+        "id": 5,
+        "question": "Sebuah pemerintah daerah memandang pembangunan sosial tidak cukup dilakukan melalui satu sektor saja. Programnya menghubungkan aspek pendidikan, kesehatan, ekonomi, budaya, lingkungan, dan kelembagaan. Pemahaman ini sesuai dengan materi bahwa pembangunan sosial ....",
+        "options": [
+          "Hanya berarti pembangunan fasilitas pendidikan",
+          "Hanya berfokus pada pembangunan fisik",
+          "Terbatas pada pemberian bantuan tunai",
+          "Tidak berkaitan dengan aspek ekonomi dan lingkungan",
+          "Memiliki makna lebih luas daripada pembangunan sektor sosial dan budaya saja"
+        ],
+        "correctIndex": 4,
+        "explanation": "Materi menyatakan pembangunan sosial memiliki makna lebih luas dibandingkan pembangunan yang hanya mencakup sektor sosial dan budaya."
+      },
+      {
+        "id": 6,
+        "question": "Dalam model Top Down Planning, arah utama perencanaan umumnya berasal dari ....",
+        "options": [
+          "Pemerintah atau tingkat pengambil kebijakan yang lebih tinggi menuju tingkat pelaksana di bawahnya",
+          "Hasil pemetaan mandiri warga tanpa proses perencanaan formal",
+          "Kesepakatan antarindividu tanpa struktur kelembagaan",
+          "Kelompok warga di tingkat paling bawah saja",
+          "Organisasi masyarakat tanpa koordinasi pemerintah"
+        ],
+        "correctIndex": 0,
+        "explanation": "Top Down Planning merupakan model perencanaan dengan arah dari tingkat atas ke tingkat bawah, sebagaimana ditunjukkan dalam diagram model perencanaan pada materi."
+      },
+      {
+        "id": 7,
+        "question": "Warga suatu kelurahan mengidentifikasi kebutuhan lingkungan, menyusun usulan kegiatan, lalu menyampaikannya kepada pemerintah untuk dibahas dalam rencana pembangunan. Proses tersebut mencerminkan ....",
+        "options": [
+          "Pengendalian administratif",
+          "Bottom Up Planning",
+          "Top Down Planning",
+          "Social engineering",
+          "Perencanaan teknokratis tertutup"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bottom Up Planning merupakan aliran perencanaan dari tingkat bawah. Dalam contoh, kebutuhan dan usulan berasal dari warga."
+      },
+      {
+        "id": 8,
+        "question": "Pemerintah menetapkan arah kebijakan, sedangkan masyarakat menyampaikan kebutuhan dan ikut merumuskan kegiatan. Kedua arah perencanaan dipertemukan melalui forum partisipatif. Model yang paling tepat adalah ....",
+        "options": [
+          "Perencanaan yang hanya bersifat bottom up",
+          "Perencanaan tanpa koordinasi",
+          "Perencanaan partisipatif",
+          "Perencanaan sepihak",
+          "Perencanaan yang hanya bersifat top down"
+        ],
+        "correctIndex": 2,
+        "explanation": "Materi menggambarkan Top Down Planning dan Bottom Up Planning yang dipertemukan dalam participative planning."
+      },
+      {
+        "id": 9,
+        "question": "Suatu program pemberdayaan membangun hubungan berkelanjutan antara warga dan lembaga lokal. Warga juga diberi kesempatan menyampaikan gagasan dan ikut mengambil keputusan. Kondisi ini sesuai dengan ciri pembangunan sosial berupa ....",
+        "options": [
+          "Penyeragaman kondisi sosial seluruh warga",
+          "Dominasi lembaga eksternal dalam seluruh keputusan",
+          "Penghapusan peran kelompok masyarakat",
+          "Hubungan masyarakat dengan kelembagaan yang erat dan terus-menerus",
+          "Pembatasan keterlibatan masyarakat setelah program dimulai"
+        ],
+        "correctIndex": 3,
+        "explanation": "Salah satu ciri pembangunan sosial dalam materi adalah adanya hubungan erat antara masyarakat dan kelembagaan secara terus-menerus."
+      },
+      {
+        "id": 10,
+        "question": "Dalam pelaksanaan program, warga tidak hanya menerima hasil kegiatan, tetapi juga ikut mengidentifikasi masalah dan menentukan keputusan. Hal tersebut menunjukkan ciri pembangunan sosial bahwa ....",
+        "options": [
+          "Keputusan sepenuhnya berada pada pelaksana program",
+          "Kegiatan masyarakat baru dilakukan setelah seluruh keputusan ditetapkan",
+          "Program harus dijalankan tanpa mempertimbangkan kemampuan warga",
+          "Masyarakat hanya berfungsi sebagai penerima manfaat",
+          "Warga masyarakat berperan penting dalam setiap keputusan"
+        ],
+        "correctIndex": 4,
+        "explanation": "Materi menyebutkan bahwa warga masyarakat berperan penting dalam setiap keputusan dan mendapat manfaat dari pelaksanaan perencanaan."
+      },
+      {
+        "id": 11,
+        "question": "Program pembangunan desa dirancang agar warga mampu mengenali persoalan, merencanakan pemecahan, dan memanfaatkan modal keahlian, pengetahuan, serta keuangan yang dimiliki secara berkelanjutan. Tujuan pembangunan sosial yang paling terkait adalah ....",
+        "options": [
+          "Meningkatkan kapasitas masyarakat untuk memecahkan masalah dengan sumber daya sendiri",
+          "Meningkatkan ketergantungan masyarakat pada bantuan luar",
+          "Membatasi kemampuan warga dalam menilai sumber daya",
+          "Mengurangi hubungan antarkelompok masyarakat",
+          "Mengalihkan seluruh tanggung jawab kepada pemerintah"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tujuan pembangunan sosial dalam materi mencakup peningkatan kapasitas masyarakat untuk mengenali dan memprakarsai pemecahan masalah menggunakan sumber daya mereka sendiri secara berkelanjutan."
+      },
+      {
+        "id": 12,
+        "question": "Setelah warga dilibatkan sejak tahap perencanaan, mereka merasa memiliki program dan bersedia menjaga hasil kegiatan. Dampak yang diharapkan dari proses tersebut adalah meningkatnya ....",
+        "options": [
+          "Kewenangan pihak luar dalam pengambilan keputusan",
+          "Rasa memiliki dan tanggung jawab masyarakat",
+          "Ketergantungan pada fasilitator",
+          "Penyeragaman budaya masyarakat",
+          "Kebutuhan untuk mengganti seluruh program"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menempatkan peningkatan rasa memiliki dan tanggung jawab masyarakat terhadap kesinambungan kegiatan sebagai salah satu tujuan pembangunan sosial."
+      },
+      {
+        "id": 13,
+        "question": "Sebuah desa memperkuat kerja sama antara kelompok warga, sekolah, puskesmas, lembaga adat, dan pemerintah. Dalam tujuan pembangunan sosial, upaya ini terutama memperkuat ....",
+        "options": [
+          "Pembatasan jaringan sosial",
+          "Ketergantungan pada satu organisasi",
+          "Sosial kapital melalui kelembagaan masyarakat",
+          "Modal fisik individu",
+          "Persaingan antarwarga"
+        ],
+        "correctIndex": 2,
+        "explanation": "Materi menyebutkan penguatan sosial kapital melalui kelembagaan yang ada di masyarakat sebagai salah satu tujuan pembangunan sosial."
+      },
+      {
+        "id": 14,
+        "question": "Fasilitator mengajak kelompok perempuan, pemuda, dan tokoh adat terlibat dalam penentuan kegiatan. Setiap kelompok diberi ruang untuk menyampaikan kebutuhan dan membangun rasa memiliki. Proses ini terutama mencerminkan ....",
+        "options": [
+          "Penggantian kelembagaan lokal",
+          "Pengarahan satu arah",
+          "Pemberian bantuan tanpa pelibatan warga",
+          "Community empowerment",
+          "Pengumpulan data administratif saja"
+        ],
+        "correctIndex": 3,
+        "explanation": "Community empowerment dalam materi menekankan proses pemberdayaan yang melibatkan masyarakat secara partisipatif sehingga mereka memiliki rasa memiliki terhadap kegiatan."
+      },
+      {
+        "id": 15,
+        "question": "Program perusahaan di sebuah desa disusun secara sistematis dan terencana untuk meningkatkan kualitas hidup masyarakat serta mendorong kemandirian mereka. Kegiatan tersebut paling tepat disebut ....",
+        "options": [
+          "Kegiatan pengamanan operasional",
+          "Kegiatan promosi perusahaan",
+          "Pengawasan administrasi desa",
+          "Bantuan sesaat tanpa perencanaan",
+          "Community development"
+        ],
+        "correctIndex": 4,
+        "explanation": "Materi menjelaskan community development sebagai kegiatan yang sistematis, terencana, dan diarahkan untuk meningkatkan kualitas hidup masyarakat; prosesnya juga mencakup pemberdayaan agar masyarakat mandiri."
+      },
+      {
+        "id": 16,
+        "question": "Dalam sebuah wilayah, masalah pengangguran berkaitan dengan rendahnya pendidikan, keterbatasan akses kesehatan, dan produktivitas yang belum optimal. Cara memahami masalah tersebut sesuai dengan karakteristik masalah sosial adalah ....",
+        "options": [
+          "Melihat masalah sebagai kondisi yang saling berhubungan dan dipengaruhi berbagai keadaan sosial",
+          "Mengabaikan dampak masalah pada kelompok lain",
+          "Menganggap setiap masalah berdiri sendiri dan tidak saling memengaruhi",
+          "Menilai masalah hanya berdasarkan pendapat satu orang",
+          "Memusatkan analisis pada aspek fisik saja"
+        ],
+        "correctIndex": 0,
+        "explanation": "Materi menyebut masalah sosial saling berhubungan (interconnected), dipengaruhi berbagai kondisi sosial, dan dapat berdampak berbeda pada individu."
+      },
+      {
+        "id": 17,
+        "question": "Suatu kebiasaan di lingkungan masyarakat menimbulkan dampak luas dan dinilai tidak dapat diterima oleh warga. Dalam materi, kondisi tersebut dapat dikategorikan sebagai masalah sosial karena ....",
+        "options": [
+          "Selalu berkaitan dengan penurunan pendapatan nasional",
+          "Merupakan isu atau persoalan yang dipandang masyarakat tidak dapat diterima",
+          "Tidak menimbulkan dampak pada kehidupan publik",
+          "Selalu disebabkan oleh kebijakan pemerintah pusat",
+          "Hanya terjadi pada masyarakat perkotaan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menjelaskan masalah sosial sebagai isu atau persoalan yang dipandang oleh masyarakat tidak dapat diterima dan berdampak pada kehidupan publik secara luas."
+      },
+      {
+        "id": 18,
+        "question": "Satu persoalan dapat dianggap sebagai masalah sosial dalam suatu situasi, tetapi tidak dianggap demikian dalam situasi lain. Kesimpulan yang paling sesuai adalah ....",
+        "options": [
+          "Masalah sosial tidak berkaitan dengan nilai masyarakat",
+          "Setiap persoalan pasti menjadi masalah sosial",
+          "Penilaian terhadap masalah sosial dapat dipengaruhi konteks situasi masyarakat",
+          "Masalah sosial selalu memiliki definisi yang sama di semua tempat",
+          "Masalah sosial hanya ditentukan oleh data ekonomi nasional"
+        ],
+        "correctIndex": 2,
+        "explanation": "Materi menyebutkan bahwa suatu persoalan dapat menjadi masalah sosial dalam situasi tertentu, tetapi belum tentu menjadi masalah sosial dalam situasi lain."
+      },
+      {
+        "id": 19,
+        "question": "Sebuah komunitas menghadapi perubahan mata pencaharian yang sangat cepat akibat perubahan pasar dan teknologi. Dalam kerangka VUCA, kondisi perubahan yang sangat cepat disebut ....",
+        "options": [
+          "Ambiguous",
+          "Complex",
+          "Stable",
+          "Volatile",
+          "Uncertain"
+        ],
+        "correctIndex": 3,
+        "explanation": "Volatile dalam materi VUCA berarti bergejolak atau mengalami perubahan yang sangat cepat."
+      },
+      {
+        "id": 20,
+        "question": "Perencana kesulitan memperkirakan jenis pekerjaan yang akan tersedia bagi warga dalam lima tahun mendatang karena banyak faktor yang belum dapat diprediksi. Kondisi tersebut menggambarkan unsur VUCA berupa ....",
+        "options": [
+          "Volatile",
+          "Complex",
+          "Ambiguous",
+          "Predictable",
+          "Uncertain"
+        ],
+        "correctIndex": 4,
+        "explanation": "Uncertain berarti tidak pasti, yaitu kesulitan memprediksi kejadian atau peristiwa yang akan terjadi pada masa depan."
+      },
+      {
+        "id": 21,
+        "question": "Masalah kemiskinan di suatu daerah berkaitan dengan pendidikan, kesehatan, pekerjaan, kelembagaan, dan akses terhadap layanan. Banyak faktor tersebut saling terkait. Dalam VUCA, karakteristik ini disebut ....",
+        "options": [
+          "Complex",
+          "Linear",
+          "Volatile",
+          "Uncertain",
+          "Ambiguous"
+        ],
+        "correctIndex": 0,
+        "explanation": "Complex atau sangat rumit merujuk pada beragamnya permasalahan yang saling berkaitan."
+      },
+      {
+        "id": 22,
+        "question": "Data tentang penyebab rendahnya partisipasi sekolah di suatu desa menunjukkan beberapa penjelasan yang belum jelas dan masih dipertanyakan. Dalam kerangka VUCA, situasi ini paling dekat dengan ....",
+        "options": [
+          "Volatile",
+          "Ambiguous",
+          "Uncertain",
+          "Consistent",
+          "Complex"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ambiguous berarti keadaan yang tidak jelas atau mengambang sehingga kejelasannya masih dipertanyakan."
+      },
+      {
+        "id": 23,
+        "question": "Sebuah kelompok masyarakat sulit memperoleh layanan pendidikan dan kesehatan karena struktur kebijakan dan sistem sosial membatasi akses mereka terhadap sumber daya. Perspektif kemiskinan yang paling sesuai adalah ....",
+        "options": [
+          "Perspektif subjektif",
+          "Perspektif kultural",
+          "Perspektif struktural",
+          "Perspektif perilaku konsumsi",
+          "Perspektif individual semata"
+        ],
+        "correctIndex": 2,
+        "explanation": "Perspektif struktural memandang kemiskinan terjadi karena sistem sosial, ekonomi, dan politik yang tidak adil serta membatasi akses masyarakat terhadap sumber daya."
+      },
+      {
+        "id": 24,
+        "question": "Program peningkatan pendapatan tidak berjalan baik karena sebagian kebiasaan dan pola pikir masyarakat dianggap menghambat perubahan sosial-ekonomi. Perspektif kemiskinan yang digunakan dalam penjelasan tersebut adalah ....",
+        "options": [
+          "Perspektif multidimensional",
+          "Perspektif struktural",
+          "Perspektif perangkap kemiskinan",
+          "Perspektif kultural",
+          "Perspektif absolut"
+        ],
+        "correctIndex": 3,
+        "explanation": "Perspektif kultural menjelaskan kemiskinan dipengaruhi nilai, budaya, pola pikir, dan kebiasaan masyarakat yang dianggap menghambat perubahan sosial-ekonomi."
+      },
+      {
+        "id": 25,
+        "question": "Keluarga miskin mengalami keterbatasan pendidikan dan kesehatan yang menyebabkan produktivitas rendah. Kondisi tersebut membuat pendapatannya tetap rendah dan sulit meningkatkan kesejahteraan generasi berikutnya. Perspektif yang paling tepat adalah ....",
+        "options": [
+          "Perspektif kemiskinan relatif",
+          "Perspektif struktural saja",
+          "Perspektif kultural saja",
+          "Perspektif kemiskinan subjektif",
+          "Perspektif perangkap kemiskinan (poverty trap)"
+        ],
+        "correctIndex": 4,
+        "explanation": "Poverty trap menggambarkan siklus kemiskinan yang sulit diputus karena berbagai faktor saling berkaitan dan dapat berulang dari generasi ke generasi."
+      },
+      {
+        "id": 26,
+        "question": "Tim perencana mengukur kemiskinan berdasarkan kemampuan rumah tangga memenuhi kebutuhan dasar minimum seperti makanan, pakaian, tempat tinggal, kesehatan, dan pendidikan. Ukuran yang digunakan adalah kemiskinan ....",
+        "options": [
+          "Absolut",
+          "Multidimensional",
+          "Subjektif",
+          "Relatif",
+          "Kultural"
+        ],
+        "correctIndex": 0,
+        "explanation": "Kemiskinan absolut diukur berdasarkan ketidakmampuan memenuhi kebutuhan dasar minimum untuk hidup layak."
+      },
+      {
+        "id": 27,
+        "question": "Pendapatan suatu rumah tangga sebenarnya cukup untuk kebutuhan dasar, tetapi jauh lebih rendah dibandingkan rata-rata kesejahteraan masyarakat di sekitarnya. Pengukuran yang menekankan perbandingan tersebut adalah kemiskinan ....",
+        "options": [
+          "Ekstrem",
+          "Relatif",
+          "Absolut",
+          "Subjektif",
+          "Multidimensional"
+        ],
+        "correctIndex": 1,
+        "explanation": "Kemiskinan relatif diukur dengan membandingkan tingkat kesejahteraan seseorang terhadap kondisi rata-rata masyarakat di sekitarnya."
+      },
+      {
+        "id": 28,
+        "question": "Dalam survei, responden menyatakan dirinya miskin karena merasa pendapatan dan kualitas hidupnya tidak mencukupi, meskipun penilaian tersebut belum dibandingkan dengan ukuran objektif. Hal ini menggambarkan kemiskinan ....",
+        "options": [
+          "Struktural",
+          "Absolut",
+          "Subjektif",
+          "Relatif",
+          "Multidimensional"
+        ],
+        "correctIndex": 2,
+        "explanation": "Kemiskinan subjektif ditentukan berdasarkan persepsi individu atau rumah tangga terhadap kondisi hidupnya sendiri."
+      },
+      {
+        "id": 29,
+        "question": "Pemerintah daerah tidak hanya melihat pendapatan warga, tetapi juga memeriksa keterbatasan pendidikan, kesehatan, dan standar hidup. Pendekatan pengukuran kemiskinan ini termasuk ....",
+        "options": [
+          "Perspektif kultural",
+          "Kemiskinan relatif",
+          "Kemiskinan subjektif",
+          "Kemiskinan multidimensional",
+          "Kemiskinan absolut"
+        ],
+        "correctIndex": 3,
+        "explanation": "Kemiskinan multidimensional mengukur kemiskinan tidak hanya dari pendapatan, tetapi juga dari berbagai dimensi kesejahteraan, seperti pendidikan, kesehatan, dan standar hidup."
+      },
+      {
+        "id": 30,
+        "question": "Berdasarkan tingkatan kemiskinan menurut materi BPS, penduduk dengan rata-rata pengeluaran per kapita di bawah Garis Kemiskinan termasuk kategori ....",
+        "options": [
+          "Sangat miskin/kemiskinan ekstrem",
+          "Rentan miskin",
+          "Hampir miskin",
+          "Tidak miskin",
+          "Miskin"
+        ],
+        "correctIndex": 4,
+        "explanation": "Dalam materi, kategori miskin dijelaskan sebagai penduduk yang rata-rata pengeluaran per kapitanya berada di bawah Garis Kemiskinan."
+      },
+      {
+        "id": 31,
+        "question": "Sebuah rumah tangga memiliki tingkat pengeluaran yang jauh di bawah garis kemiskinan dan sangat sulit memenuhi kebutuhan dasar minimum. Menurut klasifikasi dalam materi, rumah tangga tersebut termasuk ....",
+        "options": [
+          "Sangat miskin/kemiskinan ekstrem",
+          "Rentan miskin",
+          "Hampir miskin",
+          "Miskin",
+          "Tidak miskin"
+        ],
+        "correctIndex": 0,
+        "explanation": "Kategori sangat miskin atau kemiskinan ekstrem merujuk pada penduduk dengan tingkat pengeluaran jauh di bawah garis kemiskinan dan sangat sulit memenuhi kebutuhan dasar minimum."
+      },
+      {
+        "id": 32,
+        "question": "Pengeluaran per kapita suatu keluarga sedikit lebih tinggi daripada Garis Kemiskinan. Keluarga tersebut belum berada di bawah garis kemiskinan, tetapi berisiko jatuh miskin. Kategori yang paling sesuai adalah ....",
+        "options": [
+          "Kemiskinan subjektif",
+          "Hampir miskin (near poor)",
+          "Sangat miskin",
+          "Miskin",
+          "Tidak miskin"
+        ],
+        "correctIndex": 1,
+        "explanation": "Hampir miskin (near poor) dalam materi adalah penduduk dengan pengeluaran sedikit di atas Garis Kemiskinan sehingga rentan jatuh miskin."
+      },
+      {
+        "id": 33,
+        "question": "Sebuah keluarga memiliki kondisi ekonomi yang belum stabil dan mudah terdampak ketika terjadi bencana atau kenaikan harga kebutuhan pokok. Dalam tingkatan kemiskinan menurut materi, keluarga tersebut termasuk ....",
+        "options": [
+          "Miskin absolut",
+          "Sangat miskin",
+          "Rentan miskin (vulnerable poor)",
+          "Miskin subjektif",
+          "Tidak miskin"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rentan miskin adalah penduduk yang kondisi ekonominya belum stabil dan mudah terdampak krisis ekonomi, bencana, atau kenaikan harga."
+      },
+      {
+        "id": 34,
+        "question": "Rumah tangga memiliki tingkat pengeluaran di atas kebutuhan dasar minimum dan relatif stabil secara ekonomi. Kategori yang sesuai dengan materi adalah ....",
+        "options": [
+          "Miskin",
+          "Sangat miskin",
+          "Rentan miskin",
+          "Tidak miskin",
+          "Hampir miskin"
+        ],
+        "correctIndex": 3,
+        "explanation": "Kategori tidak miskin dalam materi merujuk pada penduduk dengan tingkat pengeluaran di atas kebutuhan dasar minimum dan relatif lebih stabil secara ekonomi."
+      },
+      {
+        "id": 35,
+        "question": "Program bantuan sosial di sebuah kabupaten tidak tepat sasaran karena data penerima tidak menggambarkan karakteristik dan kondisi sosial masyarakat. Perbaikan paling mendasar pada proses perencanaan adalah ....",
+        "options": [
+          "Menyeragamkan daftar penerima antarkabupaten",
+          "Menghapus proses pemetaan sosial",
+          "Menggunakan data makro saja agar proses lebih cepat",
+          "Menentukan penerima berdasarkan perkiraan pelaksana",
+          "Melakukan perencanaan berdasarkan data yang terkait dengan karakteristik masyarakat"
+        ],
+        "correctIndex": 4,
+        "explanation": "Materi menyoroti bahwa program dapat tidak tepat sasaran ketika perencanaan tidak didasarkan pada data yang terkait dengan karakteristik masyarakat."
+      },
+      {
+        "id": 36,
+        "question": "Program pengentasan kemiskinan yang berhasil di satu kabupaten belum tentu menghasilkan dampak yang sama ketika diterapkan di kabupaten lain. Penjelasan yang paling sesuai dengan materi adalah ....",
+        "options": [
+          "Implementasi dapat dipengaruhi otonomi, persepsi, dan konteks sosial budaya masing-masing daerah",
+          "Perbedaan hasil selalu disebabkan oleh jumlah penduduk",
+          "Seluruh daerah mempunyai kondisi sosial budaya yang identik",
+          "Program hanya dapat dilakukan di wilayah perkotaan",
+          "Program kemiskinan tidak perlu menyesuaikan kebutuhan daerah"
+        ],
+        "correctIndex": 0,
+        "explanation": "Materi menjelaskan bahwa implementasi program dapat dipengaruhi otonomi serta persepsi dan konteks sosial budaya kabupaten yang bersangkutan."
+      },
+      {
+        "id": 37,
+        "question": "Dalam memetakan tipologi masyarakat Indonesia, seorang perencana menemukan komunitas dengan pola berburu-meramu, berladang berpindah, bertani, dan masyarakat modern. Kesimpulan yang sesuai dengan materi adalah ....",
+        "options": [
+          "Masyarakat perdesaan selalu memiliki karakter yang identik",
+          "Tipologi masyarakat dapat beragam dan tidak dapat disamakan seluruhnya",
+          "Masyarakat Indonesia hanya terdiri atas komunitas modern",
+          "Pola kehidupan masyarakat tidak relevan bagi perencanaan",
+          "Seluruh masyarakat memiliki pola mata pencaharian yang sama"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menampilkan keberagaman tipologi masyarakat, mulai dari berburu-meramu, berladang berpindah, bertani, hingga modern."
+      },
+      {
+        "id": 38,
+        "question": "Tim perencana akan menyusun program sosial di suatu desa. Urutan kegiatan yang paling lengkap dan sesuai dengan materi adalah ....",
+        "options": [
+          "Analisis SWOT, action plan, lalu pemetaan sosial",
+          "Action plan, pelaksanaan, lalu identifikasi masalah",
+          "Pemetaan sosial, identifikasi masalah umum, identifikasi akar masalah, identifikasi potensi, analisis SWOT, dan action plan",
+          "Pemetaan sosial, action plan, kemudian pengumpulan data tanpa analisis",
+          "Identifikasi potensi, penganggaran, lalu pemetaan sosial"
+        ],
+        "correctIndex": 2,
+        "explanation": "Materi menyajikan urutan yang mencakup pemetaan sosial, identifikasi masalah umum dan akar masalah, identifikasi potensi, analisis SWOT, serta penyusunan action plan."
+      },
+      {
+        "id": 39,
+        "question": "Hasil pemetaan menunjukkan terdapat banyak persoalan di suatu desa. Sebelum menyusun kegiatan, perencana perlu membedakan masalah umum dan akar permasalahan, kemudian menentukan masalah yang perlu ditangani lebih dahulu. Tahapan ini bertujuan untuk ....",
+        "options": [
+          "Menetapkan seluruh masalah sebagai prioritas yang sama",
+          "Mengganti kebutuhan masyarakat dengan asumsi pelaksana",
+          "Menghindari penggunaan data lapangan",
+          "Menyusun skala prioritas dan alternatif solusi yang sesuai",
+          "Memastikan program hanya berfokus pada penyerapan anggaran"
+        ],
+        "correctIndex": 3,
+        "explanation": "Materi tentang identifikasi permasalahan menekankan pembedaan masalah umum dan akar masalah, penyusunan skala prioritas, serta pengembangan alternatif solusi terbaik."
+      },
+      {
+        "id": 40,
+        "question": "Dalam pengumpulan informasi di tingkat masyarakat, tim perencana mempertimbangkan agen pembangunan, pemerintah daerah, dan lembaga swadaya masyarakat yang terlibat dalam program. Pihak-pihak tersebut dapat berfungsi sebagai ....",
+        "options": [
+          "Pihak yang hanya bertugas mengesahkan anggaran",
+          "Pengganti seluruh responden masyarakat",
+          "Kelompok yang harus dikecualikan dari pemetaan",
+          "Penerima keputusan akhir saja",
+          "Informan kunci"
+        ],
+        "correctIndex": 4,
+        "explanation": "Materi menyebut agen pembangunan, pemerintah daerah, dan lembaga swadaya masyarakat yang terlibat sebagai pihak yang dapat menjadi informan kunci."
+      },
+      {
+        "id": 41,
+        "question": "Sebuah program pembangunan telah direncanakan dan dilaksanakan. Tim kemudian melakukan monitoring dan evaluasi, menemukan bahwa sebagian kegiatan tidak sesuai dengan kebutuhan warga, lalu memperbaiki desain program. Siklus ini sesuai dengan materi karena mencakup ....",
+        "options": [
+          "Perencanaan, implementasi, monitoring dan evaluasi, serta redesain program",
+          "Evaluasi hanya setelah seluruh program dihentikan",
+          "Pemetaan sosial tanpa tindak lanjut",
+          "Implementasi dan pelaporan penyerapan anggaran saja",
+          "Perencanaan dan implementasi saja"
+        ],
+        "correctIndex": 0,
+        "explanation": "Siklus perencanaan dalam materi mencakup perencanaan, implementasi, monitoring dan evaluasi, serta redesain program berdasarkan temuan."
+      },
+      {
+        "id": 42,
+        "question": "Dalam suatu program, masyarakat baru diminta memberikan pendapat setelah seluruh kegiatan selesai dirancang. Agar rasa memiliki masyarakat tumbuh sejak awal, perubahan yang paling tepat adalah ....",
+        "options": [
+          "Melibatkan masyarakat hanya saat evaluasi akhir",
+          "Melibatkan masyarakat dalam proses perencanaan dan pengambilan keputusan",
+          "Menyerahkan seluruh kegiatan kepada pihak eksternal",
+          "Membatasi masyarakat pada kegiatan seremonial",
+          "Mengurangi komunikasi antara warga dan pelaksana"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menekankan partisipasi masyarakat dalam perencanaan agar mereka bukan sekadar objek pembangunan dan memiliki sense of belonging terhadap program."
+      },
+      {
+        "id": 43,
+        "question": "Sebuah instansi menyatakan program berhasil karena hampir seluruh anggaran terserap. Namun, tidak tersedia catatan monitoring mengenai perubahan kondisi masyarakat. Kelemahan pelaksanaan yang sesuai dengan materi adalah ....",
+        "options": [
+          "Program disesuaikan dengan konteks lokal",
+          "Masyarakat memiliki rasa tanggung jawab terhadap program",
+          "Keberhasilan hanya dinilai dari penyerapan anggaran dan monitoring-evaluasi tidak memadai",
+          "Program terlalu banyak melibatkan masyarakat",
+          "Perencanaan menggunakan pemetaan sosial"
+        ],
+        "correctIndex": 2,
+        "explanation": "Contoh soal dalam materi menyoroti kelemahan ketika indikator keberhasilan hanya berupa penyerapan anggaran dan monitoring-evaluasi tidak dilakukan dengan baik."
+      },
+      {
+        "id": 44,
+        "question": "Sebuah kegiatan melibatkan warga secara partisipatif agar mereka memahami proses pemberdayaan dan merasa memiliki kegiatan tersebut. Fokus konsep yang paling tepat adalah ....",
+        "options": [
+          "Administrasi program",
+          "Pemberian bantuan langsung tanpa pendampingan",
+          "Pengawasan internal",
+          "Community empowerment",
+          "Sosialisasi satu arah"
+        ],
+        "correctIndex": 3,
+        "explanation": "Community empowerment menekankan proses pemberdayaan partisipatif yang membangun rasa memiliki masyarakat terhadap kegiatan."
+      },
+      {
+        "id": 45,
+        "question": "Setelah pelatihan usaha, fasilitator mendampingi kelompok warga dalam kurun waktu tertentu sampai mereka mampu mengelola kegiatan secara mandiri. Dalam materi, kegiatan tersebut disebut ....",
+        "options": [
+          "Pengawasan tanpa batas waktu",
+          "Pemberian bantuan yang menciptakan ketergantungan",
+          "Sosialisasi program satu kali",
+          "Pengumpulan data sekunder",
+          "Pendampingan dalam proses pemberdayaan masyarakat"
+        ],
+        "correctIndex": 4,
+        "explanation": "Pendampingan adalah kegiatan dalam proses pemberdayaan masyarakat selama kurun waktu tertentu agar masyarakat menjadi mandiri."
+      },
+      {
+        "id": 46,
+        "question": "Sebelum menetapkan lokasi dan bentuk intervensi, perencana melakukan pemetaan sosial untuk memahami kondisi warga. Alasan yang paling lengkap sesuai materi adalah ....",
+        "options": [
+          "Agar program sesuai karakteristik dan kebutuhan masyarakat, mendorong partisipasi, serta membangun rasa memiliki",
+          "Agar perencana dapat menggantikan seluruh lembaga lokal",
+          "Agar pengumpulan data primer dapat dihindari",
+          "Agar pemerintah tidak perlu melibatkan pemangku kepentingan",
+          "Agar program dapat dibuat sama untuk semua wilayah"
+        ],
+        "correctIndex": 0,
+        "explanation": "Materi mengaitkan pemetaan sosial dengan kesesuaian karakteristik dan kebutuhan masyarakat, partisipasi, serta sense of belonging."
+      },
+      {
+        "id": 47,
+        "question": "Tim pemetaan sosial mencatat sumber daya alam, kondisi sosial dan perekonomian, kelompok kelembagaan, masalah masyarakat, prioritas masalah, serta peluang pengembangan. Rangkaian informasi tersebut merupakan ....",
+        "options": [
+          "Laporan penyerapan anggaran",
+          "Keluaran kajian PRA",
+          "Dokumen pengadaan barang",
+          "Daftar inventaris aset pemerintah saja",
+          "Rencana kerja tahunan instansi"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi mencantumkan keluaran kajian PRA berupa potensi sumber daya alam, potensi sosial-ekonomi, kelembagaan, masalah, prioritas dan penyebab masalah, serta peluang pengembangan."
+      },
+      {
+        "id": 48,
+        "question": "Dalam pemetaan sosial, tim menemukan lahan produktif, sumber air, dan hasil perikanan yang dimiliki masyarakat. Informasi tersebut terutama termasuk dalam keluaran berupa ....",
+        "options": [
+          "Peluang pengembangan kelembagaan saja",
+          "Masalah-masalah masyarakat",
+          "Potensi sumber daya alam masyarakat",
+          "Prioritas dan penyebab masalah",
+          "Potensi lembaga atau kelompok kegiatan"
+        ],
+        "correctIndex": 2,
+        "explanation": "Potensi sumber daya alam yang dimiliki masyarakat merupakan salah satu keluaran kajian PRA dalam materi."
+      },
+      {
+        "id": 49,
+        "question": "Dalam suatu desa terdapat kelompok nelayan, kelompok perempuan, kelompok pemuda, dan lembaga adat. Tim mengumpulkan informasi tentang latar belakang, struktur, dan kegiatan masing-masing kelompok. Pemetaan ini mengidentifikasi ....",
+        "options": [
+          "Peta administrasi tanpa informasi sosial",
+          "Kondisi cuaca dan kalender musim saja",
+          "Tingkat pengeluaran rumah tangga",
+          "Potensi lembaga atau kelompok kegiatan yang ada di masyarakat",
+          "Hanya jumlah penduduk miskin"
+        ],
+        "correctIndex": 3,
+        "explanation": "Keluaran kajian PRA mencakup potensi lembaga atau kelompok kegiatan beserta latar belakang, struktur, dan kegiatannya."
+      },
+      {
+        "id": 50,
+        "question": "Sebelum wawancara lapangan, tim menetapkan siapa informan kunci, teknik yang digunakan, dan cara pencatatan hasil. Keputusan tersebut merupakan bagian dari ....",
+        "options": [
+          "Penentuan anggaran tanpa dasar",
+          "Penyusunan laporan keuangan",
+          "Penetapan hasil akhir program",
+          "Pelaksanaan evaluasi dampak",
+          "Strategi pengumpulan data"
+        ],
+        "correctIndex": 4,
+        "explanation": "Materi menyatakan strategi pengumpulan data perlu menetapkan informan kunci, teknik pengumpulan, serta cara pencatatan."
+      },
+      {
+        "id": 51,
+        "question": "Perencana ingin menggali pengalaman warga secara mendalam, tetapi juga membutuhkan gambaran terukur mengenai jumlah rumah tangga yang mengalami masalah tertentu. Pilihan pendekatan pengumpulan data yang paling sesuai adalah ....",
+        "options": [
+          "Kombinasi pendekatan kualitatif dan kuantitatif sesuai kebutuhan informasi",
+          "Menggunakan persepsi perencana tanpa pengumpulan data",
+          "Hanya kualitatif tanpa mempertimbangkan kebutuhan data lain",
+          "Mengandalkan data sekunder tanpa verifikasi",
+          "Hanya kuantitatif dalam seluruh kondisi"
+        ],
+        "correctIndex": 0,
+        "explanation": "Materi menekankan perlunya menentukan pendekatan untuk menggali data, yaitu kualitatif, kuantitatif, atau kombinasi keduanya, sesuai kebutuhan perencanaan."
+      },
+      {
+        "id": 52,
+        "question": "Tim perencana menggunakan data sekunder dari BPS sebagai dasar awal, kemudian memeriksa kesesuaiannya dengan kondisi dan informasi yang diperoleh di lapangan. Langkah ini sejalan dengan materi tentang ....",
+        "options": [
+          "Penggantian data dengan asumsi",
+          "Verifikasi data sekunder",
+          "Pembatasan informan kunci",
+          "Penghapusan data statistik",
+          "Penetapan program tanpa analisis"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi memasukkan verifikasi data sekunder yang berasal dari BPS sebagai salah satu hal yang perlu diperhatikan dalam pengumpulan data."
+      },
+      {
+        "id": 53,
+        "question": "Peneliti memulai pengumpulan informasi tanpa menetapkan hipotesis yang kaku, lalu membangun pemahaman berdasarkan temuan lapangan. Karakter pendekatan yang digunakan adalah ....",
+        "options": [
+          "Eksperimen terkontrol",
+          "Pengukuran berbasis skala Likert saja",
+          "Kualitatif yang bersifat induktif",
+          "Kuantitatif deduktif yang selalu dimulai dari hipotesis",
+          "Analisis data sekunder saja"
+        ],
+        "correctIndex": 2,
+        "explanation": "Materi menyebut metode kualitatif bersifat induktif dan tidak mengambil data dengan menggunakan hipotesis sebagai pedoman kaku di lapangan."
+      },
+      {
+        "id": 54,
+        "question": "Seorang peneliti ingin menggali pengalaman warga melalui wawancara mendalam. Agar informasi yang diperoleh terbuka dan tetap dapat dilaporkan secara jujur, kondisi yang perlu dibangun adalah ....",
+        "options": [
+          "Keterlibatan peneliti hingga kehilangan sikap netral",
+          "Kesediaan peneliti mengikuti seluruh pendapat informan tanpa verifikasi",
+          "Ketergantungan informan kepada peneliti",
+          "Kepercayaan dengan informan serta sikap netral dan jujur dalam melaporkan temuan",
+          "Hubungan yang membatasi informan menyampaikan kritik"
+        ],
+        "correctIndex": 3,
+        "explanation": "Materi menekankan pentingnya membangun trust dengan informan serta menjaga kesadaran untuk bersikap netral dan jujur dalam melaporkan temuan lapangan."
+      },
+      {
+        "id": 55,
+        "question": "Untuk memahami pengalaman dan pandangan masyarakat mengenai layanan kesehatan, tim melakukan wawancara mendalam, diskusi kelompok terarah, dan pengamatan terlibat. Teknik tersebut termasuk dalam pendekatan ....",
+        "options": [
+          "Perhitungan indikator administratif",
+          "Analisis dokumen tanpa interaksi lapangan",
+          "Survei kuantitatif tertutup saja",
+          "Pengukuran ekonomi makro",
+          "Kualitatif"
+        ],
+        "correctIndex": 4,
+        "explanation": "Wawancara mendalam, focus group discussion, dan pengamatan terlibat disebut sebagai teknik yang umum dilakukan dalam pendekatan kualitatif."
+      },
+      {
+        "id": 56,
+        "question": "Seorang peneliti melakukan etnografi untuk memahami kebudayaan masyarakat pesisir. Aspek yang perlu dideskripsikan menurut materi mencakup ....",
+        "options": [
+          "Lokasi, lingkungan, penduduk, sejarah, pola menetap, kehidupan sehari-hari, kekerabatan, mata pencaharian, religi, dan perubahan budaya",
+          "Kondisi bangunan dan jaringan jalan saja",
+          "Jumlah penduduk dan pendapatan daerah saja",
+          "Struktur organisasi pemerintah tanpa kehidupan masyarakat",
+          "Data pengeluaran rumah tangga tanpa konteks budaya"
+        ],
+        "correctIndex": 0,
+        "explanation": "Materi menyatakan etnografi mendeskripsikan berbagai aspek, seperti lokasi, lingkungan, penduduk, sejarah, pola menetap, kehidupan sehari-hari, kekerabatan, mata pencaharian, religi, dan perubahan kebudayaan."
+      },
+      {
+        "id": 57,
+        "question": "Dalam lokakarya desa, warga diajak mengidentifikasi dan menganalisis pengetahuan mereka sendiri tentang kehidupan serta kondisi desa, kemudian menyusun rencana dan tindakan. Pendekatan yang digunakan adalah ....",
+        "options": [
+          "Analisis makroekonomi",
+          "Participatory Rapid Appraisal (PRA)",
+          "Pengumpulan data administratif tertutup",
+          "Audit keuangan",
+          "Perencanaan satu arah"
+        ],
+        "correctIndex": 1,
+        "explanation": "PRA merupakan sekumpulan teknik dan alat yang mendorong masyarakat turut serta meningkatkan dan menganalisis pengetahuan tentang hidup serta kondisi mereka untuk membuat rencana dan tindakan."
+      },
+      {
+        "id": 58,
+        "question": "Tim akan melakukan pemetaan sosial dengan pendekatan PRA di sebuah desa. Kondisi lapangan menunjukkan bahwa sebagian teknik tidak relevan dengan kebutuhan dan waktu yang tersedia. Tindakan yang sesuai materi adalah ....",
+        "options": [
+          "Tetap menggunakan seluruh teknik tanpa mempertimbangkan situasi",
+          "Menghentikan pemetaan karena tidak semua teknik digunakan",
+          "Memilih teknik PRA sesuai situasi dan kondisi ketika turun lapangan",
+          "Menggunakan tepat lima teknik dalam semua kegiatan",
+          "Menggunakan FGD saja tanpa metode lain"
+        ],
+        "correctIndex": 2,
+        "explanation": "Materi menjelaskan bahwa tidak semua teknik PRA harus digunakan; pemilihannya disesuaikan dengan situasi dan kondisi saat turun lapangan."
+      },
+      {
+        "id": 59,
+        "question": "Dalam diskusi PRA, warga membuat diagram yang menampilkan hubungan masyarakat dengan gereja, sekolah, puskesmas, pemerintah, PKK, posyandu, lembaga adat, dan unsur keamanan. Alat yang digunakan adalah ....",
+        "options": [
+          "Kalender musim",
+          "Kalender kegiatan harian",
+          "Peta desa",
+          "Diagram Venn",
+          "Diagram tulang ikan"
+        ],
+        "correctIndex": 3,
+        "explanation": "Diagram Venn dalam materi digunakan untuk menggambarkan hubungan masyarakat dengan lembaga dan kelompok pendukung."
+      },
+      {
+        "id": 60,
+        "question": "Kelompok nelayan menyusun tabel bulanan untuk menunjukkan kapan hasil tangkapan tertentu melimpah atau menurun sepanjang tahun. Alat PRA yang paling sesuai adalah ....",
+        "options": [
+          "Peta kelembagaan",
+          "Diagram tulang ikan",
+          "Peta administrasi kecamatan",
+          "Analisis SWOT saja",
+          "Kalender musim"
+        ],
+        "correctIndex": 4,
+        "explanation": "Kalender musim digunakan untuk menggambarkan variasi kegiatan atau kondisi berdasarkan bulan dan musim, seperti kalender musim olahan ikan yang ditampilkan dalam materi."
+      },
+      {
+        "id": 61,
+        "question": "Dalam pemetaan partisipatif, warga menggambar letak rumah, fasilitas umum, kebun, sungai, pelabuhan, dan lokasi kegiatan ekonomi di wilayah desa. Alat yang digunakan adalah ....",
+        "options": [
+          "Peta desa",
+          "Tabel pengeluaran rumah tangga",
+          "Kalender musim",
+          "Diagram Venn",
+          "Diagram tulang ikan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Peta desa dalam materi merupakan alat visual untuk menggambarkan kondisi dan lokasi berbagai unsur di wilayah desa berdasarkan pengetahuan masyarakat."
+      },
+      {
+        "id": 62,
+        "question": "Fasilitator meminta warga menggambarkan pembagian kegiatan selama 24 jam, seperti bekerja, beristirahat, mengurus rumah tangga, dan kegiatan sosial. Alat ini membantu memahami ....",
+        "options": [
+          "Hubungan antarlembaga secara formal",
+          "Pola pemanfaatan waktu sehari",
+          "Perubahan hasil produksi antarmusim",
+          "Struktur organisasi pemerintah",
+          "Penyebab utama kemiskinan berdasarkan pendapatan saja"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menampilkan alat PRA 'Pemanfaatan Waktu Sehari' untuk menggambarkan alokasi kegiatan masyarakat dalam satu hari."
+      },
+      {
+        "id": 63,
+        "question": "Perencana ingin mengetahui lembaga mana yang paling sering berhubungan dengan warga, kelompok mana yang mendukung kegiatan, dan bagaimana keterkaitan antarlembaga tersebut. Teknik PRA yang paling relevan adalah ....",
+        "options": [
+          "Pengukuran penyerapan anggaran",
+          "Perhitungan garis kemiskinan",
+          "Analisis stakeholders dan pemetaan kelembagaan",
+          "Penghitungan jumlah penduduk saja",
+          "Pengamatan kondisi fisik bangunan saja"
+        ],
+        "correctIndex": 2,
+        "explanation": "Materi menyebut analisis stakeholders dan diagram Venn sebagai teknik PRA untuk memahami lembaga, kelompok kegiatan, dan hubungan mereka dengan masyarakat."
+      },
+      {
+        "id": 64,
+        "question": "Setelah kajian PRA, tim memperoleh informasi tentang sumber daya alam, potensi sosial-ekonomi, kelembagaan, masalah, prioritas masalah, penyebab, serta peluang pengembangan. Hasil tersebut paling tepat dimanfaatkan untuk ....",
+        "options": [
+          "Menggantikan seluruh proses pengambilan keputusan masyarakat",
+          "Membatasi informasi hanya untuk kebutuhan administrasi",
+          "Menentukan kegiatan tanpa mempertimbangkan akar masalah",
+          "Menyusun rencana dan tindakan berdasarkan kondisi serta pengetahuan masyarakat",
+          "Menghindari koordinasi dengan pemangku kepentingan"
+        ],
+        "correctIndex": 3,
+        "explanation": "PRA mendorong masyarakat menganalisis pengetahuan dan kondisi mereka agar dapat membuat rencana dan tindakan; keluarannya menyediakan dasar untuk mengidentifikasi prioritas dan peluang."
+      },
+      {
+        "id": 65,
+        "question": "Sebuah desa melaporkan rendahnya kehadiran anak di sekolah. Perencana segera mengusulkan pembangunan ruang kelas tambahan tanpa menelusuri alasan anak tidak bersekolah. Kekurangan utama dalam langkah tersebut adalah ....",
+        "options": [
+          "Sudah menggunakan pendekatan partisipatif secara berlebihan",
+          "Terlalu memperhatikan kebutuhan warga",
+          "Sudah melakukan analisis penyebab secara lengkap",
+          "Terlalu banyak melakukan pemetaan sosial",
+          "Belum membedakan gejala masalah dengan akar permasalahan"
+        ],
+        "correctIndex": 4,
+        "explanation": "Materi menekankan pentingnya membedakan masalah umum dengan akar permasalahan sebelum menentukan prioritas dan alternatif solusi."
+      },
+      {
+        "id": 66,
+        "question": "Dalam analisis kemiskinan, tim menggambarkan sejumlah faktor penyebab yang mengarah pada satu akibat, seperti rendahnya pendidikan, kesehatan, produktivitas, dan akses layanan. Alat yang paling sesuai untuk menyusun hubungan sebab-akibat tersebut adalah ....",
+        "options": [
+          "Diagram tulang ikan",
+          "Diagram Venn",
+          "Peta desa",
+          "Diagram pemanfaatan waktu",
+          "Kalender musim"
+        ],
+        "correctIndex": 0,
+        "explanation": "Diagram tulang ikan digunakan untuk menemukan faktor-faktor penyebab yang mungkin berpengaruh terhadap akibat atau persoalan yang muncul."
+      },
+      {
+        "id": 67,
+        "question": "Sebuah diagram tulang ikan telah memuat banyak dugaan penyebab kemiskinan. Agar perencana dapat menentukan faktor yang paling berpengaruh, langkah berikutnya adalah ....",
+        "options": [
+          "Menghapus seluruh penyebab yang berasal dari masyarakat",
+          "Menggunakan data yang tersedia untuk menilai penyebab yang paling berpengaruh",
+          "Menetapkan solusi sebelum memeriksa hubungan sebab-akibat",
+          "Menganggap semua penyebab memiliki pengaruh yang sama",
+          "Memilih penyebab berdasarkan dugaan pribadi"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menyebut diagram tulang ikan dapat membantu menemukan faktor penyebab yang mungkin berpengaruh dan mengidentifikasi penyebab paling berpengaruh dengan menggunakan data."
+      },
+      {
+        "id": 68,
+        "question": "Dalam analisis rendahnya pendidikan anak, tim menemukan bahwa sebagian orang tua lebih membutuhkan bantuan anak untuk bekerja, sekolah dianggap bukan kebutuhan, dan sarana kesehatan juga terbatas. Kesimpulan yang paling tepat adalah ....",
+        "options": [
+          "Masalah tersebut tidak berkaitan dengan kondisi rumah tangga",
+          "Perencana cukup mengidentifikasi satu penyebab yang paling mudah ditangani",
+          "Masalah sosial dapat memiliki beberapa penyebab yang saling berkaitan sehingga perlu dianalisis secara menyeluruh",
+          "Seluruh penyebab dapat diatasi hanya dengan menambah anggaran sekolah",
+          "Masalah pendidikan hanya dipengaruhi oleh ketersediaan gedung sekolah"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ilustrasi identifikasi masalah dalam materi menunjukkan beberapa faktor yang berkontribusi terhadap kemiskinan dan rendahnya pendidikan. Analisis perlu memperhatikan hubungan berbagai penyebab tersebut."
+      },
+      {
+        "id": 69,
+        "question": "Hasil identifikasi menunjukkan terdapat sepuluh masalah masyarakat, tetapi sumber daya program terbatas. Agar kegiatan yang dipilih paling sesuai dengan kondisi lapangan, perencana perlu ....",
+        "options": [
+          "Mengutamakan kegiatan yang paling besar anggarannya",
+          "Memilih masalah yang paling mudah dilaporkan saja",
+          "Menjalankan seluruh kegiatan sekaligus tanpa urutan",
+          "Menetapkan skala prioritas berdasarkan masalah dan penyebabnya, lalu menyusun alternatif solusi",
+          "Mengabaikan potensi dan sumber daya masyarakat"
+        ],
+        "correctIndex": 3,
+        "explanation": "Materi identifikasi permasalahan menekankan penyusunan skala prioritas masalah dan alternatif solusi terbaik agar rencana aksi sesuai dengan persoalan yang ada."
+      },
+      {
+        "id": 70,
+        "question": "Setelah akar masalah dan prioritas ditetapkan, tim perencana menyusun kegiatan, pihak yang terlibat, serta tindak lanjut yang akan dilakukan bersama masyarakat. Dokumen atau langkah yang sedang disiapkan adalah ....",
+        "options": [
+          "Peta administrasi tanpa analisis",
+          "Daftar masalah tanpa solusi",
+          "Dokumen evaluasi yang tidak terkait perencanaan",
+          "Laporan akhir penyerapan anggaran",
+          "Action plan atau rencana aksi"
+        ],
+        "correctIndex": 4,
+        "explanation": "Action plan disusun setelah pemetaan sosial, identifikasi masalah dan potensi, serta analisis SWOT untuk menerjemahkan hasil analisis menjadi rencana tindakan."
       }
     ]
   }
