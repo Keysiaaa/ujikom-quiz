@@ -5,7 +5,7 @@
 const publishedBank = [
   {
     "id": 1,
-    "name": "Perencanaan",
+    "name": "Bagian 1",
     "questions": [
       {
         "id": 1,
