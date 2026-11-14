@@ -1,6 +1,6 @@
 /**
  * BANK SOAL PUBLIK - dibaca oleh semua perangkat (laptop & HP).
- * Bagian 1: 100 soal. Bagian 2: 70 soal.
+ * Bagian 1: 100 soal. Bagian 2: 70 soal. Bagian 3: 70 soal.
  */
 const publishedBank = [
   {
@@ -2222,6 +2222,922 @@ const publishedBank = [
         ],
         "correctIndex": 3,
         "explanation": "RCA digunakan untuk mengukur kinerja atau keunggulan komparatif ekspor suatu komoditas dengan membandingkan pangsa komoditas dalam ekspor negara terhadap pangsanya dalam perdagangan dunia."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Bagian 3",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Dalam kajian pembangunan, wilayah yang mencakup daratan, laut, udara, dan bagian di dalam bumi sebagai satu kesatuan disebut ....",
+        "options": [
+          "Kawasan budidaya",
+          "Ruang",
+          "Struktur ruang",
+          "Pola ruang",
+          "Pusat kegiatan lokal"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ruang mencakup ruang darat, laut, udara, dan ruang di dalam bumi sebagai satu kesatuan wilayah tempat makhluk hidup dan kegiatan berlangsung."
+      },
+      {
+        "id": 2,
+        "question": "Dua sektor pembangunan mengajukan penggunaan lahan yang sama, sementara luas lahan yang tersedia terbatas. Situasi ini menggambarkan ruang sebagai ....",
+        "options": [
+          "Sumber daya yang tidak dapat diperbarui dan diperebutkan berbagai aktivitas",
+          "Sumber daya yang selalu bertambah mengikuti kebutuhan",
+          "Barang bebas yang tidak memerlukan pengaturan",
+          "Wilayah yang hanya memiliki fungsi ekologis",
+          "Prasarana yang tidak memiliki nilai ekonomi"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ruang dipandang sebagai sumber daya yang tidak dapat diperbarui, sehingga berbagai aktivitas dapat berkompetisi untuk menggunakannya."
+      },
+      {
+        "id": 3,
+        "question": "Sebuah kota mengalami kemacetan, banjir, kawasan kumuh, serta genangan karena perkembangan kegiatan tidak diikuti pengaturan ruang dan infrastruktur yang memadai. Kondisi tersebut merupakan akibat dari ....",
+        "options": [
+          "Peningkatan struktur ruang yang hierarkis",
+          "Penguatan kawasan lindung",
+          "Pemerataan pusat kegiatan",
+          "Inefisiensi pemanfaatan ruang",
+          "Penyusunan peraturan zonasi"
+        ],
+        "correctIndex": 3,
+        "explanation": "Inefisiensi pemanfaatan ruang dapat memunculkan masalah wilayah dan kota, seperti kemacetan, banjir, kawasan kumuh, dan persoalan infrastruktur."
+      },
+      {
+        "id": 4,
+        "question": "Pemerintah daerah ingin memastikan pembangunan tidak hanya menetapkan lokasi, tetapi juga mengatur pemanfaatan dan pengendalian ruang. Rangkaian proses yang dimaksud adalah ....",
+        "options": [
+          "Inventarisasi, pengadaan, dan penjualan lahan",
+          "Perencanaan tata ruang, pemanfaatan ruang, dan pengendalian pemanfaatan ruang",
+          "Penganggaran, pengadaan, dan pengawasan keuangan",
+          "Perizinan, konstruksi, dan pemeliharaan bangunan",
+          "Pendataan penduduk, investasi, dan perdagangan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Penataan ruang merupakan sistem yang terdiri atas perencanaan tata ruang, pemanfaatan ruang, dan pengendalian pemanfaatan ruang."
+      },
+      {
+        "id": 5,
+        "question": "Dalam rancangan tata ruang, pemerintah menetapkan pusat permukiman serta jaringan jalan, energi, dan prasarana lain yang menghubungkan pusat-pusat tersebut. Muatan yang sedang disusun adalah ....",
+        "options": [
+          "Pola ruang",
+          "Kawasan strategis",
+          "Struktur ruang",
+          "Peraturan zonasi",
+          "Kesesuaian kegiatan pemanfaatan ruang"
+        ],
+        "correctIndex": 2,
+        "explanation": "Struktur ruang merupakan susunan pusat permukiman dan sistem jaringan prasarana serta sarana yang mendukung kegiatan sosial ekonomi secara hierarkis."
+      },
+      {
+        "id": 6,
+        "question": "Pemerintah kabupaten membagi wilayahnya menjadi kawasan hutan lindung, pertanian, permukiman, dan industri. Pembagian tersebut merupakan bagian dari ....",
+        "options": [
+          "Pola ruang",
+          "Struktur ruang",
+          "Sistem perkotaan nasional",
+          "Jaringan prasarana",
+          "Rencana pembiayaan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Pola ruang menunjukkan distribusi peruntukan ruang untuk fungsi lindung dan fungsi budi daya."
+      },
+      {
+        "id": 7,
+        "question": "Pemerintah daerah menyusun rencana untuk menentukan struktur ruang dan pola ruang, kemudian menetapkannya dalam dokumen rencana tata ruang. Kegiatan tersebut termasuk ....",
+        "options": [
+          "Pengendalian pemanfaatan ruang",
+          "Pemanfaatan ruang",
+          "Perencanaan tata ruang",
+          "Penataan bangunan",
+          "Pengawasan konstruksi"
+        ],
+        "correctIndex": 2,
+        "explanation": "Perencanaan tata ruang merupakan proses menentukan struktur dan pola ruang melalui penyusunan serta penetapan rencana tata ruang."
+      },
+      {
+        "id": 8,
+        "question": "Setelah RTRW ditetapkan, pemerintah menyusun program pembangunan jaringan jalan dan drainase beserta pembiayaannya agar struktur dan pola ruang terwujud. Kegiatan ini merupakan ....",
+        "options": [
+          "Perencanaan tata ruang",
+          "Pemanfaatan ruang",
+          "Pengendalian pemanfaatan ruang",
+          "Penetapan kawasan strategis",
+          "Peninjauan kembali RTRW"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pemanfaatan ruang adalah upaya mewujudkan struktur dan pola ruang sesuai rencana tata ruang melalui penyusunan dan pelaksanaan program beserta pembiayaannya."
+      },
+      {
+        "id": 9,
+        "question": "Pemerintah memeriksa kesesuaian kegiatan pembangunan dengan rencana tata ruang dan menindaklanjuti pelanggaran agar tercipta tertib tata ruang. Proses tersebut disebut ....",
+        "options": [
+          "Pengendalian pemanfaatan ruang",
+          "Perencanaan tata ruang",
+          "Pola ruang",
+          "Struktur ruang",
+          "Penyusunan program investasi"
+        ],
+        "correctIndex": 0,
+        "explanation": "Pengendalian pemanfaatan ruang merupakan upaya untuk mewujudkan tertib tata ruang."
+      },
+      {
+        "id": 10,
+        "question": "Tim perencana sedang menentukan susunan pusat kegiatan dan pembagian kawasan lindung serta kawasan budidaya. Kedua hal tersebut secara bersama-sama membentuk ....",
+        "options": [
+          "Kesesuaian kegiatan pemanfaatan ruang",
+          "Tata ruang",
+          "Persetujuan bangunan gedung",
+          "Sertifikat laik fungsi",
+          "Kajian lingkungan hidup strategis"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tata ruang adalah wujud struktur ruang dan pola ruang."
+      },
+      {
+        "id": 11,
+        "question": "Dalam menilai kelayakan lokasi permukiman, tim perencana mengkaji geologi, hidrologi, topografi, jenis tanah, dan kesesuaian lahan. Kajian tersebut merupakan penilaian karakteristik ruang ....",
+        "options": [
+          "Sosial",
+          "Politik",
+          "Ekonomi",
+          "Fisik",
+          "Kelembagaan"
+        ],
+        "correctIndex": 3,
+        "explanation": "Karakteristik ruang fisik meliputi geologi, hidrologi, topografi, jenis dan kesuburan tanah, serta kesesuaian lahan."
+      },
+      {
+        "id": 12,
+        "question": "Analisis lokasi kawasan industri memperhitungkan kegiatan ekonomi wilayah, ekonomi transportasi, serta hubungan antara lokasi kegiatan dan infrastruktur. Hal tersebut merupakan karakteristik ruang ....",
+        "options": [
+          "Fisik",
+          "Ekonomi",
+          "Sosial budaya",
+          "Geologis",
+          "Administratif"
+        ],
+        "correctIndex": 1,
+        "explanation": "Karakteristik ruang ekonomi mencakup kegiatan ekonomi wilayah dan kota, ekonomi transportasi, serta ekonomi ruang kegiatan dan infrastruktur."
+      },
+      {
+        "id": 13,
+        "question": "Sebelum menetapkan lokasi pusat pelayanan, perencana memetakan sebaran penduduk, kegiatan sosial, adat istiadat, serta pergerakan masyarakat. Analisis ini berfokus pada karakteristik ruang ....",
+        "options": [
+          "Teknis",
+          "Fisik",
+          "Sosial",
+          "Investasi",
+          "Jaringan"
+        ],
+        "correctIndex": 2,
+        "explanation": "Karakteristik ruang sosial mencakup kegiatan sosial, politik, budaya, dan kemasyarakatan."
+      },
+      {
+        "id": 14,
+        "question": "Pembangunan kawasan baru diperkirakan mengubah pola sebaran penduduk dan memengaruhi adat istiadat masyarakat setempat. Aspek yang perlu dikaji secara khusus adalah ....",
+        "options": [
+          "Teknis rekayasa",
+          "Ekonomi transportasi",
+          "Sosial dan budaya",
+          "Intensitas bangunan",
+          "Jaringan energi"
+        ],
+        "correctIndex": 2,
+        "explanation": "Aspek sosial budaya mengkaji kependudukan, budaya, adat istiadat, kehidupan kemasyarakatan, serta pergerakan dan sebaran penduduk untuk memahami dampak pembangunan."
+      },
+      {
+        "id": 15,
+        "question": "Sebuah investasi kawasan pertambangan akan dilaksanakan di kabupaten. Sebelum kegiatan dimulai, perencana perlu mengidentifikasi dasar hukum dan instansi yang bertanggung jawab. Hal ini merupakan kajian aspek ....",
+        "options": [
+          "Lingkungan dan hidrologi",
+          "Hukum dan kelembagaan",
+          "Sosial dan budaya",
+          "Ekonomi transportasi",
+          "Morfologi kota"
+        ],
+        "correctIndex": 1,
+        "explanation": "Aspek hukum berkaitan dengan dasar peraturan pembangunan, sedangkan aspek kelembagaan mengkaji aktor yang bertanggung jawab."
+      },
+      {
+        "id": 16,
+        "question": "Pemerintah daerah melakukan Kajian Lingkungan Hidup Strategis sebelum menetapkan pemanfaatan lahan untuk kawasan industri. Tujuan utama kajian tersebut adalah ....",
+        "options": [
+          "Meningkatkan kepadatan bangunan",
+          "Mempercepat perubahan fungsi seluruh lahan",
+          "Mengurangi kebutuhan infrastruktur",
+          "Meminimalkan dampak negatif pembangunan dan kerusakan lingkungan",
+          "Menggantikan seluruh proses perizinan usaha"
+        ],
+        "correctIndex": 3,
+        "explanation": "KLHS bertujuan meminimalkan dampak negatif pembangunan dan kerusakan lingkungan pada ruang atau lahan pembangunan."
+      },
+      {
+        "id": 17,
+        "question": "Dalam proses penyusunan rencana hingga pemantauan dan evaluasi pelaksanaan pemanfaatan ruang, kegiatan yang berkaitan dengan tahapan teknis atau rekayasa termasuk aspek ....",
+        "options": [
+          "Teknis penataan ruang",
+          "Sosial budaya",
+          "Hukum kelembagaan",
+          "Ekonomi makro",
+          "Politik elektoral"
+        ],
+        "correctIndex": 0,
+        "explanation": "Aspek teknis penataan ruang berkaitan dengan proses penyusunan rencana dari tahap awal hingga implementasi, pemanfaatan, pengendalian, monitoring, dan evaluasi."
+      },
+      {
+        "id": 18,
+        "question": "Perencana daerah menerima data jaringan jalan, permukiman, dan kawasan lindung dari berbagai instansi. Agar informasi tersebut dapat digunakan secara terpadu, langkah yang tepat adalah ....",
+        "options": [
+          "Mengabaikan perbedaan sumber data",
+          "Menginventarisasi, mengidentifikasi, mengolah, menganalisis, dan menyajikan data",
+          "Mengubah seluruh data menjadi data kependudukan",
+          "Memilih hanya data yang mendukung satu program",
+          "Menunda analisis hingga pembangunan selesai"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menempatkan inventarisasi dan identifikasi data primer maupun sekunder serta pengolahan, analisis, dan penyajian informasi sebagai bagian dari tugas perencana."
+      },
+      {
+        "id": 19,
+        "question": "Dalam evaluasi pembangunan bidang spasial, data perlu menunjukkan lokasi kegiatan, capaian fisik, dan kesesuaiannya dengan rencana ruang. Informasi tersebut terutama digunakan untuk ....",
+        "options": [
+          "Menyusun daftar pemilih",
+          "Menentukan kebijakan moneter",
+          "Pemantauan dan evaluasi pelaksanaan pembangunan",
+          "Menetapkan batas negara",
+          "Mengganti fungsi kawasan lindung"
+        ],
+        "correctIndex": 2,
+        "explanation": "Salah satu indikator kompetensi perencana adalah menyiapkan masukan untuk pemantauan dan evaluasi pelaksanaan pembangunan bidang spasial."
+      },
+      {
+        "id": 20,
+        "question": "Dalam sistem rencana tata ruang Indonesia, rencana yang menjadi acuan pada skala nasional adalah ....",
+        "options": [
+          "RTRW Kota",
+          "RDTR",
+          "RTRW Kabupaten",
+          "RTRW Provinsi",
+          "RTRW Nasional"
+        ],
+        "correctIndex": 4,
+        "explanation": "Hierarki rencana tata ruang mencakup RTRWN pada tingkat nasional, kemudian RTRW provinsi, kabupaten, kota, dan rencana rinci atau detail."
+      },
+      {
+        "id": 21,
+        "question": "Suatu kawasan perkotaan melayani kegiatan berskala internasional, nasional, atau beberapa provinsi. Berdasarkan hierarki pusat kegiatan, kawasan tersebut dikategorikan sebagai ....",
+        "options": [
+          "PKL",
+          "PKW",
+          "PKN",
+          "PKSN",
+          "Pusat lingkungan"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pusat Kegiatan Nasional (PKN) melayani kegiatan skala internasional, nasional, atau beberapa provinsi."
+      },
+      {
+        "id": 22,
+        "question": "Sebuah kota menjadi pusat pelayanan bagi beberapa kabupaten/kota dalam satu provinsi. Dalam sistem perkotaan nasional, fungsi ini sesuai dengan ....",
+        "options": [
+          "PKW",
+          "PKL",
+          "PKSN",
+          "Kawasan perkotaan kecil",
+          "Pusat lingkungan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Pusat Kegiatan Wilayah (PKW) melayani kegiatan skala provinsi atau beberapa kabupaten/kota."
+      },
+      {
+        "id": 23,
+        "question": "Pusat perkotaan di suatu kabupaten melayani kegiatan bagi beberapa kecamatan di sekitarnya. Kategori pusat kegiatan yang paling sesuai adalah ....",
+        "options": [
+          "PKN",
+          "PKW",
+          "PKSN",
+          "PKL",
+          "Kawasan megapolitan"
+        ],
+        "correctIndex": 3,
+        "explanation": "Pusat Kegiatan Lokal (PKL) melayani kegiatan skala kabupaten/kota atau beberapa kecamatan."
+      },
+      {
+        "id": 24,
+        "question": "Pemerintah menetapkan suatu kawasan perkotaan di perbatasan negara untuk mendorong pengembangan kawasan perbatasan. Penetapan tersebut menunjukkan fungsi ....",
+        "options": [
+          "PKL",
+          "PKSN",
+          "PKW",
+          "Kawasan perkotaan sedang",
+          "Kawasan strategis kota"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pusat Kegiatan Strategis Nasional (PKSN) merupakan kawasan perkotaan yang ditetapkan untuk mendorong pengembangan kawasan perbatasan negara."
+      },
+      {
+        "id": 25,
+        "question": "Suatu kawasan perkotaan memiliki satu kawasan inti, beberapa kawasan perkotaan di sekitarnya, jumlah penduduk minimal satu juta jiwa, dan keterkaitan fungsi antarkawasan. Kawasan tersebut memenuhi kriteria ....",
+        "options": [
+          "Perkotaan kecil",
+          "Perkotaan sedang",
+          "Perkotaan besar",
+          "Metropolitan",
+          "Megapolitan"
+        ],
+        "correctIndex": 3,
+        "explanation": "Kawasan metropolitan memiliki penduduk paling sedikit satu juta jiwa, terdiri atas satu kawasan inti dan beberapa kawasan sekitarnya, serta mempunyai keterkaitan fungsi."
+      },
+      {
+        "id": 26,
+        "question": "Dua atau lebih kawasan metropolitan memiliki hubungan fungsional dan membentuk satu sistem perkotaan yang saling berkaitan. Kategori kawasan tersebut adalah ....",
+        "options": [
+          "Kawasan megapolitan",
+          "Kawasan perkotaan besar",
+          "Kawasan perkotaan sedang",
+          "Kawasan perkotaan kecil",
+          "Pusat Kegiatan Lokal"
+        ],
+        "correctIndex": 0,
+        "explanation": "Kawasan megapolitan ditetapkan apabila terdapat dua atau lebih kawasan metropolitan yang mempunyai hubungan fungsional dan membentuk sebuah sistem."
+      },
+      {
+        "id": 27,
+        "question": "Sebuah kawasan perkotaan memiliki jumlah penduduk 620.000 jiwa. Berdasarkan kriteria dalam materi, kawasan tersebut termasuk ....",
+        "options": [
+          "Kawasan perkotaan kecil",
+          "Kawasan perkotaan sedang",
+          "Kawasan perkotaan besar",
+          "Kawasan metropolitan secara otomatis",
+          "Kawasan megapolitan secara otomatis"
+        ],
+        "correctIndex": 2,
+        "explanation": "Kawasan perkotaan besar ditetapkan dengan kriteria jumlah penduduk lebih dari 500.000 jiwa. Jumlah penduduk 620.000 jiwa memenuhi kriteria tersebut."
+      },
+      {
+        "id": 28,
+        "question": "Kawasan perkotaan dengan jumlah penduduk 300.000 jiwa akan diklasifikasikan menurut kriteria ukuran kawasan perkotaan dalam materi. Kategori yang tepat adalah ....",
+        "options": [
+          "Perkotaan kecil",
+          "Perkotaan sedang",
+          "Perkotaan besar",
+          "Metropolitan",
+          "Megapolitan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Kawasan perkotaan sedang memiliki jumlah penduduk lebih dari 100.000 sampai dengan 500.000 jiwa."
+      },
+      {
+        "id": 29,
+        "question": "Sebuah kawasan perkotaan memiliki jumlah penduduk 75.000 jiwa. Berdasarkan kriteria dalam materi, kategori yang paling tepat adalah ....",
+        "options": [
+          "Perkotaan kecil",
+          "Perkotaan sedang",
+          "Perkotaan besar",
+          "Metropolitan",
+          "Megapolitan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Kawasan perkotaan kecil memiliki jumlah penduduk lebih dari 50.000 sampai dengan 100.000 jiwa."
+      },
+      {
+        "id": 30,
+        "question": "Dalam penyusunan RTRW provinsi, kabupaten, atau kota, dokumen perlu memuat tujuan, kebijakan dan strategi, rencana struktur ruang, serta rencana pola ruang. Muatan penting lain yang juga harus diperhatikan adalah ....",
+        "options": [
+          "Daftar calon kepala daerah",
+          "Penetapan kawasan strategis, arahan pemanfaatan ruang, dan ketentuan pengendalian pemanfaatan ruang",
+          "Laporan audit perusahaan swasta",
+          "Rincian kurikulum sekolah",
+          "Daftar penerima bantuan sosial"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menyebut enam muatan RTRW: tujuan/kebijakan/strategi, struktur ruang, pola ruang, kawasan strategis, arahan pemanfaatan, dan ketentuan pengendalian."
+      },
+      {
+        "id": 31,
+        "question": "Dalam RTRW, rencana jaringan jalan, pusat permukiman, terminal, dan prasarana pendukung kegiatan masyarakat ditempatkan pada bagian ....",
+        "options": [
+          "Rencana pola ruang",
+          "Peraturan zonasi",
+          "Rencana struktur ruang",
+          "Kawasan strategis",
+          "Ketentuan intensitas ruang"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pusat permukiman dan sistem jaringan prasarana serta sarana merupakan muatan rencana struktur ruang."
+      },
+      {
+        "id": 32,
+        "question": "Rencana yang membagi wilayah menjadi kawasan lindung dan kawasan budidaya merupakan muatan ....",
+        "options": [
+          "Rencana struktur ruang",
+          "Rencana pola ruang",
+          "Rencana jaringan pergerakan",
+          "Rencana pembiayaan",
+          "Rencana kelembagaan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rencana pola ruang mengatur distribusi peruntukan ruang yang meliputi kawasan lindung dan kawasan budidaya."
+      },
+      {
+        "id": 33,
+        "question": "Suatu wilayah provinsi diprioritaskan penataan ruangnya karena mempunyai pengaruh sangat penting terhadap ekonomi, sosial, budaya, dan lingkungan pada lingkup provinsi. Wilayah tersebut dapat ditetapkan sebagai ....",
+        "options": [
+          "Kawasan Strategis Provinsi",
+          "Pusat Kegiatan Lokal",
+          "Zona perumahan",
+          "Kawasan perkotaan kecil",
+          "Subpusat lingkungan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Kawasan Strategis Provinsi merupakan wilayah yang penataan ruangnya diprioritaskan karena berpengaruh sangat penting pada lingkup provinsi dalam bidang ekonomi, sosial, budaya, dan/atau lingkungan."
+      },
+      {
+        "id": 34,
+        "question": "Pemerintah kota menetapkan bagian wilayah kota yang penataan ruangnya diprioritaskan karena berpengaruh penting terhadap ekonomi, sosial, budaya, atau lingkungan dalam lingkup kota. Penetapan ini disebut ....",
+        "options": [
+          "Kawasan Strategis Nasional",
+          "Kawasan Strategis Provinsi",
+          "Kawasan Strategis Kota",
+          "Pusat Kegiatan Wilayah",
+          "Kawasan metropolitan"
+        ],
+        "correctIndex": 2,
+        "explanation": "Kawasan Strategis Kota adalah bagian wilayah kota yang penataan ruangnya diprioritaskan karena mempunyai pengaruh sangat penting dalam lingkup kota."
+      },
+      {
+        "id": 35,
+        "question": "Dalam RTRW Kota, selain rencana struktur dan pola ruang, terdapat muatan tambahan yang membantu meningkatkan kualitas ruang publik dan keselamatan warga. Contohnya adalah ....",
+        "options": [
+          "Rencana produksi komoditas ekspor",
+          "Rencana penyediaan RTH, ruang sektor informal, prasarana pejalan kaki, dan jalur evakuasi bencana",
+          "Penetapan suku bunga",
+          "Pengaturan kurikulum pendidikan",
+          "Penetapan tarif perdagangan internasional"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menyebut muatan tambahan RTRW Kota berupa rencana penyediaan Ruang Terbuka Hijau, ruang sektor informal, prasarana pejalan kaki, dan jalur evakuasi bencana."
+      },
+      {
+        "id": 36,
+        "question": "Pemerintah kota membutuhkan dokumen yang menjabarkan RTRW secara lebih terperinci hingga mengatur ketentuan zonasi. Dokumen yang paling tepat disusun adalah ....",
+        "options": [
+          "RPJMD",
+          "RTRW Nasional",
+          "Rencana Detail Tata Ruang",
+          "Rencana Kerja Pemerintah",
+          "Kajian Lingkungan Hidup Strategis"
+        ],
+        "correctIndex": 2,
+        "explanation": "RDTR merupakan rencana secara terperinci tentang tata ruang wilayah kabupaten/kota yang dilengkapi peraturan zonasi."
+      },
+      {
+        "id": 37,
+        "question": "Suatu kecamatan telah memiliki RTRW kota, tetapi diperlukan pengaturan yang lebih rinci untuk mengendalikan pemanfaatan ruang pada tiap zona. Kedudukan dokumen RDTR dalam situasi ini adalah ....",
+        "options": [
+          "Menggantikan seluruh RTRW nasional",
+          "Menjabarkan RTRW kabupaten/kota secara lebih detail",
+          "Menghapus rencana struktur ruang",
+          "Menetapkan APBD kota",
+          "Mengatur hanya desain interior bangunan"
+        ],
+        "correctIndex": 1,
+        "explanation": "RDTR berkedudukan sebagai penjabaran RTRW kabupaten/kota dan memberikan acuan lebih detail untuk pengendalian pemanfaatan ruang."
+      },
+      {
+        "id": 38,
+        "question": "Dalam penyusunan peraturan zonasi, pemerintah menetapkan persyaratan pemanfaatan ruang dan ketentuan pengendalian untuk setiap blok atau zona peruntukan. Dokumen tersebut adalah ....",
+        "options": [
+          "RTRW Nasional",
+          "Peraturan Zonasi",
+          "Rencana Struktur Ruang",
+          "Peta administrasi",
+          "Rencana pembiayaan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Peraturan zonasi mengatur persyaratan pemanfaatan ruang dan ketentuan pengendaliannya untuk setiap blok atau zona dalam RDTR."
+      },
+      {
+        "id": 39,
+        "question": "Dalam tabel zonasi, suatu kegiatan diberi kode I, T, B, atau X. Arti kode-kode tersebut secara berurutan adalah ....",
+        "options": [
+          "Industri, transportasi, bangunan, dan ekspor",
+          "Izin, tata guna, batas, dan pengecualian",
+          "Diperbolehkan, bersyarat terbatas, bersyarat tertentu, dan tidak diperbolehkan",
+          "Inti, tambahan, bersyarat, dan dilarang sementara",
+          "Intensif, teknis, berskala, dan tertutup"
+        ],
+        "correctIndex": 2,
+        "explanation": "Materi menjelaskan kategori kegiatan zonasi: I diperbolehkan, T bersyarat secara terbatas, B bersyarat tertentu, dan X tidak diperbolehkan."
+      },
+      {
+        "id": 40,
+        "question": "Pemerintah ingin mengendalikan kepadatan zona terbangun agar tidak melampaui kapasitas kawasan. Ketentuan teknis yang digunakan dalam peraturan zonasi disebut ....",
+        "options": [
+          "Ketentuan intensitas pemanfaatan ruang",
+          "Pusat Kegiatan Nasional",
+          "Rencana kawasan strategis",
+          "Kesesuaian kegiatan pemanfaatan ruang",
+          "Sistem perkotaan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ketentuan intensitas pemanfaatan ruang merupakan ketentuan teknis mengenai kepadatan zona terbangun yang dipersyaratkan pada zona tersebut."
+      },
+      {
+        "id": 41,
+        "question": "Dalam menilai intensitas pemanfaatan ruang, perencana perlu menggunakan indikator teknis yang disebutkan dalam materi, yaitu ....",
+        "options": [
+          "PDRB, IPM, dan TPT",
+          "KDB, KLB, dan KDH",
+          "PKN, PKW, dan PKL",
+          "RTRWN, RTRWP, dan RTRWK",
+          "PBG, SLF, dan OSS"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menyebut Koefisien Dasar Bangunan (KDB), Koefisien Lantai Bangunan (KLB), dan Koefisien Daerah Hijau (KDH) sebagai ukuran intensitas pemanfaatan ruang."
+      },
+      {
+        "id": 42,
+        "question": "Pada suatu zona yang ditetapkan dalam RDTR, pemerintah membutuhkan pedoman pengaturan bentuk bangunan dan lingkungan secara lebih rinci. Dokumen yang dapat disusun untuk zona prioritas tersebut adalah ....",
+        "options": [
+          "RTRW Nasional",
+          "Rencana Tata Bangunan dan Lingkungan",
+          "Rencana Pembangunan Jangka Menengah",
+          "Rencana Kerja Pemerintah",
+          "Peta batas administrasi"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menjelaskan bahwa RDTR dapat menjadi dasar penyusunan RTBL bagi zona-zona yang penanganannya diprioritaskan."
+      },
+      {
+        "id": 43,
+        "question": "Dalam pengendalian pembangunan, RTRW menetapkan lokasi dan peruntukan lahan, sedangkan dokumen penataan bangunan dan lingkungan memberikan panduan lebih rinci pada kawasan. Hubungan ini menunjukkan bahwa ....",
+        "options": [
+          "Penataan ruang dan penataan bangunan saling berkaitan",
+          "RTBL menggantikan RTRW pada semua tingkat",
+          "RTRW hanya berlaku setelah bangunan berdiri",
+          "Izin lokasi tidak berkaitan dengan peruntukan lahan",
+          "PBG menentukan pola ruang kabupaten"
+        ],
+        "correctIndex": 0,
+        "explanation": "Materi menampilkan keterkaitan penataan ruang dengan penataan bangunan dan lingkungan, termasuk hubungan RTRW, peruntukan lahan, RTBL, dan dokumen teknis bangunan."
+      },
+      {
+        "id": 44,
+        "question": "Dalam materi, undang-undang yang menjadi dasar utama pengaturan penataan ruang adalah ....",
+        "options": [
+          "UU Nomor 25 Tahun 2004",
+          "UU Nomor 26 Tahun 2007",
+          "UU Nomor 9 Tahun 2015",
+          "UU Nomor 11 Tahun 2020",
+          "UU Nomor 8 Tahun 2013"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menyebut UU Nomor 26 Tahun 2007 tentang Penataan Ruang sebagai dasar hukum utama penataan ruang."
+      },
+      {
+        "id": 45,
+        "question": "Pemerintah memerlukan aturan yang mengintegrasikan kepentingan lintas sektor, lintas wilayah, dan lintas pemangku kepentingan dalam penyelenggaraan penataan ruang. Regulasi yang dirujuk materi adalah ....",
+        "options": [
+          "PP Nomor 21 Tahun 2021",
+          "PP Nomor 8 Tahun 2013",
+          "Permendagri Nomor 116 Tahun 2017",
+          "UU Nomor 25 Tahun 2004",
+          "Permen ATR Nomor 9 Tahun 2022"
+        ],
+        "correctIndex": 0,
+        "explanation": "PP Nomor 21 Tahun 2021 mengatur penyelenggaraan penataan ruang dan menekankan integrasi kepentingan lintas sektor, wilayah, dan pemangku kepentingan."
+      },
+      {
+        "id": 46,
+        "question": "Perencana provinsi membutuhkan pedoman tata cara penyusunan RTRW provinsi, kabupaten, kota, dan RDTR. Regulasi yang dirujuk dalam materi adalah ....",
+        "options": [
+          "Permen ATR Nomor 11 Tahun 2021",
+          "Permendagri Nomor 116 Tahun 2017",
+          "PP Nomor 8 Tahun 2013",
+          "UU Nomor 9 Tahun 2015",
+          "UU Nomor 25 Tahun 2004"
+        ],
+        "correctIndex": 0,
+        "explanation": "Permen ATR Nomor 11 Tahun 2021 dalam materi disebut mengatur tata cara penyusunan RTRW provinsi, kabupaten, kota, dan RDTR."
+      },
+      {
+        "id": 47,
+        "question": "Rencana tata ruang perlu menyelaraskan kepentingan lintas sektor dan wilayah, memaduserasikan struktur dengan pola ruang, serta menjaga keseimbangan perkembangan antardaerah. Prinsip tersebut sejalan dengan ....",
+        "options": [
+          "Pengelolaan ruang secara terpisah oleh setiap sektor",
+          "Penyelenggaraan penataan ruang yang terintegrasi",
+          "Penghapusan hierarki rencana tata ruang",
+          "Pemberian ruang tanpa pengendalian",
+          "Pemanfaatan ruang berdasarkan kepentingan satu pelaku"
+        ],
+        "correctIndex": 1,
+        "explanation": "PP 21 Tahun 2021 dalam materi digambarkan mendorong integrasi lintas sektor, lintas wilayah, dan lintas pemangku kepentingan serta penyelarasan struktur dan pola ruang."
+      },
+      {
+        "id": 48,
+        "question": "Dalam latihan materi, RTRW disebut perlu ditinjau kembali secara berkala setiap ....",
+        "options": [
+          "2 tahun",
+          "3 tahun",
+          "5 tahun",
+          "8 tahun",
+          "10 tahun"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pada bagian latihan soal materi, jangka waktu peninjauan kembali RTRW disebut setiap 5 tahun."
+      },
+      {
+        "id": 49,
+        "question": "Suatu daerah mengalami perubahan ekonomi, penduduk, dan kebutuhan infrastruktur. Agar RTRW tetap dapat mengantisipasi perkembangan dan tidak menghambat pembangunan, karakter rencana yang diperlukan adalah ....",
+        "options": [
+          "Statis",
+          "Tertutup",
+          "Dinamis",
+          "Tidak fleksibel",
+          "Seragam untuk semua wilayah"
+        ],
+        "correctIndex": 2,
+        "explanation": "Latihan dalam materi menekankan bahwa RTRW harus bersifat dinamis untuk mengantisipasi perubahan pembangunan."
+      },
+      {
+        "id": 50,
+        "question": "Penyusunan RTRW hanya berdasarkan kepentingan pasar berisiko mengabaikan kepentingan masyarakat. Peran forum penataan ruang diperlukan untuk menjembatani pemanfaatan ruang agar lebih ....",
+        "options": [
+          "Berpihak hanya pada kegiatan bisnis",
+          "Mengutamakan kemakmuran rakyat dan kepentingan publik",
+          "Mengutamakan kepentingan pemilik lahan terbesar",
+          "Menutup akses masyarakat terhadap dokumen",
+          "Menghilangkan kajian lingkungan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Latihan materi menekankan peran forum penataan ruang untuk menjembatani pemanfaatan ruang dengan pendekatan yang berpihak pada kemakmuran rakyat."
+      },
+      {
+        "id": 51,
+        "question": "Dokumen RTRW dan RDTR perlu dapat diakses masyarakat agar proses penataan ruang transparan. Prinsip yang paling sesuai dengan kondisi tersebut adalah ....",
+        "options": [
+          "Kerahasiaan dokumen",
+          "Keterbukaan",
+          "Sentralisasi informasi",
+          "Pembatasan partisipasi",
+          "Penghapusan konsultasi"
+        ],
+        "correctIndex": 1,
+        "explanation": "Latihan materi mengaitkan keterbukaan dan akses publik terhadap dokumen RTRW/RDTR dengan prinsip keterbukaan yang bertanggung jawab."
+      },
+      {
+        "id": 52,
+        "question": "Pelaku usaha harus memastikan lokasi dan kegiatan usahanya sesuai dengan rencana tata ruang sebelum melaksanakan usaha. Persyaratan dasar tersebut disebut ....",
+        "options": [
+          "Sertifikat Laik Fungsi",
+          "Kesesuaian Kegiatan Pemanfaatan Ruang",
+          "Koefisien Lantai Bangunan",
+          "Rencana Tata Bangunan dan Lingkungan",
+          "Kajian Lingkungan Hidup Strategis"
+        ],
+        "correctIndex": 1,
+        "explanation": "KKPR merupakan salah satu persyaratan dasar yang wajib dipenuhi seluruh pelaku usaha untuk memastikan kesesuaian kegiatan dengan tata ruang."
+      },
+      {
+        "id": 53,
+        "question": "Usaha mikro dan kecil memperoleh kemudahan dalam pemenuhan KKPR melalui OSS berbasis risiko. Bentuk pemenuhan yang disebutkan dalam materi adalah ....",
+        "options": [
+          "Surat persetujuan dari seluruh warga",
+          "Pernyataan mandiri bahwa lokasi usaha sesuai tata ruang",
+          "PBG yang diterbitkan pemerintah pusat",
+          "Perubahan RTRW secara otomatis",
+          "Sertifikat tanah baru"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menyebut UMK dapat menyampaikan pernyataan mandiri melalui OSS bahwa lokasi usahanya telah sesuai dengan tata ruang dan bersedia dikenai sanksi jika ditemukan ketidaksesuaian."
+      },
+      {
+        "id": 54,
+        "question": "Suatu wilayah telah memiliki RDTR yang berlaku. Bentuk KKPR yang disebut dalam materi untuk kawasan tersebut adalah ....",
+        "options": [
+          "PKKPR",
+          "KKKPR",
+          "PBG",
+          "SLF",
+          "RTBL"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menyebut Konfirmasi Kesesuaian Kegiatan Pemanfaatan Ruang (KKKPR) untuk kawasan yang sudah memiliki RDTR."
+      },
+      {
+        "id": 55,
+        "question": "Berdasarkan materi, bagaimana perlakuan PNBP terhadap permohonan PKKPR?",
+        "options": [
+          "Semua permohonan PKKPR selalu bebas PNBP",
+          "Permohonan tanpa penilaian tidak dikenakan PNBP, sedangkan yang melalui penilaian atau verifikasi dikenakan PNBP",
+          "Semua permohonan PKKPR dikenakan PNBP dengan tarif sama",
+          "PNBP hanya dikenakan kepada usaha mikro dan kecil",
+          "PNBP ditentukan oleh pemilik lahan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi membedakan PKKPR tanpa penilaian yang tidak dikenakan PNBP dan PKKPR dengan tahapan penilaian atau verifikasi yang dikenakan PNBP."
+      },
+      {
+        "id": 56,
+        "question": "Sebuah proyek strategis nasional dan kegiatan usaha yang melintasi lebih dari satu provinsi memerlukan penerbitan KKPR. Berdasarkan pembagian kewenangan dalam materi, penerbitnya adalah ....",
+        "options": [
+          "Pemerintah kabupaten",
+          "Pemerintah kota",
+          "Pemerintah provinsi",
+          "Pemerintah pusat",
+          "Pemerintah kecamatan"
+        ],
+        "correctIndex": 3,
+        "explanation": "Kewenangan pemerintah pusat mencakup kegiatan usaha nasional yang menjadi kewenangannya, objek vital nasional, PSN, dan usaha lintas provinsi."
+      },
+      {
+        "id": 57,
+        "question": "Sebuah kegiatan usaha melintasi dua kabupaten/kota dalam satu provinsi. Berdasarkan pembagian kewenangan penerbitan KKPR pada materi, kewenangan berada pada ....",
+        "options": [
+          "Pemerintah pusat",
+          "Pemerintah provinsi",
+          "Pemerintah kabupaten pertama",
+          "Pemerintah kabupaten kedua",
+          "Pemerintah kecamatan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menyebut pemerintah provinsi berwenang untuk usaha yang melintasi kabupaten/kota."
+      },
+      {
+        "id": 58,
+        "question": "Untuk kegiatan pemanfaatan ruang yang menjadi kewenangan kabupaten/kota, pihak yang disebut menerbitkan Persetujuan KKPR dalam materi adalah ....",
+        "options": [
+          "Forum Penataan Ruang Kabupaten/Kota",
+          "Kementerian Keuangan",
+          "Badan Pusat Statistik",
+          "DPR RI",
+          "Kantor kecamatan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Materi menyebut Forum Penataan Ruang (FPR) kabupaten/kota menerbitkan Persetujuan KKPR untuk kewenangan kabupaten/kota."
+      },
+      {
+        "id": 59,
+        "question": "Pelaku usaha telah memperoleh kesesuaian pemanfaatan ruang dan akan membangun gedung baru. Perizinan bangunan yang perlu ditindaklanjuti melalui SIMBG adalah ....",
+        "options": [
+          "RTRW dan RDTR",
+          "PBG dan SLF",
+          "KDB dan KDH",
+          "PKN dan PKW",
+          "IHK dan IHPB"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menjelaskan bahwa apabila kegiatan usaha membutuhkan pembangunan gedung, OSS memberikan notifikasi untuk menindaklanjuti PBG dan SLF melalui SIMBG."
+      },
+      {
+        "id": 60,
+        "question": "Sebuah gedung telah selesai dibangun. Sebelum gedung tersebut dimanfaatkan, pemerintah daerah perlu menyatakan bahwa bangunan laik fungsi. Dokumen yang menyatakan hal tersebut adalah ....",
+        "options": [
+          "RTRW",
+          "RDTR",
+          "PBG",
+          "SLF",
+          "KKPR"
+        ],
+        "correctIndex": 3,
+        "explanation": "SLF adalah sertifikat yang diberikan pemerintah daerah untuk menyatakan kelaikan fungsi bangunan gedung sebelum dapat dimanfaatkan."
+      },
+      {
+        "id": 61,
+        "question": "Sebuah kota memiliki satu pusat utama dan beberapa subpusat yang tidak saling terhubung langsung satu sama lain. Model struktur ruang yang sesuai adalah ....",
+        "options": [
+          "Mono-centered",
+          "Multi-centered",
+          "Non-centered",
+          "Multi nodal",
+          "Dispersed city"
+        ],
+        "correctIndex": 0,
+        "explanation": "Model mono-centered terdiri atas satu pusat dan beberapa subpusat yang tidak saling terhubung antara satu subpusat dan subpusat lainnya."
+      },
+      {
+        "id": 62,
+        "question": "Dalam struktur ruang suatu wilayah, terdapat satu pusat dan beberapa subpusat. Setiap sub-subpusat terhubung langsung dengan subpusat sekaligus dengan pusat utama. Model ini disebut ....",
+        "options": [
+          "Mono-centered",
+          "Multi nodal",
+          "Multi-centered",
+          "Non-centered",
+          "Ring plans"
+        ],
+        "correctIndex": 1,
+        "explanation": "Model multi nodal terdiri atas satu pusat dan beberapa subpusat serta sub-subpusat; sub-subpusat terhubung dengan subpusat dan pusat."
+      },
+      {
+        "id": 63,
+        "question": "Suatu kawasan perkotaan memiliki beberapa pusat dan subpusat yang saling terhubung satu sama lain. Bentuk struktur ruang tersebut adalah ....",
+        "options": [
+          "Mono-centered",
+          "Non-centered",
+          "Multi-centered",
+          "Multi nodal",
+          "Compact plans"
+        ],
+        "correctIndex": 2,
+        "explanation": "Model multi-centered terdiri atas beberapa pusat dan subpusat yang saling terhubung satu sama lain."
+      },
+      {
+        "id": 64,
+        "question": "Dalam suatu jaringan wilayah, tidak ada node yang berperan sebagai pusat maupun subpusat karena semua node mempunyai hierarki yang sama dan saling terhubung. Model ini disebut ....",
+        "options": [
+          "Mono-centered",
+          "Multi nodal",
+          "Multi-centered",
+          "Non-centered",
+          "Stellar"
+        ],
+        "correctIndex": 3,
+        "explanation": "Model non-centered tidak memiliki node pusat atau subpusat; semua node berada pada hierarki yang sama dan saling terhubung."
+      },
+      {
+        "id": 65,
+        "question": "Kota utama direncanakan memiliki hubungan fungsional yang efektif dengan beberapa kota kecil di sekitarnya sebagai pusat-pusat baru. Pola perkembangan ruang yang sesuai adalah ....",
+        "options": [
+          "Bentuk satelit dan pusat-pusat baru",
+          "Bentuk cincin",
+          "Bentuk inti/kompak",
+          "Bentuk memencar",
+          "Bentuk linier bermanik"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bentuk satelit dan pusat-pusat baru menghubungkan kota utama dengan kota-kota kecil melalui hubungan fungsional yang efektif dan efisien."
+      },
+      {
+        "id": 66,
+        "question": "Dalam suatu rencana kota, pusat kegiatan kedua ditempatkan pada setiap lidah perkembangan perkotaan, sedangkan bagian yang menjorok ke dalam dipertahankan sebagai jalur hijau dan ruang rekreasi. Pola tersebut adalah ....",
+        "options": [
+          "Bentuk cincin",
+          "Bentuk stellar atau radial",
+          "Bentuk linier bermanik",
+          "Bentuk inti/kompak",
+          "Bentuk memencar"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bentuk stellar atau radial menempatkan pusat kegiatan kedua pada tiap lidah dan merencanakan bagian yang menjorok ke dalam sebagai jalur hijau, rekreasi, dan olahraga."
+      },
+      {
+        "id": 67,
+        "question": "Sebuah kota berkembang mengikuti jalan utama yang melingkar, sementara bagian tengah wilayah dipertahankan sebagai ruang hijau terbuka. Pola ruang ini disebut ....",
+        "options": [
+          "Bentuk satelit",
+          "Bentuk radial",
+          "Bentuk cincin",
+          "Bentuk linier bermanik",
+          "Bentuk memencar"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bentuk cincin (ring plans) menggambarkan perkembangan kota di sepanjang jalan utama yang melingkar dengan bagian tengah dipertahankan sebagai daerah hijau terbuka."
+      },
+      {
+        "id": 68,
+        "question": "Permukiman dan pusat komersial tumbuh memanjang di sepanjang jalan utama. Bangunan komersial umumnya berada di tepi jalan, sedangkan permukiman berada di belakangnya. Pola ini disebut ....",
+        "options": [
+          "Bentuk inti/kompak",
+          "Bentuk memencar",
+          "Bentuk satelit",
+          "Bentuk linier bermanik",
+          "Bentuk cincin"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bentuk linier bermanik menggambarkan pusat-pusat perkotaan kecil yang tumbuh di kanan-kiri pusat utama sepanjang jalan, dengan bangunan komersial di tepi jalan dan permukiman di belakangnya."
+      },
+      {
+        "id": 69,
+        "question": "Sebuah pusat kota berkembang secara vertikal sehingga banyak bangunan terkonsentrasi pada wilayah yang relatif kecil. Model pola ruang yang paling sesuai adalah ....",
+        "options": [
+          "Bentuk inti/kompak",
+          "Bentuk memencar",
+          "Bentuk cincin",
+          "Bentuk satelit",
+          "Bentuk radial"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bentuk inti atau kompak didominasi perkembangan vertikal yang memungkinkan konsentrasi banyak bangunan pada area kecil."
+      },
+      {
+        "id": 70,
+        "question": "Dalam satu kesatuan morfologi perkotaan yang luas, terdapat beberapa pusat perkotaan dengan kelompok fungsi yang khusus dan berbeda satu sama lain. Pola tersebut merupakan ....",
+        "options": [
+          "Bentuk cincin",
+          "Bentuk memencar",
+          "Bentuk radial",
+          "Bentuk inti/kompak",
+          "Bentuk linier bermanik"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bentuk memencar (dispersed city plans) memiliki beberapa pusat perkotaan dengan kelompok fungsi yang khusus dan berbeda satu sama lain."
       }
     ]
   }
