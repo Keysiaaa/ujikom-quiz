@@ -64,7 +64,11 @@ function initCategoriesData() {
   if (savedCategories) {
     try {
       const parsed = JSON.parse(savedCategories);
-      if (Array.isArray(parsed) && parsed.length > 0) {
+      const totalLocal = Array.isArray(parsed)
+        ? parsed.reduce((n, c) => n + ((c && c.questions) ? c.questions.length : 0), 0)
+        : 0;
+      // Draf lokal kosong diabaikan bila ada bank soal publik
+      if (Array.isArray(parsed) && parsed.length > 0 && (totalLocal > 0 || !published)) {
         AppState.categories = parsed;
         return;
       }
@@ -1225,6 +1229,16 @@ function handleStartQuiz() {
     return;
   }
   errorEl.classList.add('hidden');
+
+  // Muat soal dari kategori yang dipilih (atau kategori pertama yang berisi soal)
+  let activeCat = getCategory(AppState.selectedCategoryId);
+  if (!activeCat || activeCat.questions.length === 0) {
+    activeCat = AppState.categories.find(c => c.questions && c.questions.length > 0) || null;
+  }
+  if (activeCat) {
+    AppState.selectedCategoryId = activeCat.id;
+    AppState.questions = [...activeCat.questions];
+  }
 
   if (AppState.questions.length === 0) {
     alert("Bank soal masih kosong! Silakan tambahkan soal Anda terlebih dahulu dengan mengklik tombol 'Kelola & Tambah Soal'.");
