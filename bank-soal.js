@@ -1,6 +1,6 @@
 /**
  * BANK SOAL PUBLIK - dibaca oleh semua perangkat (laptop & HP).
- * Berisi 100 soal Uji Kompetensi Perencana Ahli Pertama.
+ * Bagian 1: 100 soal. Bagian 2: 70 soal.
  */
 const publishedBank = [
   {
@@ -1306,6 +1306,922 @@ const publishedBank = [
         ],
         "correctIndex": 3,
         "explanation": "Pembahasan belum ditambahkan."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bagian 2",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Sebuah pemerintah daerah memiliki anggaran terbatas dan harus memilih antara membangun jalan penghubung atau memperbaiki fasilitas sekolah. Jika pemerintah memilih pembangunan jalan, konsep biaya peluang dalam keputusan tersebut paling tepat diartikan sebagai ....",
+        "options": [
+          "Jumlah seluruh proyek yang tidak memperoleh anggaran",
+          "Biaya administrasi yang muncul selama proses pembangunan",
+          "Nilai manfaat dari alternatif terbaik yang tidak jadi dipilih, yaitu perbaikan fasilitas sekolah",
+          "Seluruh anggaran yang dikeluarkan untuk pembangunan jalan",
+          "Manfaat pembangunan jalan yang diterima masyarakat"
+        ],
+        "correctIndex": 2,
+        "explanation": "Biaya peluang adalah nilai dari alternatif terbaik yang dikorbankan ketika suatu pilihan diambil. Dalam kasus ini, alternatif terbaik yang tidak dipilih adalah perbaikan fasilitas sekolah."
+      },
+      {
+        "id": 2,
+        "question": "Seorang perencana menyampaikan bahwa inflasi daerah tercatat sebesar 4,2 persen berdasarkan data indeks harga. Pernyataan tersebut termasuk pendekatan positif dalam analisis ekonomi karena ....",
+        "options": [
+          "Memuat penilaian bahwa inflasi tersebut tidak dapat diterima",
+          "Mengutamakan pendapat pribadi perencana",
+          "Didasarkan pada data dan fakta yang dapat diukur",
+          "Menyatakan kebijakan yang seharusnya dilakukan pemerintah",
+          "Menjelaskan kondisi berdasarkan norma sosial"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pendekatan positif menjelaskan keadaan ekonomi berdasarkan data dan fakta, bukan berdasarkan penilaian atau norma mengenai keadaan yang seharusnya."
+      },
+      {
+        "id": 3,
+        "question": "Sebuah perusahaan membutuhkan tenaga kerja untuk menjalankan kegiatan produksinya. Dalam arus melingkar perekonomian, hubungan yang tepat antara rumah tangga dan perusahaan adalah ....",
+        "options": [
+          "Rumah tangga menyediakan faktor produksi dan menerima upah dari perusahaan",
+          "Perusahaan menerima tenaga kerja tanpa memberikan balas jasa",
+          "Rumah tangga membayar upah kepada perusahaan atas penggunaan tenaga kerja",
+          "Perusahaan menyediakan seluruh faktor produksi tanpa melibatkan rumah tangga",
+          "Rumah tangga hanya membeli barang dan tidak memasok faktor produksi"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rumah tangga memasok faktor produksi, termasuk tenaga kerja, kepada perusahaan. Sebagai balas jasa, perusahaan membayar upah atau gaji kepada rumah tangga."
+      },
+      {
+        "id": 4,
+        "question": "Meningkatnya pembayaran QRIS di pasar dan restoran menunjukkan perubahan cara pembayaran, tetapi kegiatan tersebut tetap dicatat sebagai ....",
+        "options": [
+          "Investasi swasta dalam teknologi keuangan",
+          "Konsumsi rumah tangga atas barang dan jasa",
+          "Pengeluaran pemerintah untuk barang dan jasa",
+          "Pembentukan modal tetap oleh rumah tangga",
+          "Ekspor jasa ke luar negeri"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pembayaran digital hanya mengubah metode transaksi. Ketika rumah tangga membeli barang atau jasa, pengeluaran tersebut tetap merupakan konsumsi rumah tangga (C)."
+      },
+      {
+        "id": 5,
+        "question": "Dalam menghitung PDB, sebuah pabrik menjual bahan baku kepada perusahaan lain yang kemudian mengolahnya menjadi barang jadi. Agar tidak terjadi penghitungan ganda, pendekatan produksi seharusnya menghitung ....",
+        "options": [
+          "Nilai penjualan bahan baku saja",
+          "Nilai seluruh transaksi bahan baku dan barang jadi secara terpisah",
+          "Nilai barang jadi ditambah seluruh nilai input antara",
+          "Nilai tambah yang dihasilkan pada setiap tahap produksi",
+          "Jumlah tenaga kerja di seluruh perusahaan"
+        ],
+        "correctIndex": 3,
+        "explanation": "Pendekatan produksi menghitung jumlah nilai tambah dari seluruh sektor. Dengan demikian, nilai input antara tidak dihitung berulang kali."
+      },
+      {
+        "id": 6,
+        "question": "BPS ingin menghitung kontribusi sektor pertanian, industri pengolahan, dan perdagangan terhadap PDRB suatu kabupaten. Pendekatan PDRB yang paling sesuai adalah pendekatan ....",
+        "options": [
+          "Konsumsi, dengan menjumlahkan pembelian barang akhir",
+          "Produksi, dengan menjumlahkan nilai tambah setiap lapangan usaha",
+          "Pendapatan, dengan menjumlahkan balas jasa faktor produksi",
+          "Pengeluaran, dengan menjumlahkan konsumsi rumah tangga saja",
+          "Perdagangan, dengan menjumlahkan ekspor dan impor saja"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pendekatan produksi atau lapangan usaha menghitung PDB/PDRB dengan menjumlahkan nilai tambah seluruh sektor ekonomi."
+      },
+      {
+        "id": 7,
+        "question": "Suatu daerah memiliki konsumsi rumah tangga Rp500 triliun, investasi Rp120 triliun, pengeluaran pemerintah Rp100 triliun, ekspor Rp80 triliun, dan impor Rp50 triliun. Berdasarkan pendekatan pengeluaran, nilai PDRB adalah ....",
+        "options": [
+          "Rp750 triliun",
+          "Rp850 triliun",
+          "Rp700 triliun",
+          "Rp730 triliun",
+          "Rp800 triliun"
+        ],
+        "correctIndex": 0,
+        "explanation": "PDRB = C + I + G + (X − M) = 500 + 120 + 100 + (80 − 50) = Rp750 triliun. Opsi yang benar adalah Rp750 triliun."
+      },
+      {
+        "id": 8,
+        "question": "Pemerintah menaikkan pengeluaran untuk pembangunan infrastruktur, sedangkan konsumsi, investasi swasta, dan ekspor neto diasumsikan tetap. Berdasarkan identitas PDB Y = C + I + G + NX, dampak langsungnya adalah ....",
+        "options": [
+          "PDB meningkat hanya jika impor juga meningkat",
+          "PDB meningkat karena komponen pengeluaran pemerintah bertambah",
+          "PDB tidak berubah karena hanya konsumsi yang dihitung",
+          "PDB turun karena belanja pemerintah tidak masuk PDB",
+          "PDB turun sebesar kenaikan pengeluaran pemerintah"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pengeluaran pemerintah (G) merupakan salah satu komponen PDB dari sisi pengeluaran. Dengan komponen lain tetap, kenaikan G meningkatkan PDB."
+      },
+      {
+        "id": 9,
+        "question": "Sebuah perusahaan membayar upah kepada pekerja, sewa kepada pemilik tanah, bunga kepada pemilik modal, dan laba kepada wirausahawan. Data tersebut digunakan dalam penghitungan PDB melalui pendekatan ....",
+        "options": [
+          "Pendapatan",
+          "Konsumsi",
+          "Produksi",
+          "Pengeluaran",
+          "Perdagangan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Pendekatan pendapatan menjumlahkan balas jasa faktor produksi, seperti upah/gaji, sewa, bunga, dan laba atau profit."
+      },
+      {
+        "id": 10,
+        "question": "PDB nominal suatu provinsi meningkat 12 persen, tetapi pada periode yang sama terjadi kenaikan harga barang dan jasa secara umum. Untuk menilai perubahan volume produksi yang sesungguhnya, perencana sebaiknya menggunakan ....",
+        "options": [
+          "Indeks Harga Perdagangan Besar saja",
+          "PDB nominal berdasarkan harga berlaku",
+          "PDB riil berdasarkan harga konstan",
+          "Nilai ekspor berdasarkan mata uang asing",
+          "Jumlah belanja pemerintah"
+        ],
+        "correctIndex": 2,
+        "explanation": "PDB riil menggunakan harga pada tahun dasar sehingga pengaruh perubahan harga umum dapat dipisahkan. Pertumbuhan ekonomi diukur dari perubahan PDB riil."
+      },
+      {
+        "id": 11,
+        "question": "PDB riil suatu wilayah meningkat dari Rp800 triliun menjadi Rp840 triliun. Berdasarkan data tersebut, pertumbuhan ekonomi wilayah itu adalah ....",
+        "options": [
+          "5 persen",
+          "10 persen",
+          "6 persen",
+          "8 persen",
+          "4 persen"
+        ],
+        "correctIndex": 0,
+        "explanation": "Pertumbuhan ekonomi = ((840 − 800) / 800) × 100 persen = 5 persen."
+      },
+      {
+        "id": 12,
+        "question": "Dalam suatu perekonomian, konsumsi rumah tangga, investasi, belanja pemerintah, serta ekspor neto mengalami peningkatan. Kondisi ini menunjukkan peningkatan pada ....",
+        "options": [
+          "Permintaan agregat",
+          "Kapasitas produksi potensial saja",
+          "Jumlah penduduk usia kerja",
+          "Penawaran agregat",
+          "Biaya input produksi"
+        ],
+        "correctIndex": 0,
+        "explanation": "Permintaan agregat merupakan total pengeluaran untuk barang dan jasa, yaitu C + I + G + (X − M). Kenaikan komponennya meningkatkan permintaan agregat."
+      },
+      {
+        "id": 13,
+        "question": "PDRB suatu kabupaten dihitung dari seluruh nilai pasar barang dan jasa final yang diproduksi di wilayah kabupaten tersebut selama satu tahun. Pernyataan ini menunjukkan bahwa PDRB dibatasi oleh ....",
+        "options": [
+          "Jumlah penduduk yang bekerja saja",
+          "Besarnya pendapatan yang diterima pemerintah",
+          "Wilayah dan periode waktu penghitungan",
+          "Kewarganegaraan pemilik perusahaan",
+          "Kepemilikan modal oleh penduduk lokal"
+        ],
+        "correctIndex": 2,
+        "explanation": "PDB/PDRB mencakup nilai pasar barang dan jasa final yang dihasilkan dalam suatu wilayah selama periode tertentu. Batas wilayah dan waktu merupakan unsur definisinya."
+      },
+      {
+        "id": 14,
+        "question": "Harga paket barang dan jasa yang menjadi acuan IHK sebesar Rp1.000.000 pada tahun dasar dan Rp1.200.000 pada tahun berjalan. Dengan menggunakan perbandingan biaya paket tersebut, nilai IHK tahun berjalan adalah ....",
+        "options": [
+          "140",
+          "80",
+          "100",
+          "110",
+          "120"
+        ],
+        "correctIndex": 4,
+        "explanation": "IHK = (biaya paket tahun berjalan / biaya paket tahun dasar) × 100 = (1.200.000 / 1.000.000) × 100 = 120."
+      },
+      {
+        "id": 15,
+        "question": "Seorang analis ingin mengukur perubahan harga barang dan jasa yang dibeli konsumen rumah tangga, seperti makanan, transportasi, kesehatan, dan pendidikan. Indeks yang paling tepat digunakan adalah ....",
+        "options": [
+          "Indeks Harga Konsumen (IHK)",
+          "Indeks produksi industri",
+          "PDB riil",
+          "Location Quotient",
+          "Indeks Harga Perdagangan Besar (IHPB)"
+        ],
+        "correctIndex": 0,
+        "explanation": "IHK mengukur perubahan harga kelompok barang dan jasa yang dikonsumsi konsumen di beberapa wilayah."
+      },
+      {
+        "id": 16,
+        "question": "Harga barang dan jasa pada perdagangan besar meningkat, sedangkan harga eceran yang dibayar konsumen belum seluruhnya berubah. Indikator yang secara khusus memantau harga pada tingkat perdagangan besar adalah ....",
+        "options": [
+          "IHK",
+          "IHPB",
+          "Tingkat Pengangguran Terbuka",
+          "PDB riil",
+          "PDB deflator"
+        ],
+        "correctIndex": 1,
+        "explanation": "IHPB dihitung berdasarkan survei kelompok barang dan jasa pada perdagangan besar di beberapa wilayah, berbeda dari IHK yang berfokus pada konsumsi rumah tangga."
+      },
+      {
+        "id": 17,
+        "question": "PDB nominal suatu negara sebesar Rp2.400 triliun, sedangkan PDB riilnya Rp2.000 triliun. Berdasarkan rumus PDB deflator, nilai deflator adalah ....",
+        "options": [
+          "100",
+          "110",
+          "80",
+          "120",
+          "140"
+        ],
+        "correctIndex": 3,
+        "explanation": "PDB deflator = (PDB nominal / PDB riil) × 100 = (2.400 / 2.000) × 100 = 120."
+      },
+      {
+        "id": 18,
+        "question": "IHK meningkat dari 110 pada tahun sebelumnya menjadi 115 pada tahun berjalan. Tingkat inflasi berdasarkan IHK adalah sekitar ....",
+        "options": [
+          "10,00 persen",
+          "2,50 persen",
+          "4,55 persen",
+          "15,00 persen",
+          "5,00 persen"
+        ],
+        "correctIndex": 2,
+        "explanation": "Inflasi = ((IHK tahun berjalan − IHK sebelumnya) / IHK sebelumnya) × 100 persen = ((115 − 110) / 110) × 100 = sekitar 4,55 persen."
+      },
+      {
+        "id": 19,
+        "question": "Nilai tukar rupiah melemah sehingga industri yang menggunakan bahan baku impor harus membayar biaya input lebih tinggi. Perusahaan kemudian menaikkan harga jual produknya. Peristiwa tersebut merupakan ....",
+        "options": [
+          "Penurunan harga akibat meningkatnya produktivitas",
+          "Demand-pull inflation akibat peningkatan konsumsi",
+          "Cost-push inflation akibat kenaikan biaya produksi",
+          "Inflasi yang hanya disebabkan belanja pemerintah",
+          "Deflasi akibat penurunan permintaan"
+        ],
+        "correctIndex": 2,
+        "explanation": "Kenaikan harga bahan baku impor meningkatkan biaya produksi. Kenaikan harga umum yang berasal dari sisi penawaran atau biaya produksi disebut cost-push inflation."
+      },
+      {
+        "id": 20,
+        "question": "Pendapatan masyarakat meningkat dan mendorong permintaan barang serta jasa, sementara kapasitas produksi tidak mampu mengikuti kenaikan permintaan. Tekanan inflasi yang paling mungkin terjadi adalah ....",
+        "options": [
+          "Cost-push inflation",
+          "Deflasi",
+          "Penurunan indeks harga",
+          "Inflasi karena penurunan biaya input",
+          "Demand-pull inflation"
+        ],
+        "correctIndex": 4,
+        "explanation": "Kenaikan permintaan agregat yang tidak diimbangi peningkatan penawaran dapat mendorong kenaikan harga secara umum. Kondisi ini disebut demand-pull inflation."
+      },
+      {
+        "id": 21,
+        "question": "Jika IHK suatu wilayah turun dari 125 menjadi 120, kondisi perubahan harga secara umum tersebut disebut ....",
+        "options": [
+          "Stagflasi",
+          "Cost-push inflation",
+          "Inflasi",
+          "Demand-pull inflation",
+          "Deflasi"
+        ],
+        "correctIndex": 4,
+        "explanation": "Deflasi merupakan persentase penurunan harga secara umum, yang tercermin dari penurunan indeks harga."
+      },
+      {
+        "id": 22,
+        "question": "Sebuah wilayah memiliki 720.000 penduduk bekerja dan 80.000 penganggur. Tingkat Pengangguran Terbuka (TPT) wilayah tersebut adalah ....",
+        "options": [
+          "12 persen",
+          "11 persen",
+          "10 persen",
+          "9 persen",
+          "8 persen"
+        ],
+        "correctIndex": 2,
+        "explanation": "Angkatan kerja = 720.000 + 80.000 = 800.000 orang. TPT = 80.000 / 800.000 × 100 persen = 10 persen."
+      },
+      {
+        "id": 23,
+        "question": "Suatu kabupaten memiliki 900.000 angkatan kerja dan 1.200.000 penduduk usia kerja. Tingkat Partisipasi Angkatan Kerja (TPAK) kabupaten tersebut adalah ....",
+        "options": [
+          "80 persen",
+          "70 persen",
+          "65 persen",
+          "75 persen",
+          "60 persen"
+        ],
+        "correctIndex": 3,
+        "explanation": "TPAK = jumlah angkatan kerja / jumlah penduduk usia kerja × 100 persen = 900.000 / 1.200.000 × 100 persen = 75 persen."
+      },
+      {
+        "id": 24,
+        "question": "Dalam pendataan Sakernas, seseorang membantu usaha keluarganya selama dua jam tanpa menerima upah pada minggu lalu. Kegiatan tersebut termasuk kategori ....",
+        "options": [
+          "Penduduk bukan usia kerja",
+          "Penganggur yang sedang mempersiapkan usaha",
+          "Penganggur karena tidak menerima upah",
+          "Bekerja karena melakukan kegiatan ekonomi paling sedikit satu jam dalam seminggu",
+          "Bukan angkatan kerja karena bekerja di usaha keluarga"
+        ],
+        "correctIndex": 3,
+        "explanation": "Konsep bekerja dalam materi mencakup kegiatan ekonomi untuk memperoleh atau membantu memperoleh pendapatan/keuntungan sedikitnya satu jam tanpa terputus dalam seminggu, termasuk pekerja tak dibayar yang membantu usaha."
+      },
+      {
+        "id": 25,
+        "question": "Seseorang belum bekerja, tetapi sedang menyiapkan usaha sendiri dan belum mulai beroperasi. Dalam konsep ketenagakerjaan pada materi, orang tersebut dikategorikan sebagai ....",
+        "options": [
+          "Penganggur terbuka",
+          "Bukan angkatan kerja karena sekolah",
+          "Penduduk di luar usia kerja",
+          "Pekerja tidak penuh",
+          "Pekerja formal"
+        ],
+        "correctIndex": 0,
+        "explanation": "Penganggur terbuka mencakup orang yang tidak memiliki pekerjaan dan sedang mempersiapkan usaha, selain kategori pencari kerja dan kategori lainnya yang disebutkan dalam materi."
+      },
+      {
+        "id": 26,
+        "question": "Seorang pekerja hanya bekerja 25 jam dalam seminggu. Berdasarkan batas jam kerja pada materi, ia termasuk ....",
+        "options": [
+          "Angkatan kerja baru",
+          "Pekerja tidak penuh",
+          "Bukan angkatan kerja",
+          "Penganggur terbuka",
+          "Penduduk bukan usia kerja"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pekerja tidak penuh adalah mereka yang bekerja di bawah jam kerja normal, yaitu kurang dari 35 jam dalam seminggu."
+      },
+      {
+        "id": 27,
+        "question": "Harga suatu barang naik, sedangkan faktor lain dianggap tetap. Berdasarkan hukum permintaan, perubahan yang paling mungkin terjadi adalah ....",
+        "options": [
+          "Jumlah barang yang diminta menurun",
+          "Jumlah barang yang diminta meningkat",
+          "Kurva permintaan selalu bergeser ke kanan",
+          "Penawaran barang pasti menurun",
+          "Permintaan tidak dipengaruhi harga"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hukum permintaan menyatakan harga dan jumlah yang diminta berhubungan berlawanan arah. Ketika harga naik, jumlah yang diminta turun, dengan faktor lain tetap."
+      },
+      {
+        "id": 28,
+        "question": "Pendapatan masyarakat di suatu kota meningkat. Untuk barang normal, perubahan tersebut cenderung menyebabkan ....",
+        "options": [
+          "Permintaan bergeser ke kiri",
+          "Harga input produksi meningkat secara otomatis",
+          "Jumlah penjual menurun",
+          "Kurva permintaan bergeser ke kanan",
+          "Kurva penawaran bergeser ke kiri"
+        ],
+        "correctIndex": 3,
+        "explanation": "Peningkatan pendapatan masyarakat merupakan faktor yang meningkatkan permintaan barang normal, sehingga kurva permintaan bergeser ke kanan."
+      },
+      {
+        "id": 29,
+        "question": "Harga bahan baku utama industri makanan meningkat tajam. Dengan faktor lain tetap, dampak yang paling mungkin terhadap penawaran produk makanan adalah ....",
+        "options": [
+          "Penawaran meningkat dan kurva bergeser ke kanan",
+          "Penawaran menurun dan kurva bergeser ke kiri",
+          "Kurva permintaan bergeser ke kanan",
+          "Penawaran tidak berubah karena harga output tetap",
+          "Permintaan meningkat secara otomatis"
+        ],
+        "correctIndex": 1,
+        "explanation": "Kenaikan harga input meningkatkan biaya produksi sehingga produsen cenderung mengurangi penawaran. Kurva penawaran bergeser ke kiri."
+      },
+      {
+        "id": 30,
+        "question": "Produsen menerapkan teknologi baru yang mampu menghasilkan lebih banyak produk dengan jumlah input yang sama. Perubahan ini cenderung menyebabkan ....",
+        "options": [
+          "Kurva permintaan bergeser ke kiri",
+          "Permintaan turun karena harga input turun",
+          "Penawaran meningkat dan kurva bergeser ke kanan",
+          "Jumlah pembeli berkurang",
+          "Penawaran menurun dan kurva bergeser ke kiri"
+        ],
+        "correctIndex": 2,
+        "explanation": "Teknologi yang lebih baik meningkatkan kemampuan produksi dan mendorong penawaran barang/jasa meningkat."
+      },
+      {
+        "id": 31,
+        "question": "Harga teh meningkat. Jika teh merupakan barang substitusi bagi kopi, perubahan tersebut cenderung menyebabkan ....",
+        "options": [
+          "Permintaan kopi meningkat",
+          "Harga kopi harus turun",
+          "Penawaran kopi menurun",
+          "Penawaran teh meningkat secara otomatis",
+          "Permintaan kopi menurun"
+        ],
+        "correctIndex": 0,
+        "explanation": "Barang substitusi dapat saling menggantikan. Ketika harga teh meningkat, sebagian konsumen beralih ke kopi sehingga permintaan kopi meningkat."
+      },
+      {
+        "id": 32,
+        "question": "Harga printer meningkat tajam. Jika tinta merupakan barang komplementer bagi printer, perubahan tersebut cenderung menyebabkan ....",
+        "options": [
+          "Penawaran tinta meningkat",
+          "Permintaan tinta menurun",
+          "Jumlah produsen tinta pasti bertambah",
+          "Permintaan tinta meningkat",
+          "Permintaan printer meningkat"
+        ],
+        "correctIndex": 1,
+        "explanation": "Barang komplementer digunakan bersama. Kenaikan harga printer dapat menurunkan permintaan printer dan ikut menurunkan permintaan tinta."
+      },
+      {
+        "id": 33,
+        "question": "Harga layanan digital naik 15 persen, sementara jumlah pelanggan turun 3 persen. Berdasarkan perbandingan persentase perubahan kuantitas dan harga, permintaan layanan tersebut bersifat ....",
+        "options": [
+          "Elastis",
+          "Elastis sempurna",
+          "Inelastis",
+          "Inelastis sempurna",
+          "Unit elastis"
+        ],
+        "correctIndex": 2,
+        "explanation": "Koefisien elastisitas harga permintaan secara absolut = 3% / 15% = 0,2. Karena lebih kecil dari 1, permintaannya bersifat inelastis."
+      },
+      {
+        "id": 34,
+        "question": "Harga suatu produk meningkat 10 persen dan jumlah yang diminta turun 10 persen. Berdasarkan nilai absolut elastisitas harga permintaan, permintaan produk tersebut tergolong ....",
+        "options": [
+          "Inelastis",
+          "Elastis sempurna",
+          "Elastis",
+          "Unit elastis",
+          "Inelastis sempurna"
+        ],
+        "correctIndex": 3,
+        "explanation": "Elastisitas absolut = 10% / 10% = 1. Nilai tersebut menunjukkan permintaan unit elastis."
+      },
+      {
+        "id": 35,
+        "question": "Pemerintah menetapkan harga eceran tertinggi minyak goreng di bawah harga keseimbangan pasar. Dampak yang paling mungkin terjadi adalah ....",
+        "options": [
+          "Penawaran dan permintaan selalu sama",
+          "Produsen meningkatkan penawaran tanpa batas",
+          "Kelebihan penawaran minyak goreng",
+          "Kekurangan penawaran atau kelangkaan barang",
+          "Permintaan turun menjadi nol"
+        ],
+        "correctIndex": 3,
+        "explanation": "Harga tertinggi (ceiling price) yang ditetapkan di bawah harga keseimbangan membuat harga lebih rendah dari harga pasar. Jumlah yang diminta cenderung melebihi jumlah yang ditawarkan, sehingga terjadi kekurangan."
+      },
+      {
+        "id": 36,
+        "question": "Pemerintah menetapkan upah minimum di atas tingkat keseimbangan pasar tenaga kerja. Kebijakan harga terendah (floor price) tersebut pada dasarnya ditujukan untuk ....",
+        "options": [
+          "Membatasi seluruh kegiatan produksi",
+          "Menurunkan standar upah pekerja",
+          "Melindungi produsen atau pihak penjual faktor produksi melalui penetapan harga minimum",
+          "Melindungi konsumen dari kenaikan harga",
+          "Menghapus peran pasar tenaga kerja"
+        ],
+        "correctIndex": 2,
+        "explanation": "Harga terendah (floor price) ditujukan untuk melindungi produsen. Dalam contoh materi, upah minimum merupakan salah satu bentuk penetapan harga terendah."
+      },
+      {
+        "id": 37,
+        "question": "Pemerintah memberikan subsidi pupuk kepada petani sehingga biaya input produksi pertanian menurun. Dengan faktor lain tetap, dampak yang diharapkan pada pasar pupuk/produksi pertanian adalah ....",
+        "options": [
+          "Harga seluruh barang pasti meningkat",
+          "Jumlah produksi pertanian turun",
+          "Penawaran meningkat karena biaya produksi lebih rendah",
+          "Kurva permintaan pupuk bergeser ke kiri",
+          "Kurva penawaran bergeser ke kiri karena biaya turun"
+        ],
+        "correctIndex": 2,
+        "explanation": "Subsidi yang menurunkan biaya input mendorong peningkatan penawaran. Dalam konteks kebijakan pupuk, tujuan materi adalah menjaga keterjangkauan harga pupuk dan meningkatkan produksi pertanian."
+      },
+      {
+        "id": 38,
+        "question": "Pemerintah memberikan subsidi pupuk yang menurunkan biaya input bagi petani. Dengan faktor lain tetap, dampak yang paling mungkin terhadap penawaran hasil pertanian adalah ....",
+        "options": [
+          "Permintaan hasil pertanian menurun secara otomatis",
+          "Penawaran hasil pertanian bergeser ke kiri karena biaya input turun",
+          "Jumlah produksi hasil pertanian pasti turun",
+          "Penawaran hasil pertanian meningkat karena biaya produksi lebih rendah",
+          "Harga seluruh barang pasti meningkat"
+        ],
+        "correctIndex": 3,
+        "explanation": "Subsidi pupuk menurunkan biaya input yang ditanggung petani. Biaya produksi yang lebih rendah mendorong peningkatan penawaran hasil pertanian."
+      },
+      {
+        "id": 39,
+        "question": "Sebuah kabupaten mengembangkan pendidikan vokasi, memperbaiki keterampilan tenaga kerja, memanfaatkan sumber daya alam secara berkelanjutan, serta memperkuat teknologi dan kelembagaan. Kebijakan ini paling sesuai dengan konsep ....",
+        "options": [
+          "Pengukuran inflasi dengan IHPB",
+          "Pertumbuhan ekonomi yang hanya bergantung pada modal fisik",
+          "Pengendalian harga melalui ceiling price",
+          "Pertumbuhan ekonomi endogen yang memanfaatkan potensi internal wilayah",
+          "Pertumbuhan yang hanya ditentukan oleh ekspor"
+        ],
+        "correctIndex": 3,
+        "explanation": "Pertumbuhan ekonomi endogen menekankan pemanfaatan potensi internal wilayah, termasuk SDM berpengetahuan dan berketerampilan, SDA, teknologi, serta kelembagaan."
+      },
+      {
+        "id": 40,
+        "question": "Pembangunan mesin, pabrik, dan peralatan produksi oleh perusahaan termasuk penambahan faktor pertumbuhan berupa ....",
+        "options": [
+          "Modal manusia (H)",
+          "Modal fisik (K)",
+          "Social overhead capital",
+          "Sumber daya alam (N)",
+          "Teknologi (A) saja"
+        ],
+        "correctIndex": 1,
+        "explanation": "Modal fisik (K) adalah barang modal yang secara langsung dapat digunakan untuk menghasilkan produksi, seperti bangunan, pabrik, mesin, dan peralatan."
+      },
+      {
+        "id": 41,
+        "question": "Program beasiswa dan peningkatan layanan kesehatan pekerja diarahkan untuk memperbaiki pengetahuan, keterampilan, pengalaman, dan kondisi manusia. Dalam fungsi produksi pada materi, upaya ini memperkuat ....",
+        "options": [
+          "Modal fisik",
+          "Harga pasar",
+          "Sumber daya alam tidak terbarukan",
+          "Modal manusia",
+          "Ekspor neto"
+        ],
+        "correctIndex": 3,
+        "explanation": "Modal manusia berkaitan dengan pengetahuan, keterampilan, dan pengalaman. Pendidikan serta kesehatan merupakan investasi penting dalam modal manusia."
+      },
+      {
+        "id": 42,
+        "question": "Pemerintah daerah membangun jalan, sekolah, rumah sakit, dan perumahan umum. Infrastruktur tersebut digolongkan sebagai social overhead capital karena ....",
+        "options": [
+          "Seluruhnya merupakan barang konsumsi akhir rumah tangga",
+          "Menjadi sarana dasar kebutuhan masyarakat dan tidak secara langsung meningkatkan produksi",
+          "Secara langsung selalu menjadi mesin produksi perusahaan",
+          "Hanya digunakan oleh perusahaan swasta",
+          "Tidak memiliki manfaat bagi kegiatan ekonomi"
+        ],
+        "correctIndex": 1,
+        "explanation": "Social overhead capital merupakan sarana atau dasar bagi kebutuhan masyarakat, seperti infrastruktur, perumahan, sekolah, dan rumah sakit, yang tidak secara langsung meningkatkan produksi."
+      },
+      {
+        "id": 43,
+        "question": "Pemerintah kabupaten membangun jalan dan irigasi, sementara perusahaan swasta membeli mesin serta membangun pabrik. Dalam penghitungan Pembentukan Modal Tetap Domestik Bruto (PMTB), kegiatan yang termasuk investasi tetap adalah ....",
+        "options": [
+          "Pembayaran bunga pinjaman konsumsi",
+          "Pembayaran bantuan sosial tunai kepada rumah tangga",
+          "Belanja pegawai pemerintah dan pembayaran gaji pekerja",
+          "Pembelian barang konsumsi sehari-hari",
+          "Pembangunan jalan dan irigasi serta pembelian mesin dan pembangunan pabrik"
+        ],
+        "correctIndex": 4,
+        "explanation": "PMTB mencakup investasi dalam barang modal tetap, antara lain infrastruktur pemerintah dan aset produksi seperti pabrik serta mesin. Belanja pegawai bukan pembentukan modal tetap."
+      },
+      {
+        "id": 44,
+        "question": "Sebuah industri membuang limbah cair ke sungai sehingga kualitas air masyarakat menurun, tetapi biaya kerusakan tersebut tidak tercermin dalam harga produk industri. Kondisi ini merupakan ....",
+        "options": [
+          "Eksternalitas positif yang perlu diberi subsidi",
+          "Biaya peluang rumah tangga",
+          "Kenaikan permintaan agregat",
+          "Manfaat sosial dari kegiatan industri",
+          "Eksternalitas negatif yang dapat ditangani melalui pajak lingkungan atau kewajiban pengolahan limbah"
+        ],
+        "correctIndex": 4,
+        "explanation": "Pencemaran yang merugikan pihak lain tanpa tercermin dalam harga pasar merupakan eksternalitas negatif. Kebijakan dapat berupa pajak lingkungan atau kewajiban pengolahan limbah."
+      },
+      {
+        "id": 45,
+        "question": "Peningkatan cakupan vaksinasi memberikan manfaat bukan hanya kepada individu yang divaksin, tetapi juga mengurangi risiko penularan bagi orang lain. Situasi ini menggambarkan ....",
+        "options": [
+          "Biaya peluang pemerintah",
+          "Eksternalitas negatif dari konsumsi",
+          "Penawaran agregat yang menurun",
+          "Kenaikan harga faktor produksi",
+          "Eksternalitas positif melalui terbentuknya herd immunity"
+        ],
+        "correctIndex": 4,
+        "explanation": "Vaksinasi memberi manfaat eksternal kepada masyarakat karena membantu menciptakan herd immunity, termasuk melindungi orang yang belum atau tidak dapat divaksin."
+      },
+      {
+        "id": 46,
+        "question": "Pemerintah daerah ingin mengukur partisipasi sekolah sesuai kelompok usia ideal untuk jenjang SMA/sederajat. Indikator yang tepat adalah APM, dengan perbandingan ....",
+        "options": [
+          "Jumlah seluruh murid SMA dibandingkan jumlah penduduk seluruh usia",
+          "Jumlah penduduk usia 16–18 tahun dibandingkan jumlah murid SMA nasional",
+          "Jumlah murid SMA usia 16–18 tahun dibandingkan jumlah penduduk usia 16–18 tahun",
+          "Jumlah murid SMA dibandingkan jumlah seluruh murid SD sampai perguruan tinggi",
+          "Jumlah murid semua jenjang dibandingkan jumlah penduduk usia sekolah"
+        ],
+        "correctIndex": 2,
+        "explanation": "APM SMA/sederajat menunjukkan jumlah murid pada jenjang SMA yang berusia 16–18 tahun dibandingkan dengan jumlah penduduk usia 16–18 tahun."
+      },
+      {
+        "id": 47,
+        "question": "Sebuah wilayah memiliki potensi tenaga air dan energi surya yang besar. Pemanfaatan potensi tersebut untuk mendukung pembangunan ekonomi daerah paling sesuai diarahkan pada ....",
+        "options": [
+          "Pengurangan kapasitas produksi listrik",
+          "Pembatasan investasi sektor energi",
+          "Pengalihan seluruh sumber daya ke industri nonproduktif",
+          "Peningkatan ketergantungan pada energi fosil",
+          "Pengembangan industrialisasi hijau"
+        ],
+        "correctIndex": 4,
+        "explanation": "Potensi energi baru terbarukan seperti PLTA dan energi surya dapat dikembangkan untuk mendorong industrialisasi hijau."
+      },
+      {
+        "id": 48,
+        "question": "Rupiah mengalami depresiasi terhadap dolar AS. Dengan asumsi faktor lain tetap, harga barang ekspor Indonesia menjadi relatif lebih murah bagi pembeli luar negeri. Dampak yang paling mungkin adalah ....",
+        "options": [
+          "Permintaan ekspor meningkat dan nilai ekspor berpotensi naik",
+          "Permintaan ekspor turun karena barang domestik lebih mahal",
+          "Permintaan impor meningkat secara otomatis",
+          "Ekspor dan impor pasti tidak berubah",
+          "Harga barang impor turun di pasar domestik"
+        ],
+        "correctIndex": 0,
+        "explanation": "Depresiasi rupiah membuat harga barang ekspor relatif lebih murah di pasar internasional sehingga permintaan dan nilai ekspor berpotensi meningkat."
+      },
+      {
+        "id": 49,
+        "question": "Ketika rupiah melemah terhadap mata uang asing, harga barang impor dalam rupiah cenderung naik. Dengan faktor lain tetap, dampak yang paling mungkin adalah ....",
+        "options": [
+          "Nilai impor selalu naik tanpa dipengaruhi permintaan",
+          "Ekspor pasti menurun",
+          "Harga barang impor di dalam negeri turun",
+          "Permintaan impor meningkat karena barang lebih murah",
+          "Permintaan impor menurun karena harga barang impor lebih mahal"
+        ],
+        "correctIndex": 4,
+        "explanation": "Depresiasi rupiah membuat barang impor lebih mahal di pasar domestik. Hal ini cenderung menurunkan permintaan impor."
+      },
+      {
+        "id": 50,
+        "question": "Pendapatan masyarakat internasional meningkat sehingga daya beli terhadap barang impor bertambah. Bagi negara yang mengekspor komoditas tersebut, dampak yang paling mungkin adalah ....",
+        "options": [
+          "Nilai impor domestik meningkat",
+          "PDB riil negara pengekspor pasti turun",
+          "Biaya input domestik otomatis meningkat",
+          "Permintaan ekspor menurun",
+          "Permintaan ekspor meningkat"
+        ],
+        "correctIndex": 4,
+        "explanation": "Peningkatan pendapatan masyarakat internasional dapat meningkatkan daya beli terhadap barang impor, sehingga permintaan dan nilai ekspor negara mitra berpotensi naik."
+      },
+      {
+        "id": 51,
+        "question": "Pemerintah mengenakan tarif pada barang impor. Berdasarkan materi, dampak langsung kebijakan tariff barrier tersebut adalah ....",
+        "options": [
+          "Menghapus biaya masuk barang impor",
+          "Menaikkan kuota impor tanpa batas",
+          "Menurunkan harga barang impor di pasar domestik",
+          "Meningkatkan permintaan impor karena harga turun",
+          "Meningkatkan harga barang impor di pasar domestik sehingga permintaan impor cenderung turun"
+        ],
+        "correctIndex": 4,
+        "explanation": "Tarif impor meningkatkan harga barang impor di pasar dalam negeri. Harga yang lebih tinggi cenderung menurunkan permintaan impor."
+      },
+      {
+        "id": 52,
+        "question": "Pemerintah membangun integrasi pelabuhan, digitalisasi rantai pasok, dan tol laut untuk memperbaiki konektivitas antardaerah. Dampak ekonomi regional yang diharapkan adalah ....",
+        "options": [
+          "Memperbesar disparitas harga antarwilayah",
+          "Menurunkan biaya logistik dan mengurangi disparitas harga antarwilayah",
+          "Meningkatkan biaya logistik antarwilayah",
+          "Meningkatkan fragmentasi pasar",
+          "Mengurangi perdagangan domestik"
+        ],
+        "correctIndex": 1,
+        "explanation": "Integrasi logistik dan konektivitas dapat menurunkan biaya distribusi sehingga membantu mengurangi disparitas harga antarwilayah."
+      },
+      {
+        "id": 53,
+        "question": "Beberapa kabupaten membangun kawasan ekonomi terpadu, tetapi menghadapi perbedaan kepentingan, regulasi, dan kapasitas fiskal. Strategi kelembagaan yang paling mendukung kerja sama berkelanjutan adalah ....",
+        "options": [
+          "Menunda kerja sama sampai seluruh daerah memiliki kapasitas fiskal yang sama",
+          "Membiarkan setiap daerah mengembangkan kawasan sendiri tanpa koordinasi",
+          "Menyerahkan semua pengelolaan kepada daerah dengan anggaran terbesar",
+          "Menghentikan komunikasi antardaerah",
+          "Membentuk badan kerja sama dengan pembagian peran, pendanaan, dan manfaat yang disepakati secara jelas"
+        ],
+        "correctIndex": 4,
+        "explanation": "Badan kerja sama dengan kesepakatan yang jelas mengenai peran, pendanaan, dan pembagian manfaat membantu mengelola perbedaan antardaerah serta menjaga keberlanjutan kerja sama."
+      },
+      {
+        "id": 54,
+        "question": "ASEAN Free Trade Area (AFTA) dalam materi dicantumkan sebagai contoh ....",
+        "options": [
+          "Indikator produktivitas tenaga kerja",
+          "Kerja sama perdagangan regional",
+          "Pengukuran kemiskinan absolut",
+          "Pengendalian harga domestik",
+          "Kebijakan moneter nasional"
+        ],
+        "correctIndex": 1,
+        "explanation": "AFTA merupakan salah satu contoh kerja sama perdagangan regional, bersama antara lain USMCA, Uni Eropa, dan WTO."
+      },
+      {
+        "id": 55,
+        "question": "Menurut pendekatan kebutuhan dasar yang digunakan BPS, penduduk dikategorikan miskin apabila ....",
+        "options": [
+          "Rata-rata pengeluaran per kapita per bulan berada di bawah garis kemiskinan",
+          "Tidak memiliki akses terhadap barang impor",
+          "Penghasilannya lebih rendah daripada rata-rata nasional",
+          "Tidak memiliki rumah milik sendiri",
+          "Tidak memiliki pekerjaan tetap"
+        ],
+        "correctIndex": 0,
+        "explanation": "Pengukuran kemiskinan absolut BPS menggunakan pendekatan kemampuan memenuhi kebutuhan dasar. Penduduk miskin adalah penduduk dengan rata-rata pengeluaran per kapita per bulan di bawah garis kemiskinan."
+      },
+      {
+        "id": 56,
+        "question": "Garis Kemiskinan Makanan (GKM) dalam penghitungan kemiskinan BPS mengacu pada pengeluaran minimum untuk memenuhi kebutuhan makanan setara dengan ....",
+        "options": [
+          "2.500 kilokalori per kapita per hari",
+          "2.100 kilokalori per kapita per hari",
+          "1.800 kilokalori per kapita per hari",
+          "1.500 kilokalori per kapita per hari",
+          "2.000 kilokalori per kapita per hari"
+        ],
+        "correctIndex": 1,
+        "explanation": "Materi menjelaskan bahwa GKM mengacu pada kebutuhan minimum makanan setara 2.100 kilokalori per kapita per hari."
+      },
+      {
+        "id": 57,
+        "question": "Pengeluaran untuk perumahan, pakaian, pendidikan, dan kesehatan dalam pengukuran kemiskinan BPS masuk ke dalam komponen ....",
+        "options": [
+          "PDB deflator",
+          "Pembentukan Modal Tetap Domestik Bruto",
+          "Pengeluaran konsumsi pemerintah",
+          "Garis Kemiskinan Makanan (GKM)",
+          "Garis Kemiskinan Non-Makanan (GKNM)"
+        ],
+        "correctIndex": 4,
+        "explanation": "GKNM mencakup kebutuhan dasar nonmakanan, antara lain perumahan, pakaian, pendidikan, dan kesehatan."
+      },
+      {
+        "id": 58,
+        "question": "Dua wilayah memiliki persentase penduduk miskin yang sama, tetapi wilayah A memiliki koefisien Gini 0,42 dan wilayah B 0,28. Berdasarkan rentang koefisien Gini 0 sampai 1, kesimpulan yang tepat adalah ....",
+        "options": [
+          "Kedua wilayah memiliki ketimpangan yang sama",
+          "Koefisien Gini hanya mengukur jumlah penduduk miskin",
+          "Wilayah A memiliki ketimpangan pendapatan lebih tinggi",
+          "Wilayah B memiliki ketimpangan pendapatan lebih tinggi",
+          "Wilayah A pasti memiliki kemiskinan lebih rendah"
+        ],
+        "correctIndex": 2,
+        "explanation": "Semakin mendekati 1, koefisien Gini menunjukkan ketimpangan pendapatan yang semakin tinggi. Karena 0,42 lebih besar daripada 0,28, ketimpangan di wilayah A lebih tinggi."
+      },
+      {
+        "id": 59,
+        "question": "Pada grafik Kurva Lorenz, kurva suatu wilayah semakin jauh dari garis pemerataan sempurna. Interpretasi yang paling tepat adalah ....",
+        "options": [
+          "Distribusi pendapatan semakin merata",
+          "Jumlah penduduk miskin pasti menjadi nol",
+          "Ketimpangan distribusi pendapatan semakin tinggi",
+          "Pendapatan seluruh penduduk meningkat dengan proporsi sama",
+          "Koefisien Gini mendekati nol"
+        ],
+        "correctIndex": 2,
+        "explanation": "Kurva Lorenz yang semakin jauh dari garis pemerataan menunjukkan distribusi pendapatan yang semakin tidak merata dan koefisien Gini yang lebih tinggi."
+      },
+      {
+        "id": 60,
+        "question": "Indeks Pembangunan Manusia (IPM) mengukur capaian pembangunan manusia melalui tiga dimensi dasar, yaitu ....",
+        "options": [
+          "Kesehatan, pengetahuan, dan kehidupan yang layak",
+          "Kemiskinan, ketimpangan, dan pengangguran",
+          "Investasi, ekspor, dan konsumsi",
+          "Produksi, pendapatan pemerintah, dan tabungan",
+          "Infrastruktur, teknologi, dan perdagangan"
+        ],
+        "correctIndex": 0,
+        "explanation": "IPM dalam materi dibangun berdasarkan tiga dimensi: umur panjang dan hidup sehat, pengetahuan, serta kehidupan yang layak."
+      },
+      {
+        "id": 61,
+        "question": "Sebuah daerah memperbaiki fasilitas kesehatan ibu dan anak untuk meningkatkan rata-rata perkiraan usia yang dapat dicapai penduduk sejak lahir. Komponen IPM yang secara langsung dituju adalah ....",
+        "options": [
+          "Harapan Lama Sekolah",
+          "Pengeluaran riil per kapita disesuaikan",
+          "Rata-rata Lama Sekolah",
+          "Indeks Harga Konsumen",
+          "Angka Harapan Hidup"
+        ],
+        "correctIndex": 4,
+        "explanation": "Dimensi kesehatan IPM diukur menggunakan Angka Harapan Hidup (AHH), yaitu rata-rata perkiraan usia yang dapat dicapai seseorang sejak lahir."
+      },
+      {
+        "id": 62,
+        "question": "Program pendidikan bagi anak yang baru berusia tujuh tahun diharapkan meningkatkan lama sekolah yang akan ditempuh pada masa depan. Indikator IPM yang mencerminkan harapan lama pendidikan tersebut adalah ....",
+        "options": [
+          "Harapan Lama Sekolah (HLS)",
+          "Rata-rata Lama Sekolah (RLS)",
+          "Angka Harapan Hidup",
+          "Koefisien Gini",
+          "Pengeluaran per kapita"
+        ],
+        "correctIndex": 0,
+        "explanation": "HLS mengukur lama tahun sekolah yang diharapkan akan ditempuh oleh anak berusia tujuh tahun."
+      },
+      {
+        "id": 63,
+        "question": "Dalam penghitungan IPM, data lama sekolah yang telah ditempuh oleh penduduk berusia 25 tahun ke atas digunakan untuk mengukur ....",
+        "options": [
+          "Angka Harapan Hidup",
+          "Pengeluaran riil per kapita",
+          "Harapan Lama Sekolah",
+          "Rata-rata Lama Sekolah",
+          "Produktivitas tenaga kerja"
+        ],
+        "correctIndex": 3,
+        "explanation": "RLS merupakan lama tahun sekolah yang telah ditempuh oleh penduduk usia 25 tahun ke atas."
+      },
+      {
+        "id": 64,
+        "question": "Suatu daerah mengalami peningkatan daya beli masyarakat. Dalam dimensi IPM, perubahan ini tercermin melalui indikator ....",
+        "options": [
+          "Harapan Lama Sekolah",
+          "Tingkat Partisipasi Angkatan Kerja",
+          "Angka Harapan Hidup",
+          "Pengeluaran riil per kapita yang disesuaikan",
+          "Rata-rata Lama Sekolah"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dimensi kehidupan yang layak dalam IPM diukur melalui pengeluaran riil per kapita yang disesuaikan dengan daya beli masyarakat."
+      },
+      {
+        "id": 65,
+        "question": "Investasi suatu daerah bertambah Rp120 triliun dan menghasilkan tambahan output sebesar Rp30 triliun. Berdasarkan rumus ICOR = ΔK/ΔY, nilai ICOR daerah tersebut adalah ....",
+        "options": [
+          "3",
+          "5",
+          "6",
+          "4",
+          "2"
+        ],
+        "correctIndex": 3,
+        "explanation": "ICOR = tambahan investasi / tambahan output = 120 / 30 = 4."
+      },
+      {
+        "id": 66,
+        "question": "Dua wilayah memiliki nilai ICOR masing-masing 4,5 dan 7,0. Dengan asumsi pengukuran dan kondisi lain sebanding, wilayah yang memiliki pemanfaatan investasi lebih efisien adalah ....",
+        "options": [
+          "Kedua wilayah sama efisien karena nilai ICOR selalu tidak bermakna",
+          "Wilayah dengan ICOR 4,5 karena tambahan modal yang dibutuhkan untuk menghasilkan tambahan output relatif lebih kecil",
+          "Wilayah dengan ICOR 7,0 karena membutuhkan modal lebih banyak",
+          "Tidak dapat dibandingkan karena ICOR mengukur inflasi",
+          "Wilayah dengan ICOR 7,0 karena outputnya pasti lebih tinggi"
+        ],
+        "correctIndex": 1,
+        "explanation": "ICOR yang lebih rendah menunjukkan investasi lebih efisien, karena tambahan modal yang lebih sedikit dapat menghasilkan tambahan output yang relatif lebih besar."
+      },
+      {
+        "id": 67,
+        "question": "Sebuah perusahaan menghasilkan 12.000 unit produk dengan menggunakan 40 pekerja. Produktivitas tenaga kerja berdasarkan output per pekerja adalah ....",
+        "options": [
+          "250 unit per pekerja",
+          "350 unit per pekerja",
+          "200 unit per pekerja",
+          "400 unit per pekerja",
+          "300 unit per pekerja"
+        ],
+        "correctIndex": 4,
+        "explanation": "Produktivitas tenaga kerja = output / jumlah tenaga kerja = 12.000 / 40 = 300 unit per pekerja."
+      },
+      {
+        "id": 68,
+        "question": "Sektor perikanan memiliki kontribusi relatif lebih besar terhadap perekonomian suatu kabupaten dibandingkan kontribusi sektor yang sama pada tingkat provinsi. Jika nilai LQ sektor tersebut sebesar 1,35, interpretasi yang tepat adalah ....",
+        "options": [
+          "Sektor perikanan merupakan sektor nonbasis",
+          "Sektor perikanan merupakan sektor basis dan berpotensi menghasilkan surplus untuk ekspor",
+          "Sektor perikanan hanya memenuhi kebutuhan lokal dan tidak berpotensi ekspor",
+          "Sektor perikanan tidak berkontribusi terhadap PDRB",
+          "Sektor perikanan tidak memiliki keunggulan relatif"
+        ],
+        "correctIndex": 1,
+        "explanation": "LQ lebih besar dari 1 menunjukkan sektor basis, yaitu sektor yang relatif lebih unggul di daerah dan berpotensi menghasilkan surplus untuk ekspor."
+      },
+      {
+        "id": 69,
+        "question": "Hasil perhitungan Location Quotient (LQ) sektor industri pengolahan di suatu daerah adalah 0,72. Berdasarkan konsep LQ pada materi, sektor tersebut termasuk ....",
+        "options": [
+          "Sektor nonbasis yang relatif kurang berkembang dibandingkan wilayah pembanding",
+          "Sektor yang tidak boleh dikembangkan",
+          "Sektor yang pasti memiliki RCA tinggi",
+          "Sektor yang menghasilkan surplus ekspor",
+          "Sektor basis yang sangat unggul"
+        ],
+        "correctIndex": 0,
+        "explanation": "LQ kurang dari 1 menunjukkan sektor nonbasis, yaitu sektor yang relatif kurang berkembang dibandingkan wilayah administratif yang lebih besar dan cenderung memenuhi kebutuhan lokal."
+      },
+      {
+        "id": 70,
+        "question": "Seorang analis membandingkan pangsa suatu komoditas dalam total ekspor negara dengan pangsa komoditas yang sama dalam perdagangan dunia. Indikator yang digunakan adalah ....",
+        "options": [
+          "TPAK",
+          "ICOR",
+          "IHK",
+          "RCA (Revealed Comparative Advantage)",
+          "PDB deflator"
+        ],
+        "correctIndex": 3,
+        "explanation": "RCA digunakan untuk mengukur kinerja atau keunggulan komparatif ekspor suatu komoditas dengan membandingkan pangsa komoditas dalam ekspor negara terhadap pangsanya dalam perdagangan dunia."
       }
     ]
   }
