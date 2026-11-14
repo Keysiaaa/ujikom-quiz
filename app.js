@@ -42,8 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 // KATEGORI & DATA SOAL
 // ==========================================
+function getPublishedBank() {
+  // Bank soal publik: dibaca dari file bank-soal.js yang ikut ter-deploy,
+  // sehingga SEMUA perangkat (laptop, HP, tablet) melihat soal yang sama.
+  if (typeof publishedBank !== 'undefined' && Array.isArray(publishedBank) && publishedBank.length > 0) {
+    return JSON.parse(JSON.stringify(publishedBank));
+  }
+  return null;
+}
+
 function initCategoriesData() {
-  // 1. Coba load dari localStorage 'ujikom_categories'
+  // 0. Pengunjung SELALU memakai bank soal publik (bank-soal.js), bukan localStorage
+  const published = getPublishedBank();
+  if (published && !AppState.isAdmin) {
+    AppState.categories = published;
+    return;
+  }
+
+  // 1. Coba load dari localStorage 'ujikom_categories' (draft admin di perangkat ini)
   const savedCategories = localStorage.getItem('ujikom_categories');
   if (savedCategories) {
     try {
@@ -77,7 +93,13 @@ function initCategoriesData() {
     }
   }
 
-  // 3. Gunakan data default dari questions.js
+  // 3a. Admin tanpa draft lokal: mulai dari bank soal publik
+  if (published) {
+    AppState.categories = published;
+    return;
+  }
+
+  // 3b. Gunakan data default dari questions.js
   if (typeof questionsData !== 'undefined' && Array.isArray(questionsData) && questionsData.length > 0) {
     AppState.categories = [{
       id: 1,
@@ -532,6 +554,7 @@ function bindEvents() {
   document.getElementById('btn-clear-all-questions').addEventListener('click', handleClearAllQuestions);
   document.getElementById('btn-reset-default-sample').addEventListener('click', handleResetDefaultQuestions);
   document.getElementById('btn-download-backup').addEventListener('click', downloadBackupJSON);
+  document.getElementById('btn-download-publish').addEventListener('click', downloadPublishFile);
   document.getElementById('file-input-backup').addEventListener('change', uploadBackupJSON);
 
   // Tab 4: Raw JSON Save
@@ -702,6 +725,12 @@ function openManageModal() {
     openAdminLoginModal();
     return;
   }
+  // Muat kategori pertama otomatis bila belum ada kategori yang dipilih
+  if (AppState.managingCategoryId === null && AppState.categories.length > 0) {
+    AppState.managingCategoryId = AppState.categories[0].id;
+    AppState.questions = [...AppState.categories[0].questions];
+  }
+  renderCategoryManagerBar();
   updateQuestionCounters();
   renderManageQuestionsList();
   document.getElementById('modal-manage').classList.remove('hidden');
@@ -1100,6 +1129,26 @@ function handleResetDefaultQuestions() {
   saveQuestionsToStorage();
   renderManageQuestionsList();
   alert("Bank soal telah di-reset ke 20 soal contoh bawaan.");
+}
+
+// Ekspor SEMUA kategori sebagai bank-soal.js untuk dipublikasikan ke semua perangkat
+function downloadPublishFile() {
+  const total = AppState.categories.reduce((n, c) => n + (c.questions ? c.questions.length : 0), 0);
+  const content =
+    "/**\n * BANK SOAL PUBLIK - dibaca oleh semua perangkat (laptop & HP).\n" +
+    " * File ini dibuat otomatis lewat tombol \"Download untuk Publikasi\" di menu Kelola Soal.\n" +
+    " * Ganti file ini di repository lalu push agar semua perangkat memuat soal terbaru.\n */\n" +
+    "const publishedBank = " + JSON.stringify(AppState.categories, null, 2) + ";\n";
+  const blob = new Blob([content], { type: 'text/javascript;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'bank-soal.js';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  alert(`File bank-soal.js berisi ${total} soal berhasil diunduh.\n\nGanti file bank-soal.js di folder project dengan file ini, lalu push ke GitHub. Setelah itu semua perangkat (termasuk HP) akan menampilkan soal yang sama.`);
 }
 
 // Backup & Restore File JSON
